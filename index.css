@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 12pt;
+  font-size: 16px;
 }
 
 div.container {
@@ -12,20 +12,20 @@ div.container {
   padding: 10px 20px;
   position: relative;
   border: 1px solid #ccc;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
 }
-div.container div.left-container h2.header {
-  margin: 14px;
+div.container div.info-container h2.header {
+  margin-top: 14px;
   font-size: 1.5em;
 }
-div.container div.right-container ul#project-list {
+div.container div.list-container ul#project-list {
   margin-top: 14px;
   list-style: none;
 }
-div.container div.right-container ul#project-list li {
+div.container div.list-container ul#project-list li {
   margin-top: 6px;
 }
 div.container a {
@@ -33,7 +33,7 @@ div.container a {
   color: #28f;
 }
 div.container a:hover {
-  color: #79b7ff;
+  color: #64acff;
 }
 div.container hr.divider {
   background-color: #d9d9d9;
@@ -48,11 +48,11 @@ div.container hr.divider.vertical {
 }
 div.container hr.divider.horizontal {
   margin: 14px auto;
-  width: 250px;
+  width: 208.3333333333px;
   height: 1px;
 }
 div.container a.github-link {
-  margin: 14px;
+  margin-bottom: 14px;
 }
 
 @media screen and (min-width: 601px) {
@@ -60,13 +60,19 @@ div.container a.github-link {
     margin-top: 100px;
     width: 500px;
   }
-  div.container div.left-container {
+  div.container div.info-container {
     float: left;
     width: 200px;
   }
-  div.container div.right-container {
+  div.container div.info-container h2.header {
+    margin-left: 14px;
+  }
+  div.container div.list-container {
     float: right;
     width: 300px;
+  }
+  div.container div.list-container ul#project-list {
+    padding-left: 40px;
   }
   div.container hr.vertical.divider {
     display: block;
@@ -76,25 +82,32 @@ div.container a.github-link {
   }
   div.container a.github-link {
     position: absolute;
-    left: 20px;
+    left: 34px;
     bottom: 10px;
   }
 }
 @media screen and (max-width: 600px) {
   div.container {
     margin-top: 50px;
-    width: 250px;
+    width: 208.3333333333px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     border-radius: 10px;
   }
-  div.container div.left-container, div.container div.right-container {
+  div.container div.info-container {
     float: none;
     width: inherit;
   }
-  div.container div.right-container ul#project-list {
-    padding-left: 14px;
+  div.container div.info-container h2.header {
+    margin-left: 0;
+  }
+  div.container div.list-container {
+    float: none;
+    width: inherit;
+  }
+  div.container div.list-container ul#project-list {
+    padding-left: 0;
   }
   div.container hr.vertical.divider {
     display: none;

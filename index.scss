@@ -2,7 +2,7 @@
 
 $font-stack: 'Lato', Helvetica, Arial, sans-serif;;
 $container-width: 500px;
-$mini-container-width: $container-width / 2;
+$mini-container-width: $container-width / 2.4;
 $container-padding-v: 10px;
 $container-padding-h: 20px;
 $inner-margin: 14px;
@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $font-stack;
-  font-size: 12pt;
+  font-size: 16px;
 }
 
 div.container {
@@ -29,16 +29,16 @@ div.container {
   padding: $container-padding-v $container-padding-h;
   position: relative;
   border: 1px solid $border-color;
-  @include border-radius(10px);
+  @include border-radius(8px);
 
-  div.left-container {
+  div.info-container {
     h2.header {
-      margin: $inner-margin;
+      margin-top: $inner-margin;
       font-size: 1.5em;
     }
   }
 
-  div.right-container {
+  div.list-container {
     ul#project-list {
       margin-top: $inner-margin;
       list-style: none;
@@ -51,7 +51,7 @@ div.container {
     text-decoration: none;
     color: $link-color;
 
-    &:hover { color: lighten($link-color, 17%); }
+    &:hover { color: lighten($link-color, 13%); }
   }
 
   hr.divider {
@@ -74,22 +74,27 @@ div.container {
     }
   }
 
-  a.github-link { margin: $inner-margin; }
+  a.github-link { margin-bottom: $inner-margin; }
 }
+
 
 @media screen and (min-width: 601px) {
   div.container {
     margin-top: 100px;
     width: $container-width;
 
-    div.left-container {
+    div.info-container {
       float: left;
       width: $container-width * 2 / 5;
+      
+      h2.header { margin-left: $inner-margin; }
     }
 
-    div.right-container {
+    div.list-container {
       float: right;
       width: $container-width * 3 / 5;
+
+      ul#project-list { padding-left: 40px; }
     }
 
     hr.vertical.divider { display: block; }
@@ -98,11 +103,12 @@ div.container {
 
     a.github-link {
       position: absolute;
-      left: $container-padding-h;
+      left: $container-padding-h + $inner-margin;
       bottom: $container-padding-v;
     }
   }
 }
+
 
 @media screen and (max-width: 600px) {
   div.container {
@@ -111,13 +117,18 @@ div.container {
 
     @include border-radius(10px);
 
-    div.left-container, div.right-container {
+    div.info-container {
       float: none;
       width: inherit;
+
+      h2.header { margin-left: 0; }
     }
 
-    div.right-container {
-      ul#project-list { padding-left: $inner-margin; }
+    div.list-container {
+      float: none;
+      width: inherit;
+
+      ul#project-list { padding-left: 0; }
     }
 
     hr.vertical.divider { display: none; }
