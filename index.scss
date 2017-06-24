@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-
 $font-stack: 'Lato', Helvetica, Arial, sans-serif;;
-
 $container-width: 500px;
+$mini-container-width: $container-width / 2;
 $container-padding-v: 10px;
 $container-padding-h: 20px;
-
 $inner-margin: 14px;
-
+$border-color: #ccc;
 $link-color: #28f;
 
 @mixin border-radius($radius) {
@@ -18,7 +16,6 @@ $link-color: #28f;
           border-radius: $radius;
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -26,24 +23,13 @@ body {
   font-size: 12pt;
 }
 
-
 div.container {
-  margin: 100px auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: $container-padding-v $container-padding-h;
-  width: $container-width;
-  border: 1px solid #ccc;
-
+  position: relative;
+  border: 1px solid $border-color;
   @include border-radius(10px);
-
-  div.left-container {
-    float: left;
-    width: $container-width * 2 / 5;
-  }
-
-  div.right-container {
-    float: right;
-    width: $container-width * 3 / 5;
-  }
 
   div.left-container {
     h2.header {
@@ -53,32 +39,95 @@ div.container {
   }
 
   div.right-container {
-
-    ul.project-list {
+    ul#project-list {
       margin-top: $inner-margin;
       list-style: none;
 
-      li {
-        margin-top: 6px;
-      }
+      li { margin-top: 6px; }
     }
   }
 
   a {
     text-decoration: none;
     color: $link-color;
+
+    &:hover { color: lighten($link-color, 17%); }
   }
 
-  a:hover {
-    color: lighten($link-color, 17%);
+  hr.divider {
+    background-color: lighten($border-color, 5%);
+    border: none;
+
+    &.vertical {
+      width: 1px;
+      height: 120px;
+
+      position: absolute;
+      top: $container-padding-v / 2;
+      left: $container-padding-h + $container-width * 2 / 5;
+    }
+
+    &.horizontal {
+      margin: $inner-margin auto;
+      width: $mini-container-width;
+      height: 1px;
+    }
   }
 
-  position: relative;
+  a.github-link { margin: $inner-margin; }
+}
 
-  p.github-link {
-    position: absolute;
-    left: $container-padding-h + $inner-margin;
-    bottom: $container-padding-v;
+@media screen and (min-width: 601px) {
+  div.container {
+    margin-top: 100px;
+    width: $container-width;
+
+    div.left-container {
+      float: left;
+      width: $container-width * 2 / 5;
+    }
+
+    div.right-container {
+      float: right;
+      width: $container-width * 3 / 5;
+    }
+
+    hr.vertical.divider { display: block; }
+
+    hr.horizontal.divider { display: none; }
+
+    a.github-link {
+      position: absolute;
+      left: $container-padding-h;
+      bottom: $container-padding-v;
+    }
   }
 }
 
+@media screen and (max-width: 600px) {
+  div.container {
+    margin-top: 50px;
+    width: $mini-container-width;
+
+    @include border-radius(10px);
+
+    div.left-container, div.right-container {
+      float: none;
+      width: inherit;
+    }
+
+    div.right-container {
+      ul#project-list { padding-left: $inner-margin; }
+    }
+
+    hr.vertical.divider { display: none; }
+
+    hr.horizontal.divider { display: block; }
+
+    a.github-link {
+      position: relative;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
