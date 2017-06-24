@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+$font-stack: 'Lato', Helvetica, Arial, sans-serif;;
+
+$container-width: 500px;
+$container-padding-v: 10px;
+$container-padding-h: 20px;
+
+$inner-margin: 14px;
+
+$link-color: #28f;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  font-size: 12pt;
+}
+
+
+div.container {
+  margin: 100px auto;
+  padding: $container-padding-v $container-padding-h;
+  width: $container-width;
+  border: 1px solid #ccc;
+
+  @include border-radius(10px);
+
+  div.left-container {
+    float: left;
+    width: $container-width * 2 / 5;
+  }
+
+  div.right-container {
+    float: right;
+    width: $container-width * 3 / 5;
+  }
+
+  div.left-container {
+    h2.header {
+      margin: $inner-margin;
+      font-size: 1.5em;
+    }
+  }
+
+  div.right-container {
+
+    ul.project-list {
+      margin-top: $inner-margin;
+      list-style: none;
+
+      li {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $link-color;
+  }
+
+  a:hover {
+    color: lighten($link-color, 17%);
+  }
+
+  position: relative;
+
+  p.github-link {
+    position: absolute;
+    left: $container-padding-h + $inner-margin;
+    bottom: $container-padding-v;
+  }
+}
+
