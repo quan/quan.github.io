@@ -41,7 +41,7 @@ div.container hr.divider {
 }
 div.container hr.divider.vertical {
   width: 1px;
-  height: 120px;
+  height: 140px;
   position: absolute;
   top: 5px;
   left: 220px;
