@@ -3,6 +3,9 @@ const links = [
     'title': 'Persona 5 Itemization',
     'url': 'http://quan.github.io/persona5_itemization/'
   }, {
+    'title': 'Madotsuki Walker',
+    'url': 'https://quan.github.io/madotsuki/'
+  }, {
     'title': 'Inkwell',
     'url': 'https://quan.github.io/inkwell_website/'
   }, {
