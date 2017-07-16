@@ -1,7 +1,7 @@
 const PROJECTS = [
   {
-    'title': 'Persona 5 Itemization',
-    'url': 'https://quan.github.io/persona5_itemization/',
+    'title': 'Persona 5 Item Tool',
+    'url': 'https://quan.github.io/persona5_items/',
     'image': '',
     'description': {
       'short': '',
