@@ -1,7 +1,7 @@
 const PROJECTS = [
   {
-    'title': 'Persona 5 Item Lookup',
-    'url': 'https://quan.github.io/persona5_items/',
+    'title': 'Persona 5 Item Listings',
+    'url': 'https://quan.github.io/persona5-items/',
     'image': '',
     'description': {
       'short': '',
