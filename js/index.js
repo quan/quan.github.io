@@ -19,7 +19,7 @@ const PROJECTS = [
     'tech-stack': ''
   }, {
     'title': 'Inkwell',
-    'url': 'https://quan.github.io/inkwell_website/',
+    'url': 'https://quan.github.io/inkwell-website/',
     'image': '',
     'description': {
       'short': '',
@@ -46,7 +46,7 @@ const PROJECTS = [
     'tech-stack': ''
   }, {
     'title': 'Facebook vs. Fake News',
-    'url': 'https://quan.github.io/facebook_fakenews/main.pdf',
+    'url': 'https://quan.github.io/facebook-fakenews/main.pdf',
     'image': '',
     'description': {
       'short': '',
