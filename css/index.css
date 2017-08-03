@@ -1,123 +1,65 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
 body {
   margin: 0;
   padding: 0;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 16px;
 }
 
-div.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 20px;
-  position: relative;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  border-radius: 8px;
-}
-div.container div.info-container h2.header {
-  margin-top: 14px;
-  font-size: 1.5em;
-}
-div.container div.list-container ul#project-list {
-  margin-top: 14px;
-  list-style: none;
-}
-div.container div.list-container ul#project-list li {
-  margin-top: 6px;
-}
-div.container a {
-  text-decoration: none;
-  color: #28f;
-}
-div.container a:hover {
-  color: #64acff;
-}
-div.container hr.divider {
-  background-color: #d9d9d9;
-  border: none;
-}
-div.container hr.divider.vertical {
-  width: 1px;
-  height: 168px;
-  position: absolute;
-  top: 5px;
-  left: 220px;
-}
-div.container hr.divider.horizontal {
-  margin: 14px auto;
-  width: 208.3333333333px;
-  height: 1px;
-}
-div.container a.github-link {
-  margin-bottom: 14px;
+/* Each of the columns in the header section at the top of the page. */
+@media (max-width: 575px) {
+  div.header-col {
+    padding: 0;
+  }
 }
 
-@media screen and (min-width: 601px) {
-  div.container {
-    margin-top: 100px;
-    width: 500px;
-  }
-  div.container div.info-container {
-    float: left;
-    width: 200px;
-  }
-  div.container div.info-container h2.header {
-    margin-left: 14px;
-  }
-  div.container div.list-container {
-    float: right;
-    width: 300px;
-  }
-  div.container div.list-container ul#project-list {
-    padding-left: 40px;
-  }
-  div.container hr.vertical.divider {
-    display: block;
-  }
-  div.container hr.horizontal.divider {
-    display: none;
-  }
-  div.container a.github-link {
-    position: absolute;
-    left: 34px;
-    bottom: 10px;
+@media (min-width: 576px) {
+  div.header-col {
+    padding: 10px;
   }
 }
-@media screen and (max-width: 600px) {
-  div.container {
-    margin-top: 50px;
-    width: 208.3333333333px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px;
+
+@media (min-width: 768px) {
+  div.header-col {
+    padding: 20px;
   }
-  div.container div.info-container {
-    float: none;
-    width: inherit;
+}
+
+@media (min-width: 992px) {
+  div.header-col {
+    padding: 30px;
   }
-  div.container div.info-container h2.header {
-    margin-left: 0;
+}
+
+@media (min-width: 1200px) {
+  div.header-col {
+    padding: 40px;
   }
-  div.container div.list-container {
-    float: none;
-    width: inherit;
+}
+
+/* Profile picture. Appears at the top of the page. */
+@media (max-width: 575px) {
+  img.profile-pic {
+    width: 100vw;
+    height: 100vw;
   }
-  div.container div.list-container ul#project-list {
-    padding-left: 0;
-  }
-  div.container hr.vertical.divider {
-    display: none;
-  }
-  div.container hr.horizontal.divider {
-    display: block;
-  }
-  div.container a.github-link {
-    position: relative;
-    left: 0;
-    bottom: 0;
-  }
+}
+
+/* Title in landing section. Appears with .profile-pic and .about. */
+h2.header {
+  font-family: "Zilla Slab", serif;
+  font-kerning: normal;
+}
+
+/* Project card wrapper wrapping .project-card. */
+div.project-card-wrapper {
+  padding: 20px;
+}
+
+/* Project card div wrapping .project-card-img and .project-card-title. */
+div.project-card {
+  padding: 20px;
+}
+
+/* Project card title. Appears below project-card-img. */
+h5.project-card-title {
+  font-weight: bold;
 }

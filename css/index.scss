@@ -1,144 +1,72 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+$sans-serif-font-stack: 'Lato', Helvetica, Arial, sans-serif;
+$slab-font-stack: 'Zilla Slab', serif;
 
-$font-stack: 'Lato', Helvetica, Arial, sans-serif;;
-$container-width: 500px;
-$mini-container-width: $container-width / 2.4;
-$container-padding-v: 10px;
-$container-padding-h: 20px;
-$inner-margin: 14px;
-$border-color: #ccc;
-$link-color: #28f;
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 992px;
+$xl-min: 1200px;
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
           border-radius: $radius;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: $font-stack;
-  font-size: 16px;
+  font-family: $sans-serif-font-stack;
+  // font-size: 16px;
 }
 
-div.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding: $container-padding-v $container-padding-h;
-  position: relative;
-  border: 1px solid $border-color;
-  @include border-radius(8px);
-
-  div.info-container {
-    h2.header {
-      margin-top: $inner-margin;
-      font-size: 1.5em;
-    }
+/* Each of the columns in the header section at the top of the page. */
+div.header-col {
+  @media (max-width: #{$sm-min - 1}) {
+    padding: 0;
   }
 
-  div.list-container {
-    ul#project-list {
-      margin-top: $inner-margin;
-      list-style: none;
-
-      li { margin-top: 6px; }
-    }
+  @media (min-width: #{$sm-min}) {
+    padding: 10px;
   }
 
-  a {
-    text-decoration: none;
-    color: $link-color;
-
-    &:hover { color: lighten($link-color, 13%); }
+  @media (min-width: #{$md-min}) {
+    padding: 20px;
   }
 
-  hr.divider {
-    background-color: lighten($border-color, 5%);
-    border: none;
-
-    &.vertical {
-      width: 1px;
-      height: 168px;
-
-      position: absolute;
-      top: $container-padding-v / 2;
-      left: $container-padding-h + $container-width * 2 / 5;
-    }
-
-    &.horizontal {
-      margin: $inner-margin auto;
-      width: $mini-container-width;
-      height: 1px;
-    }
+  @media (min-width: #{$lg-min}) {
+    padding: 30px;
   }
 
-  a.github-link { margin-bottom: $inner-margin; }
-}
-
-
-@media screen and (min-width: 601px) {
-  div.container {
-    margin-top: 100px;
-    width: $container-width;
-
-    div.info-container {
-      float: left;
-      width: $container-width * 2 / 5;
-      
-      h2.header { margin-left: $inner-margin; }
-    }
-
-    div.list-container {
-      float: right;
-      width: $container-width * 3 / 5;
-
-      ul#project-list { padding-left: 40px; }
-    }
-
-    hr.vertical.divider { display: block; }
-
-    hr.horizontal.divider { display: none; }
-
-    a.github-link {
-      position: absolute;
-      left: $container-padding-h + $inner-margin;
-      bottom: $container-padding-v;
-    }
+  @media (min-width: #{$xl-min}) {
+    padding: 40px;
   }
 }
 
-
-@media screen and (max-width: 600px) {
-  div.container {
-    margin-top: 50px;
-    width: $mini-container-width;
-
-    @include border-radius(10px);
-
-    div.info-container {
-      float: none;
-      width: inherit;
-
-      h2.header { margin-left: 0; }
-    }
-
-    div.list-container {
-      float: none;
-      width: inherit;
-
-      ul#project-list { padding-left: 0; }
-    }
-
-    hr.vertical.divider { display: none; }
-
-    hr.horizontal.divider { display: block; }
-
-    a.github-link {
-      position: relative;
-      left: 0;
-      bottom: 0;
-    }
+/* Profile picture. Appears at the top of the page. */
+img.profile-pic {
+  @media (max-width: #{$sm-min - 1}) {
+    width: 100vw;
+    height: 100vw;
   }
+}
+
+/* Title in landing section. Appears with .profile-pic and .about. */
+h2.header {
+  font-family: $slab-font-stack;
+  font-kerning: normal;
+}
+
+/* Project card wrapper wrapping .project-card. */
+div.project-card-wrapper {
+  padding: 20px;
+}
+
+/* Project card div wrapping .project-card-img and .project-card-title. */
+div.project-card {
+  padding: 20px;
+}
+
+/* Project card title. Appears below project-card-img. */
+h5.project-card-title {
+  font-weight: bold;
 }

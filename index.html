@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="stylesheet" href="css/index.css" type="text/css" /> 
-        <title>quan.github.io</title>
-        <script src="js/index.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="info-container">
-                <h2 class="header">quan.github.io</h2>
-                <a class="github-link" href="https://github.com/quan">quan@github</a>
-            </div>
-            <hr class="vertical divider" />
-            <hr class="horizontal divider" />
-            <div class="list-container">
-                <ul id="project-list"></ul>
-            </div>
-            <div style="clear: both"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+  <title>quan.github.io</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Zilla+Slab|Lato" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <!--<nav id="mainNav" class="navbar navbar-default navbar-fixed-top"></nav>-->
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col header-col">
+          <img class="profile-pic square" src="images/placeholder-square.jpg" />
         </div>
-    </body>
+
+        <div class="col header-col">
+          <h2 class="header">quan.github.io</h2>
+          <a class="github-link" href="https://github.com/quan">quan@github</a>
+          <p class="about-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-0" style="background-color:gainsboro"></div>
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-1" style="background-color:darkolivegreen"></div>
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-2" style="background-color:darkslategrey"></div>
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-3" style="background-color:sandybrown"></div>
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-4" style="background-color:salmon"></div>
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-5" style="background-color:rosybrown"></div>
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-6" style="background-color:cornflowerblue"></div>
+        <div class="project-card-wrapper col-xl-4 col-sm-6" id="item-7" style="background-color:orchid"></div>
+      </div>
+      <!--<ul id="project-list"></ul>-->
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+          integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+          integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+          integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+          crossorigin="anonymous"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
