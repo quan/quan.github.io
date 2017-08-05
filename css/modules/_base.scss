@@ -1,13 +1,18 @@
-// variables
+/* Variables */
 $sans-serif-font-stack: 'Lato', Helvetica, Arial, sans-serif;
 $slab-font-stack: 'Zilla Slab', serif;
 
+// path relative to index.scss
+$background-img: url("../assets/graphics/light.png");
+//$background-img: url("../assets/graphics/dark.png");
+
+// display size cutoffs
 $sm-min: 576px;
 $md-min: 768px;
 $lg-min: 992px;
 $xl-min: 1200px;
 
-// mixins
+/* Mixins */
 @mixin center-horizontally() {
   display: block;
   margin-left: auto;
@@ -35,10 +40,12 @@ $xl-min: 1200px;
   border-radius: $radius;
 }
 
-// body
+/* Body */
 body {
   margin: 0;
   padding: 0;
   font-family: $sans-serif-font-stack;
   // font-size: 16px;
+
+  background: $background-img;
 }

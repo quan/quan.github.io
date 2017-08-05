@@ -2,7 +2,7 @@ const PROJECTS = [
   {
     'title': 'Persona 5 Items',
     'url': 'https://quan.github.io/persona5-items/',
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'A tabular Persona 5 item database.',
       'long': ''
@@ -11,7 +11,7 @@ const PROJECTS = [
   }, {
     'title': 'Madotsuki Walker',
     'url': 'https://quan.github.io/madotsuki/',
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'Take a walk with Madotsuki.',
       'long': ''
@@ -20,7 +20,7 @@ const PROJECTS = [
   }, {
     'title': 'Inkwell',
     'url': 'https://quan.github.io/inkwell-website/',
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'A cross-platform draw and chat app.',
       'long': ''
@@ -29,7 +29,7 @@ const PROJECTS = [
   }, {
     'title': 'PolyRents',
     'url': 'https://polyrents.com',
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'Renting, simplified.',
       'long': ''
@@ -38,7 +38,7 @@ const PROJECTS = [
   }, {
     'title': 'slamrater.com',
     'url': null,
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'Support the slams that support us!',
       'long': ''
@@ -47,7 +47,7 @@ const PROJECTS = [
   }, {
     'title': 'Cru',
     'url': null,
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'A mobile app for Cru Central Coast.',
       'long': ''
@@ -56,7 +56,7 @@ const PROJECTS = [
   }, {
     'title': 'AsterRide',
     'url': 'https://www.asterride.com',
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'A luxury and taxi booking app.',
       'long': ''
@@ -65,7 +65,7 @@ const PROJECTS = [
   }, {
     'title': 'Facebook vs. Fake News',
     'url': 'https://quan.github.io/facebook-fakenews/main.pdf',
-    'image': 'images/placeholder-square.jpg',
+    'image': 'assets/images/placeholder-square.jpg',
     'description': {
       'short': 'A paper on fake news on Facebook.',
       'long': ''

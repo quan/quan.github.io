@@ -1,18 +1,49 @@
 @import "../modules/_base.scss";
 
-// The top row of the page containing the profile.
-div.header-row {
-  @media (max-width: #{$sm-min - 1}) {
-    @include padding-vertical(0);
-  }
+/*
+- div.jumbotron
+  - div.container
+    - div.top-header-wrapper-row
+      - div.top-header-wrapper-col.profile-pic-col
+        - img.profile-pic.square
+      - div.top-header-wrapper-col
+        - div.title-wrapper-row
+          - div.title-wrapper-col
+            - h2.title
+            - a.github-link
+        - div.about-wrapper-row
+          - div.profile-pic-mobile-col
+            - img.profile-pic.square
+           - div.text-box
+            - p.about-me
+ */
 
-  @media (min-width: #{$sm-min}) {
-    @include padding-vertical(20px);
-  }
+// The jumbotron section at the top of the page.
+div.jumbotron.jumbotron-header {
+  background-color: dimgrey;
+  color: white;
+  //background-color: #1d1e1f;
+  //color: #daeeff;
+
+  border-bottom: dashed black;
 }
 
-// Each of the columns in the header section at the top of the page.
-div.header-col {
+// The top row of the page containing the profile.
+// Wraps two columns.
+div.top-header-wrapper-row {
+  @include padding-vertical(10px);
+  //@media (max-width: #{$sm-min - 1}) {
+  //  @include padding-vertical(0);
+  //}
+  //
+  //@media (min-width: #{$sm-min}) {
+  //  @include padding-vertical(20px);
+  //}
+}
+
+// Each of the two main wrapping columns in the header section at the top of
+// the page. The right column wraps two rows.
+div.top-header-wrapper-col {
   @media (max-width: #{$sm-min - 1}) {
     @include padding-horizontal(0);
   }
@@ -34,35 +65,65 @@ div.header-col {
   }
 }
 
-// Profile picture. Appears at the top of the page.
-img.profile-pic {
-  @media (min-width: #{$md-min}) {
-    @include center-horizontally();
-    @include square-dimensions(320px);
-  }
-
-  @media (min-width: #{$lg-min}) {
-    @include square-dimensions(360px);
-  }
-
-  @media (min-width: #{$xl-min}) {
-    @include square-dimensions(400px);
-  }
+div.title-wrapper-row {
+  margin-bottom: 20px;
 }
 
-// On small screens, display the title on its own row.
-@media (max-width: #{$md-min - 1}) {
-  img.profile-pic {
+div.title-wrapper-col {
+  margin-bottom: 20px;
 
+  @media (max-width: #{$lg-min - 1}) {
+    text-align: center;
   }
-
-
-  @include square-dimensions(90vw);
-  margin-bottom: 5px;
 }
 
 // Title in landing section. Appears with .profile-pic and .about.
-h2.header {
+h2.title {
   font-family: $slab-font-stack;
   font-kerning: normal;
+}
+
+
+// Profile picture. Two exist at the top of the page that alternate
+// visibility based on screen dimensions.
+img.profile-pic {
+  @include center-horizontally();
+
+  @media (max-width: #{$md-min - 1}) {
+    @include square-dimensions(180px);
+  }
+
+  //@media (min-width: #{$sm-min}) {
+  //  @include square-dimensions(180px);
+  //}
+
+  @media (min-width: #{$md-min}) {
+    @include square-dimensions(220px);
+  }
+
+  @media (min-width: #{$lg-min}) {
+    @include square-dimensions(300px);
+  }
+
+  @media (min-width: #{$xl-min}) {
+    @include square-dimensions(300px);
+  }
+}
+
+// Hide picture on smallest screens.
+@media (max-width: #{$sm-min - 1}) {
+  div.profile-pic-col { display: none; }
+  div.profile-pic-mobile-col { display: none; }
+}
+
+// Display the picture under the title, next to description on medium screens.
+@media (min-width: #{$sm-min}) {
+  div.profile-pic-col { display: none; }
+  div.profile-pic-mobile-col { display: block; }
+}
+
+// Display the picture in its own top level column on large screens.
+@media (min-width: #{$lg-min}) {
+  div.profile-pic-col { display: block; }
+  div.profile-pic-mobile-col { display: none; }
 }

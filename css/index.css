@@ -1,122 +1,184 @@
+/* Variables */
+/* Mixins */
+/* Body */
 body {
   margin: 0;
   padding: 0;
   font-family: "Lato", Helvetica, Arial, sans-serif;
+  background: url("../assets/graphics/light.png");
 }
 
-/* The top row of the page containing the profile. */
+/* Variables */
+/* Mixins */
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  background: url("../assets/graphics/light.png");
+}
+
+/*
+- div.jumbotron
+  - div.container
+    - div.top-header-wrapper-row
+      - div.top-header-wrapper-col.profile-pic-col
+        - img.profile-pic.square
+      - div.top-header-wrapper-col
+        - div.title-wrapper-row
+          - div.title-wrapper-col
+            - h2.title
+            - a.github-link
+        - div.about-wrapper-row
+          - div.profile-pic-mobile-col
+            - img.profile-pic.square
+           - div.text-box
+            - p.about-me
+ */
+div.jumbotron.jumbotron-header {
+  background-color: dimgrey;
+  color: white;
+  border-bottom: dashed black;
+}
+
+div.top-header-wrapper-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 @media (max-width: 575px) {
-  div.header-row {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media (min-width: 576px) {
-  div.header-row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-}
-
-/* Each of the columns in the header section at the top of the page. */
-@media (max-width: 575px) {
-  div.header-col {
+  div.top-header-wrapper-col {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 @media (min-width: 576px) {
-  div.header-col {
+  div.top-header-wrapper-col {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 
 @media (min-width: 768px) {
-  div.header-col {
+  div.top-header-wrapper-col {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
 @media (min-width: 992px) {
-  div.header-col {
+  div.top-header-wrapper-col {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
 @media (min-width: 1200px) {
-  div.header-col {
+  div.top-header-wrapper-col {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
-@media (min-width: 576px) {
-  div.header-col.profile-pic-col {
-    display: none;
+div.title-wrapper-row {
+  margin-bottom: 20px;
+}
+
+div.title-wrapper-col {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  div.title-wrapper-col {
+    text-align: center;
+  }
+}
+
+h2.title {
+  font-family: "Zilla Slab", serif;
+  font-kerning: normal;
+}
+
+img.profile-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  img.profile-pic {
+    width: 180px;
+    height: 180px;
   }
 }
 
 @media (min-width: 768px) {
-  div.header-col.profile-pic-col {
-    display: block;
-  }
-}
-
-/* Profile picture. Appears at the top of the page. */
-@media (max-width: 575px) {
   img.profile-pic {
-    width: 90vw;
-    height: 90vw;
-    margin-bottom: 5px;
-  }
-}
-
-@media (min-width: 768px) {
-  img.profile-pic {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 320px;
-    height: 320px;
+    width: 220px;
+    height: 220px;
   }
 }
 
 @media (min-width: 992px) {
   img.profile-pic {
-    width: 360px;
-    height: 360px;
+    width: 300px;
+    height: 300px;
   }
 }
 
 @media (min-width: 1200px) {
   img.profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
   }
 }
 
-/* Title in landing section. Appears with .profile-pic and .about. */
-h2.header {
-  font-family: "Zilla Slab", serif;
-  font-kerning: normal;
+@media (max-width: 575px) {
+  div.profile-pic-col {
+    display: none;
+  }
+  div.profile-pic-mobile-col {
+    display: none;
+  }
 }
 
-/* Project card wrapper wrapping .project-card. */
+@media (min-width: 576px) {
+  div.profile-pic-col {
+    display: none;
+  }
+  div.profile-pic-mobile-col {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  div.profile-pic-col {
+    display: block;
+  }
+  div.profile-pic-mobile-col {
+    display: none;
+  }
+}
+
+/* Variables */
+/* Mixins */
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  background: url("../assets/graphics/light.png");
+}
+
 div.project-card-wrapper {
   padding: 20px;
 }
 
-/* Project card div wrapping .project-card-img and .project-card-title. */
 div.project-card {
   padding: 20px;
 }
 
-/* Project card title. Appears below project-card-img. */
 h5.project-card-title {
   font-weight: bold;
 }
