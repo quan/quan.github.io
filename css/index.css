@@ -55,50 +55,48 @@ body {
   }
 }
 
-/* Profile picture. Appears at the top of the page. */
-img.profile-pic {
-  margin: 0 auto;
-}
-
-@media (max-width: 575px) {
-  img.profile-pic {
-    width: 100vw;
-    height: 100vw;
-  }
-}
-
-@media (max-width: 575px) {
-  img.profile-pic {
-    width: 100vw;
-    height: 100vw;
-  }
-}
-
 @media (min-width: 576px) {
+  div.header-col.profile-pic-col {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  div.header-col.profile-pic-col {
+    display: block;
+  }
+}
+
+/* Profile picture. Appears at the top of the page. */
+@media (max-width: 575px) {
   img.profile-pic {
-    width: 360px;
-    height: 360px;
+    width: 90vw;
+    height: 90vw;
+    margin-bottom: 5px;
   }
 }
 
 @media (min-width: 768px) {
   img.profile-pic {
-    width: 360px;
-    height: 360px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 320px;
   }
 }
 
 @media (min-width: 992px) {
   img.profile-pic {
-    width: 400px;
-    height: 400px;
+    width: 360px;
+    height: 360px;
   }
 }
 
 @media (min-width: 1200px) {
   img.profile-pic {
-    width: 420px;
-    height: 420px;
+    width: 400px;
+    height: 400px;
   }
 }
 

@@ -1,0 +1,16 @@
+@import "../modules/_base.scss";
+
+// Project card wrapper wrapping .project-card.
+div.project-card-wrapper {
+  padding: 20px;
+}
+
+// Project card div wrapping .project-card-img and .project-card-title.
+div.project-card {
+  padding: 20px;
+}
+
+// Project card title. Appears below project-card-img.
+h5.project-card-title {
+  font-weight: bold;
+}

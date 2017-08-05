@@ -1,0 +1,68 @@
+@import "../modules/_base.scss";
+
+// The top row of the page containing the profile.
+div.header-row {
+  @media (max-width: #{$sm-min - 1}) {
+    @include padding-vertical(0);
+  }
+
+  @media (min-width: #{$sm-min}) {
+    @include padding-vertical(20px);
+  }
+}
+
+// Each of the columns in the header section at the top of the page.
+div.header-col {
+  @media (max-width: #{$sm-min - 1}) {
+    @include padding-horizontal(0);
+  }
+
+  @media (min-width: #{$sm-min}) {
+    @include padding-horizontal(10px);
+  }
+
+  @media (min-width: #{$md-min}) {
+    @include padding-horizontal(20px);
+  }
+
+  @media (min-width: #{$lg-min}) {
+    @include padding-horizontal(30px);
+  }
+
+  @media (min-width: #{$xl-min}) {
+    @include padding-horizontal(40px);
+  }
+}
+
+// Profile picture. Appears at the top of the page.
+img.profile-pic {
+  @media (min-width: #{$md-min}) {
+    @include center-horizontally();
+    @include square-dimensions(320px);
+  }
+
+  @media (min-width: #{$lg-min}) {
+    @include square-dimensions(360px);
+  }
+
+  @media (min-width: #{$xl-min}) {
+    @include square-dimensions(400px);
+  }
+}
+
+// On small screens, display the title on its own row.
+@media (max-width: #{$md-min - 1}) {
+  img.profile-pic {
+
+  }
+
+
+  @include square-dimensions(90vw);
+  margin-bottom: 5px;
+}
+
+// Title in landing section. Appears with .profile-pic and .about.
+h2.header {
+  font-family: $slab-font-stack;
+  font-kerning: normal;
+}
