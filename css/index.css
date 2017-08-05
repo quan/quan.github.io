@@ -4,42 +4,101 @@ body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
 }
 
+/* The top row of the page containing the profile. */
+@media (max-width: 575px) {
+  div.header-row {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  div.header-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 /* Each of the columns in the header section at the top of the page. */
 @media (max-width: 575px) {
   div.header-col {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 @media (min-width: 576px) {
   div.header-col {
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
 @media (min-width: 768px) {
   div.header-col {
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: 992px) {
   div.header-col {
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
 @media (min-width: 1200px) {
   div.header-col {
-    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
 /* Profile picture. Appears at the top of the page. */
+img.profile-pic {
+  margin: 0 auto;
+}
+
 @media (max-width: 575px) {
   img.profile-pic {
     width: 100vw;
     height: 100vw;
+  }
+}
+
+@media (max-width: 575px) {
+  img.profile-pic {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+@media (min-width: 576px) {
+  img.profile-pic {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@media (min-width: 768px) {
+  img.profile-pic {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@media (min-width: 992px) {
+  img.profile-pic {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  img.profile-pic {
+    width: 420px;
+    height: 420px;
   }
 }
 

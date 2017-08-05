@@ -1,10 +1,10 @@
 const PROJECTS = [
   {
-    'title': 'Persona 5 Item Listings',
+    'title': 'Persona 5 Items',
     'url': 'https://quan.github.io/persona5-items/',
     'image': 'images/placeholder-square.jpg',
     'description': {
-      'short': 'A sleek tabular Persona 5 Item database.',
+      'short': 'A tabular Persona 5 item database.',
       'long': ''
     },
     'tech-stack': ''
@@ -67,7 +67,7 @@ const PROJECTS = [
     'url': 'https://quan.github.io/facebook-fakenews/main.pdf',
     'image': 'images/placeholder-square.jpg',
     'description': {
-      'short': 'A paper on the rise of fake news on Facebook.',
+      'short': 'A paper on fake news on Facebook.',
       'long': ''
     },
     'tech-stack': ''

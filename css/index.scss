@@ -6,6 +6,21 @@ $md-min: 768px;
 $lg-min: 992px;
 $xl-min: 1200px;
 
+@mixin square-dimensions($dimensions) {
+  width: $dimensions;
+  height: $dimensions;
+}
+
+@mixin padding-vertical($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin padding-horizontal($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -19,34 +34,63 @@ body {
   // font-size: 16px;
 }
 
-/* Each of the columns in the header section at the top of the page. */
-div.header-col {
+/* The top row of the page containing the profile. */
+div.header-row {
   @media (max-width: #{$sm-min - 1}) {
-    padding: 0;
+    @include padding-vertical(0);
   }
 
   @media (min-width: #{$sm-min}) {
-    padding: 10px;
+    @include padding-vertical(20px);
+  }
+}
+
+/* Each of the columns in the header section at the top of the page. */
+div.header-col {
+  @media (max-width: #{$sm-min - 1}) {
+    @include padding-horizontal(0);
+  }
+
+  @media (min-width: #{$sm-min}) {
+    @include padding-horizontal(10px);
   }
 
   @media (min-width: #{$md-min}) {
-    padding: 20px;
+    @include padding-horizontal(20px);
   }
 
   @media (min-width: #{$lg-min}) {
-    padding: 30px;
+    @include padding-horizontal(30px);
   }
 
   @media (min-width: #{$xl-min}) {
-    padding: 40px;
+    @include padding-horizontal(40px);
   }
 }
 
 /* Profile picture. Appears at the top of the page. */
 img.profile-pic {
+  // Center horizontally
+  margin: 0 auto;
+
   @media (max-width: #{$sm-min - 1}) {
     width: 100vw;
     height: 100vw;
+  }
+  @media (max-width: #{$sm-min - 1}) {
+    @include square-dimensions(100vw);
+  }
+  @media (min-width: #{$sm-min}) {
+    @include square-dimensions(360px);
+  }
+  @media (min-width: #{$md-min}) {
+    @include square-dimensions(360px);
+  }
+  @media (min-width: #{$lg-min}) {
+    @include square-dimensions(400px);
+  }
+  @media (min-width: #{$xl-min}) {
+    @include square-dimensions(420px);
   }
 }
 
