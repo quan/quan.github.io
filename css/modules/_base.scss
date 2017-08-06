@@ -10,6 +10,10 @@ $bg-color-light: #f4f4f4;
 $bg-image: $bg-image-light;
 $bg-color: $bg-color-light;
 
+// header/footer stuff
+$hf-color: rgb(47,69,84);
+$hf-border: dashed $bg-color 5px;
+
 // display size cutoffs
 $sm-min: 576px;
 $md-min: 768px;
@@ -26,16 +30,6 @@ $xl-min: 1200px;
 @mixin square-dimensions($dimensions) {
   width: $dimensions;
   height: $dimensions;
-}
-
-@mixin padding-vertical($padding) {
-  padding-top: $padding;
-  padding-bottom: $padding;
-}
-
-@mixin padding-horizontal($padding) {
-  padding-left: $padding;
-  padding-right: $padding;
 }
 
 /* Body */
