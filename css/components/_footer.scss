@@ -1,0 +1,23 @@
+div.footer {
+  margin-top: 32px;
+  @include padding-vertical(10px);
+
+  font-family: $slab-font-stack;
+  font-weight: 300;
+  color: $bg-color;
+
+  background-color: $hf-color;
+  border-top: $hf-border;
+}
+
+ul.footer-list {
+  @include margin-vertical(15px);
+
+  text-align: center;
+
+  list-style: none;
+}
+
+li.footer-list-item {
+  display: inline-block;
+}

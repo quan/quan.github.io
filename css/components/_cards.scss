@@ -30,11 +30,11 @@ a.project-img-wrapper {
 img.project-card-img {
   border-top: solid darken(white, 12.5%) 1px;
 
-  &.link:hover {
+  &:hover {
     cursor: pointer;
+    opacity: .8;
   }
 }
-
 
 // Project card title. Appears below project-card-img.
 h5.project-card-title {

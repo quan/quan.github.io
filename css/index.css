@@ -26,7 +26,7 @@ body {
             - p.about-me
  */
 div.jumbotron.jumbotron-header {
-  background-color: slategrey;
+  background-color: #2f4554;
   color: #f4f4f4;
   border-radius: 0;
   border-bottom: dashed #f4f4f4 5px;
@@ -113,13 +113,15 @@ img.profile-pic {
 
 @media (max-width: 767px) {
   img.profile-pic {
-    width: 180px;
-    height: 180px;
+    margin-top: 7px;
+    width: 200px;
+    height: 200px;
   }
 }
 
 @media (min-width: 768px) {
   img.profile-pic {
+    margin-top: 7px;
     width: 220px;
     height: 220px;
   }
@@ -127,6 +129,7 @@ img.profile-pic {
 
 @media (min-width: 992px) {
   img.profile-pic {
+    margin-top: 0;
     width: 300px;
     height: 300px;
   }
@@ -154,6 +157,15 @@ img.profile-pic {
   }
   div.profile-pic-mobile-col {
     display: block;
+  }
+  span.extra-text {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  span.extra-text {
+    display: inline;
   }
 }
 
@@ -190,11 +202,34 @@ img.project-card-img {
   border-top: solid #dfdfdf 1px;
 }
 
-img.project-card-img.link:hover {
+img.project-card-img:hover {
   cursor: pointer;
+  opacity: .8;
 }
 
 h5.project-card-title {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
+}
+
+div.footer {
+  margin-top: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #f4f4f4;
+  background-color: #2f4554;
+  border-top: dashed #f4f4f4 5px;
+}
+
+ul.footer-list {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  list-style: none;
+}
+
+li.footer-list-item {
+  display: inline-block;
 }

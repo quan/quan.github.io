@@ -16,16 +16,14 @@
             - p.about-me
  */
 
-$jumbotron-border: dashed $bg-color 5px;
-
 // The jumbotron section at the top of the page.
 div.jumbotron.jumbotron-header {
-  background-color: slategrey;
+  background-color: $hf-color;
   color: $bg-color;
 
   border-radius: 0;
-  border-bottom: $jumbotron-border;
-  border-top: $jumbotron-border;
+  border-bottom: $hf-border;
+  border-top: $hf-border;
 }
 
 // The top row of the page containing the profile.
@@ -88,7 +86,6 @@ a.github-link {
   }
 }
 
-
 /* Profile picture */
 
 // Two images exist at the top of the page that alternate visibility
@@ -97,18 +94,17 @@ img.profile-pic {
   @include center-horizontally();
 
   @media (max-width: #{$md-min - 1}) {
-    @include square-dimensions(180px);
+    margin-top: 7px;
+    @include square-dimensions(200px);
   }
 
-  //@media (min-width: #{$sm-min}) {
-  //  @include square-dimensions(180px);
-  //}
-
   @media (min-width: #{$md-min}) {
+    margin-top: 7px;
     @include square-dimensions(220px);
   }
 
   @media (min-width: #{$lg-min}) {
+    margin-top: 0;
     @include square-dimensions(300px);
   }
 
@@ -119,18 +115,40 @@ img.profile-pic {
 
 // Hide picture on smallest screens.
 @media (max-width: #{$sm-min - 1}) {
-  div.profile-pic-col { display: none; }
-  div.profile-pic-mobile-col { display: none; }
+  div.profile-pic-col {
+    display: none;
+  }
+  div.profile-pic-mobile-col {
+    display: none;
+  }
 }
 
 // Display the picture under the title, next to description on medium screens.
 @media (min-width: #{$sm-min}) {
-  div.profile-pic-col { display: none; }
-  div.profile-pic-mobile-col { display: block; }
+  div.profile-pic-col {
+    display: none;
+  }
+  div.profile-pic-mobile-col {
+    display: block;
+  }
+  // Hide a bit of text at this size. It's too long otherwise.
+  span.extra-text {
+    display: none;
+  }
+}
+
+@media (min-width: #{$md-min}) {
+  span.extra-text {
+    display: inline;
+  }
 }
 
 // Display the picture in its own top level column on large screens.
 @media (min-width: #{$lg-min}) {
-  div.profile-pic-col { display: block; }
-  div.profile-pic-mobile-col { display: none; }
+  div.profile-pic-col {
+    display: block;
+  }
+  div.profile-pic-mobile-col {
+    display: none;
+  }
 }
