@@ -16,29 +16,22 @@
             - p.about-me
  */
 
+$jumbotron-border: dashed $bg-color 5px;
+
 // The jumbotron section at the top of the page.
 div.jumbotron.jumbotron-header {
   background-color: slategrey;
-  color: white;
-  //background-color: #1d1e1f;
-  //color: #daeeff;
+  color: $bg-color;
 
-  border-bottom: dashed $bg-color 5px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 0;
+  border-bottom: $jumbotron-border;
+  border-top: $jumbotron-border;
 }
 
 // The top row of the page containing the profile.
 // Wraps two columns.
 div.top-header-wrapper-row {
   @include padding-vertical(10px);
-  //@media (max-width: #{$sm-min - 1}) {
-  //  @include padding-vertical(0);
-  //}
-  //
-  //@media (min-width: #{$sm-min}) {
-  //  @include padding-vertical(20px);
-  //}
 }
 
 // Each of the two main wrapping columns in the header section at the top of
@@ -80,7 +73,7 @@ div.title-wrapper-col {
 // Title in landing section. Appears with .profile-pic and .about.
 h2.title {
   font-family: $slab-font-stack;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 a.github-link {

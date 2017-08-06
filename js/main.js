@@ -8,7 +8,6 @@ function renderCard (project) {
   const description = project.description.short
   const image = project.image
   const url = project.url
-  const bgColor = project.backgroundColor
 
   // Create the title that appears within the card block.
   const $title = $('<h5>', {
@@ -24,54 +23,30 @@ function renderCard (project) {
     'text': description
   })
 
-  // Create some link. TODO
-  const $link = $('<a>', {
-    'class': 'btn btn-primary',
-    'href': url,
-    'text': 'Link'
-  })
-  // Create some other link. TODO
-  const $otherLink = $('<a>', {
-    'class': 'btn btn-primary',
-    'href': url,
-    'text': 'More'
-  })
-
   // Create the card block that appears below the image.
   const $block = $('<div>')
     .addClass('card-block')
     .append($title)
     .append($description)
-    // .append($link)
-    // .append($otherLink)
 
   // Create the image that appears at the top of the card.
   const $image = $('<img>', {
     'class': 'card-img-bottom project-card-img darken',
     'src': image,
     'alt': title
-  })
+  }).click(function () {
+    console.log(description)
+  }).addClass('link')
 
-  const $imageWrapper = $('<a>', {
-    'class': 'card-img-top',
-    'href': url
-  }).append($image)
-
-  // Compile the card and return.
-  return $('<div>')
+  const $card = $('<div>')
     .addClass('card project-card')
     .append($block)
     .append($image)
 
-}
-
-function loadProjects (projects) {
-  // For each link, find its corresponding node and render the html
-  for (var index in projects) {
-    const project = projects[index]
-    const id = '#item-' + index
-    $(id).append(renderCard(project))
-  }
+  // Compile the card wrapper and return.
+  return $('<div>')
+    .addClass('project-card-wrapper col-xl-4 col-sm-6')
+    .append($card)
 }
 
 /**
@@ -87,7 +62,13 @@ function resizeSquare ($elements) {
 }
 
 function main () {
-  loadProjects(PROJECTS)
+  // Load and render each project into the page.
+  const $projectContainer = $('div.project-list')
+
+  for (var index in PROJECTS) {
+    const project = PROJECTS[index]
+    $projectContainer.append(renderCard(project))
+  }
 
   var projectCardImages = $('img.project-card-img')
   resizeSquare(projectCardImages)

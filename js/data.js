@@ -39,15 +39,6 @@ const PROJECTS = [
     },
     'tech-stack': ''
   }, {
-    'title': 'slamrater.com',
-    'url': null,
-    'image': 'assets/images/slamrater.png',
-    'description': {
-      'short': 'Support the slams that support us!',
-      'long': ''
-    },
-    'tech-stack': ''
-  }, {
     'title': 'Cru',
     'url': null,
     'image': 'assets/images/cru.png',
@@ -57,11 +48,11 @@ const PROJECTS = [
     },
     'tech-stack': ''
   }, {
-    'title': 'AsterRide',
-    'url': 'https://www.asterride.com',
-    'image': 'assets/images/placeholder-square.jpg',
+    'title': 'slamrater.com',
+    'url': null,
+    'image': 'assets/images/slamrater.png',
     'description': {
-      'short': 'A luxury and taxi booking app.',
+      'short': 'Support the slams that support us!',
       'long': ''
     },
     'tech-stack': ''
