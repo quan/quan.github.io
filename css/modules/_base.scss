@@ -1,10 +1,14 @@
 /* Variables */
-$sans-serif-font-stack: 'Lato', Helvetica, Arial, sans-serif;
-$slab-font-stack: 'Zilla Slab', serif;
+$sans-serif-font-stack: 'Open Sans', Helvetica, Arial, sans-serif;
+$slab-font-stack: 'Roboto Slab', serif;
 
 // path relative to index.scss
-$background-img: url("../assets/graphics/light.png");
-//$background-img: url("../assets/graphics/dark.png");
+$bg-image-light: url("../assets/graphics/bg-light.png");
+$bg-color-light: #f4f4f4;
+//$bg-image-dark: url("../assets/graphics/bg-dark.png");
+
+$bg-image: $bg-image-light;
+$bg-color: $bg-color-light;
 
 // display size cutoffs
 $sm-min: 576px;
@@ -34,12 +38,6 @@ $xl-min: 1200px;
   padding-right: $padding;
 }
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
 /* Body */
 body {
   margin: 0;
@@ -47,5 +45,5 @@ body {
   font-family: $sans-serif-font-stack;
   // font-size: 16px;
 
-  background: $background-img;
+  background: $bg-color $bg-image repeat;
 }

@@ -11,47 +11,58 @@ function renderCard (project) {
   const bgColor = project.backgroundColor
 
   // Create the title that appears within the card block.
-  const $title = $('<h5>')
+  const $title = $('<h5>', {
+    'class': 'card-title project-card-title',
+    'text': title
+  })
     .addClass('card-title project-card-title')
     .text(title)
 
   // Create the description that appears within the card block.
-  const $description = $('<p>')
-    .addClass('card-text')
-    .text(description)
+  const $description = $('<p>', {
+    'class': 'card-text',
+    'text': description
+  })
 
   // Create some link. TODO
-  const $link = $('<a>')
-    .addClass('btn btn-primary')
-    .attr('href', url)
-    .text('Link')
-
+  const $link = $('<a>', {
+    'class': 'btn btn-primary',
+    'href': url,
+    'text': 'Link'
+  })
   // Create some other link. TODO
-  const $otherLink = $('<a>')
-    .addClass('btn btn-primary')
-    .attr('href', url)
-    .text('More')
+  const $otherLink = $('<a>', {
+    'class': 'btn btn-primary',
+    'href': url,
+    'text': 'More'
+  })
 
   // Create the card block that appears below the image.
   const $block = $('<div>')
     .addClass('card-block')
     .append($title)
     .append($description)
-    .append($link)
-    .append($otherLink)
+    // .append($link)
+    // .append($otherLink)
 
   // Create the image that appears at the top of the card.
   const $image = $('<img>', {
-    'class': 'card-img-top project-card-img darken',
+    'class': 'card-img-bottom project-card-img darken',
     'src': image,
     'alt': title
   })
 
+  const $imageWrapper = $('<a>', {
+    'class': 'card-img-top',
+    'href': url
+  }).append($image)
+
   // Compile the card and return.
   return $('<div>')
-    .addClass('card')
-    .append($image)
+    .addClass('card project-card')
     .append($block)
+    .append($image)
+
 }
 
 function loadProjects (projects) {

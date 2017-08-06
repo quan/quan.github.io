@@ -1,4 +1,13 @@
-@import "../modules/_base.scss";
+/*
+- div.project-card-wrapper
+  - div.card.project-card
+    - img.card-img-top.project-card-img
+    - div.card-block
+      - h5.card-title.project-card-title
+      - p.card-text
+      - a.btn.btn-primary
+      - a.btn.btn-primary
+ */
 
 // Project card wrapper wrapping .project-card.
 div.project-card-wrapper {
@@ -6,11 +15,18 @@ div.project-card-wrapper {
 }
 
 // Project card div wrapping .project-card-img and .project-card-title.
-div.project-card {
-  padding: 20px;
+div.card.project-card {
+
 }
+
+// The image displayed at the top of the card.
+img.project-card-img {
+  border-top: solid darken(white, 12.5%) 1px;
+}
+
 
 // Project card title. Appears below project-card-img.
 h5.project-card-title {
-  font-weight: bold;
+  font-family: $slab-font-stack;
+  font-weight: 400; // 400
 }

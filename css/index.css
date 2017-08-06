@@ -4,18 +4,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  background: url("../assets/graphics/light.png");
-}
-
-/* Variables */
-/* Mixins */
-/* Body */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  background: url("../assets/graphics/light.png");
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background: #f4f4f4 url("../assets/graphics/bg-light.png") repeat;
 }
 
 /*
@@ -36,9 +26,11 @@ body {
             - p.about-me
  */
 div.jumbotron.jumbotron-header {
-  background-color: dimgrey;
+  background-color: slategrey;
   color: white;
-  border-bottom: dashed black;
+  border-bottom: dashed #f4f4f4 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 div.top-header-wrapper-row {
@@ -96,10 +88,23 @@ div.title-wrapper-col {
 }
 
 h2.title {
-  font-family: "Zilla Slab", serif;
-  font-kerning: normal;
+  font-family: "Roboto Slab", serif;
+  font-weight: 100;
 }
 
+a.github-link {
+  color: powderblue;
+}
+
+a.github-link:visited {
+  color: powderblue;
+}
+
+a.github-link:hover {
+  color: deepskyblue;
+}
+
+/* Profile picture */
 img.profile-pic {
   display: block;
   margin-left: auto;
@@ -161,24 +166,25 @@ img.profile-pic {
   }
 }
 
-/* Variables */
-/* Mixins */
-/* Body */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  background: url("../assets/graphics/light.png");
-}
-
+/*
+- div.project-card-wrapper
+  - div.card.project-card
+    - img.card-img-top.project-card-img
+    - div.card-block
+      - h5.card-title.project-card-title
+      - p.card-text
+      - a.btn.btn-primary
+      - a.btn.btn-primary
+ */
 div.project-card-wrapper {
   padding: 20px;
 }
 
-div.project-card {
-  padding: 20px;
+img.project-card-img {
+  border-top: solid #dfdfdf 1px;
 }
 
 h5.project-card-title {
-  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
 }
