@@ -1,24 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="stylesheet" href="css/index.css" type="text/css" /> 
-        <title>quan.github.io</title>
-        <script src="js/index.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="info-container">
-                <h2 class="header">quan.github.io</h2>
-                <a class="github-link" href="https://github.com/quan">quan@github</a>
-            </div>
-            <hr class="vertical divider" />
-            <hr class="horizontal divider" />
-            <div class="list-container">
-                <ul id="project-list"></ul>
-            </div>
-            <div style="clear: both"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+  <title>quan@github</title>
+
+  <link rel="shortcut icon" href="assets/graphics/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300,400" rel="stylesheet">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+
+<header>
+  <div class="jumbotron jumbotron-header" id="top">
+    <div class="container">
+      <div class="row top-header-wrapper-row">
+        <!-- desktop profile pic -->
+        <div class="col top-header-wrapper-col profile-pic-col">
+          <img class="profile-pic square" src="assets/images/placeholder-square.jpg"/>
         </div>
-    </body>
+        <div class="col top-header-wrapper-col">
+          <div class="row title-wrapper-row">
+            <div class="col title-wrapper-col">
+              <!-- title and github link -->
+              <h2 class="title">quan.github.io</h2>
+              <a class="github-link" href="https://github.com/quan">quan@github</a>
+            </div>
+          </div>
+          <div class="row about-wrapper-row">
+            <!-- mobile profile pic -->
+            <div class="col profile-pic-mobile-col">
+              <img class="profile-pic square" src="assets/images/placeholder-square.jpg"/>
+            </div>
+            <div class="col text-box">
+              <!-- about -->
+              <div class="text-box">
+                <p class="about">Quan Tran is a computer nerd and avid curry consumer. He was also the kid whose Myspace profile read "music is my life."</p>
+                <p class="about">He is finishing up his B.S. in Software Engineering from Cal Poly, San Luis Obispo.
+                  <span class="extra-text">He prides himself in his love for learning and has spent his time coding outside of academia on web development, API construction, and avoiding Java.</span>
+                </p>
+                <!--<p class="about">He started his first software company, <em>Trendtech Ventures</em>, in 2012 and has since seen many more failures (and the occasional success).</p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="container project-container">
+    <h2 class="section-header">Projects</h2>
+    <div class="row project-list">
+      <!-- Persona 5 Items -->
+      <div class="card-wrapper col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">Persona 5 Items</h5>
+            <p class="card-text">A sleek, filterable tabular Persona 5 item database.</p>
+          </div>
+          <img class="card-img-bottom img-fluid card-img"
+               src="assets/images/persona5-items.png"
+               alt="" />
+        </div>
+      </div>
+
+      <!-- Madotsuki Walker -->
+      <div class="card-wrapper col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">Madotsuki Walker</h5>
+            <p class="card-text">An experiment in rendering top-down sprite movement in browser.</p>
+          </div>
+          <img class="card-img-bottom img-fluid card-img"
+               src="assets/images/madotsuki-walk.png"
+               alt="" />
+        </div>
+      </div>
+
+      <!-- Inkwell -->
+      <div class="card-wrapper col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">Inkwell</h5>
+            <p class="card-text">A draw and chat app available on iOS, Android, and Windows.</p>
+          </div>
+          <img class="card-img-bottom img-fluid card-img"
+               src="assets/images/inkwell.png"
+               alt="" />
+        </div>
+      </div>
+
+      <!-- PolyRents -->
+      <div class="card-wrapper col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">PolyRents</h5>
+            <p class="card-text">A paperless solution to renting.</p>
+          </div>
+          <img class="card-img-bottom card-img img-fluid"
+               src="assets/images/polyrents.png"
+               alt="" />
+        </div>
+      </div>
+
+      <!-- Cru -->
+      <div class="card-wrapper col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">Cru</h5>
+            <p class="card-text">A mobile app developed for Cru Central Coast.</p>
+          </div>
+          <img class="card-img-bottom img-fluid card-img"
+               src="assets/images/cru.png"
+               alt="" />
+        </div>
+      </div>
+
+      <!-- slamrater.com -->
+      <div class="card-wrapper col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">slamrater.com</h5>
+            <p class="card-text">A university Greek life website for sharing images.</p>
+          </div>
+          <img class="card-img-bottom img-fluid card-img"
+               src="assets/images/slamrater.png"
+               alt="" />
+        </div>
+      </div>
+
+      <!-- Facebook vs. Fake News -->
+      <div class="card-wrapper col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h5 class="card-title">Facebook vs. Fake News</h5>
+            <p class="card-text">An ethical analysis of Facebook's response to false news.</p>
+          </div>
+          <img class="card-img-bottom img-fluid card-img"
+               src="assets/images/facebook-vs-fake-news.png"
+               alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container-fluid footer">
+    <ul class="footer-list">
+      <li class="footer-list-item">
+        <a class="footer-list-anchor" href="#">Top</a>
+      </li>
+      <li class="footer-list-divider">|</li>
+      <li class="footer-list-item">
+        <a class="footer-list-anchor" href="mailto:tranmqt@gmail.com">Email</a>
+      </li>
+      <!--<li class="footer-list-divider">|</li>-->
+      <!--<li class="footer-list-item">-->
+        <!--<a class="footer-list-anchor" href="">Something</a>-->
+      <!--</li>-->
+    </ul>
+  </div>
+</footer>
+
+
+<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"-->
+        <!--integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="-->
+        <!--crossorigin="anonymous"></script>-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>

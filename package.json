@@ -1,0 +1,23 @@
+{
+  "name": "quan.github.io",
+  "author": "quan",
+  "version": "2.0.0",
+  "description": "A static personal web page.",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "node-sass --output-style expanded css/index.scss > css/index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quan/quan.github.io.git"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/quan/quan.github.io/issues"
+  },
+  "homepage": "https://github.com/quan/quan.github.io",
+  "devDependencies": {
+    "standard": "^10.0.2"
+  }
+}

@@ -1,0 +1,52 @@
+/* Variables */
+$sans-serif-font-stack: 'Open Sans', Helvetica, Arial, sans-serif;
+$slab-font-stack: 'Roboto Slab', serif;
+
+// path relative to index.scss
+$bg-image-light: url("../assets/graphics/bg-light.png");
+$bg-color-light: #f4f4f4;
+//$bg-image-dark: url("../assets/graphics/bg-dark.png");
+
+$bg-image: $bg-image-light;
+$bg-color: $bg-color-light;
+
+// header/footer stuff
+$hf-color: rgb(47,69,84);
+$hf-border: 5px dashed $bg-color;
+
+// link colors
+$link-color: powderblue;
+$link-color-hover: deepskyblue;
+
+// display size cutoffs
+$sm-min: 576px;
+$md-min: 768px;
+$lg-min: 992px;
+$xl-min: 1200px;
+
+/* Mixins */
+@mixin center-horizontally() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin square-dimensions($dimensions) {
+  width: $dimensions;
+  height: $dimensions;
+}
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $sans-serif-font-stack;
+  // font-size: 16px;
+
+  background: $bg-color $bg-image repeat;
+}
+
+// To make loading seem smoother.
+div.project-container {
+  min-height: calc(100vh - 320px);
+}

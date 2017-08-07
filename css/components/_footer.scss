@@ -1,0 +1,40 @@
+div.footer {
+  margin-top: 32px;
+  @include padding-vertical(10px);
+
+  font-family: $slab-font-stack;
+  font-weight: 300;
+  color: $bg-color;
+
+  background-color: $hf-color;
+  border-top: $hf-border;
+}
+
+ul.footer-list {
+  @include margin-vertical(15px);
+  padding-left: 0;
+
+  text-align: center;
+
+  list-style: none;
+}
+
+li.footer-list-item, li.footer-list-divider {
+  display: inline-block;
+}
+
+li.footer-list-divider {
+  @include margin-horizontal(10px);
+}
+
+a.footer-list-anchor {
+  color: $link-color;
+
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
