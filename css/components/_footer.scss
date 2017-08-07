@@ -18,6 +18,22 @@ ul.footer-list {
   list-style: none;
 }
 
-li.footer-list-item {
+li.footer-list-item, li.footer-list-divider {
   display: inline-block;
+}
+
+li.footer-list-divider {
+  @include margin-horizontal(10px);
+}
+
+a.footer-list-anchor {
+  color: $link-color;
+
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+  }
 }

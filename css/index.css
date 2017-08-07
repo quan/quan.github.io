@@ -8,6 +8,10 @@ body {
   background: #f4f4f4 url("../assets/graphics/bg-light.png") repeat;
 }
 
+div.project-container {
+  min-height: calc(100vh - 320px);
+}
+
 /*
 - div.jumbotron
   - div.container
@@ -29,8 +33,8 @@ div.jumbotron.jumbotron-header {
   background-color: #2f4554;
   color: #f4f4f4;
   border-radius: 0;
-  border-bottom: dashed #f4f4f4 5px;
-  border-top: dashed #f4f4f4 5px;
+  border-bottom: 5px dashed #f4f4f4;
+  border-top: 5px dashed #f4f4f4;
 }
 
 div.top-header-wrapper-row {
@@ -179,35 +183,29 @@ img.profile-pic {
 }
 
 /*
-- div.project-card-wrapper
-  - div.card.project-card
-    - img.card-img-top.project-card-img
+- div.card-wrapper
+  - div.card.card
+    - img.card-img-top.card-img
     - div.card-block
-      - h5.card-title.project-card-title
+      - h5.card-title.card-title
       - p.card-text
       - a.btn.btn-primary
       - a.btn.btn-primary
  */
-div.project-card-wrapper {
-  padding: 20px;
+div.card-wrapper {
+  padding: 24px;
 }
 
-a.project-img-wrapper {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-img.project-card-img {
+img.card-img {
   border-top: solid #dfdfdf 1px;
 }
 
-img.project-card-img:hover {
+img.card-img:hover {
   cursor: pointer;
   opacity: .8;
 }
 
-h5.project-card-title {
+h5.card-title {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
 }
@@ -220,7 +218,7 @@ div.footer {
   font-weight: 300;
   color: #f4f4f4;
   background-color: #2f4554;
-  border-top: dashed #f4f4f4 5px;
+  border-top: 5px dashed #f4f4f4;
 }
 
 ul.footer-list {
@@ -230,6 +228,23 @@ ul.footer-list {
   list-style: none;
 }
 
-li.footer-list-item {
+li.footer-list-item, li.footer-list-divider {
   display: inline-block;
+}
+
+li.footer-list-divider {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+a.footer-list-anchor {
+  color: powderblue;
+}
+
+a.footer-list-anchor:visited {
+  color: powderblue;
+}
+
+a.footer-list-anchor:hover {
+  color: deepskyblue;
 }

@@ -12,7 +12,11 @@ $bg-color: $bg-color-light;
 
 // header/footer stuff
 $hf-color: rgb(47,69,84);
-$hf-border: dashed $bg-color 5px;
+$hf-border: 5px dashed $bg-color;
+
+// link colors
+$link-color: powderblue;
+$link-color-hover: deepskyblue;
 
 // display size cutoffs
 $sm-min: 576px;
@@ -40,4 +44,9 @@ body {
   // font-size: 16px;
 
   background: $bg-color $bg-image repeat;
+}
+
+// To make loading seem smoother.
+div.project-container {
+  min-height: calc(100vh - 320px);
 }

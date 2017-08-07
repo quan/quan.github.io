@@ -1,33 +1,29 @@
 /*
-- div.project-card-wrapper
-  - div.card.project-card
-    - img.card-img-top.project-card-img
+- div.card-wrapper
+  - div.card.card
+    - img.card-img-top.card-img
     - div.card-block
-      - h5.card-title.project-card-title
+      - h5.card-title.card-title
       - p.card-text
       - a.btn.btn-primary
       - a.btn.btn-primary
  */
 
-// Project card wrapper wrapping .project-card.
-div.project-card-wrapper {
-  padding: 20px;
+// Project card wrapper wrapping .card.
+div.card-wrapper {
+  padding: 24px;
 }
 
-// Project card div wrapping .project-card-img and .project-card-title.
-div.card.project-card {
-
-}
-
-// Hyperlink anchor wrapping a project card image.
-a.project-img-wrapper {
-  display: block;
-  width: 100%;
-  height: 100%;
+// Project card div wrapping .card-img and .card-title.
+div.card {
+  //-webkit-border-radius: 0;
+  //-moz-border-radius: 0;
+  //border-radius: 0;
+  //border: 3px dashed $hf-color;
 }
 
 // The image displayed at the top of the card.
-img.project-card-img {
+img.card-img {
   border-top: solid darken(white, 12.5%) 1px;
 
   &:hover {
@@ -36,8 +32,8 @@ img.project-card-img {
   }
 }
 
-// Project card title. Appears below project-card-img.
-h5.project-card-title {
+// Project card title. Appears below card-img.
+h5.card-title {
   font-family: $slab-font-stack;
   font-weight: 400;
 }

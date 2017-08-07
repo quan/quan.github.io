@@ -75,14 +75,14 @@ h2.title {
 }
 
 a.github-link {
-  color: powderblue;
-  // Don't change color after visiting.
+  color: $link-color;
+
   &:visited {
-    color: powderblue;
+    color: $link-color;
   }
 
   &:hover {
-    color: deepskyblue;
+    color: $link-color-hover;
   }
 }
 
