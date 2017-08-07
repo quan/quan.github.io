@@ -12,6 +12,7 @@ div.footer {
 
 ul.footer-list {
   @include margin-vertical(15px);
+  padding-left: 0;
 
   text-align: center;
 

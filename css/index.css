@@ -27,7 +27,7 @@ div.project-container {
           - div.profile-pic-mobile-col
             - img.profile-pic.square
            - div.text-box
-            - p.about-me
+            - p.about
  */
 div.jumbotron.jumbotron-header {
   background-color: #2f4554;
@@ -117,7 +117,7 @@ img.profile-pic {
 
 @media (max-width: 767px) {
   img.profile-pic {
-    margin-top: 7px;
+    margin-top: -6px;
     width: 200px;
     height: 200px;
   }
@@ -125,7 +125,7 @@ img.profile-pic {
 
 @media (min-width: 768px) {
   img.profile-pic {
-    margin-top: 7px;
+    margin-top: 6px;
     width: 220px;
     height: 220px;
   }
@@ -133,7 +133,6 @@ img.profile-pic {
 
 @media (min-width: 992px) {
   img.profile-pic {
-    margin-top: 0;
     width: 300px;
     height: 300px;
   }
@@ -162,12 +161,15 @@ img.profile-pic {
   div.profile-pic-mobile-col {
     display: block;
   }
-  span.extra-text {
+  .extra-text {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
+  p.extra-text {
+    display: block;
+  }
   span.extra-text {
     display: inline;
   }
@@ -182,7 +184,11 @@ img.profile-pic {
   }
 }
 
-/*
+h2.section-header {
+  font-family: "Roboto Slab", serif;
+}
+
+/* card tree
 - div.card-wrapper
   - div.card.card
     - img.card-img-top.card-img
@@ -224,6 +230,7 @@ div.footer {
 ul.footer-list {
   margin-top: 15px;
   margin-bottom: 15px;
+  padding-left: 0;
   text-align: center;
   list-style: none;
 }

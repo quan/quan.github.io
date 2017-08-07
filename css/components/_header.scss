@@ -13,7 +13,7 @@
           - div.profile-pic-mobile-col
             - img.profile-pic.square
            - div.text-box
-            - p.about-me
+            - p.about
  */
 
 // The jumbotron section at the top of the page.
@@ -68,7 +68,7 @@ div.title-wrapper-col {
   }
 }
 
-// Title in landing section. Appears with .profile-pic and .about.
+// Title in landing section. Appears with a.github-link.
 h2.title {
   font-family: $slab-font-stack;
   font-weight: 300;
@@ -94,17 +94,16 @@ img.profile-pic {
   @include center-horizontally();
 
   @media (max-width: #{$md-min - 1}) {
-    margin-top: 7px;
+    margin-top: -6px;
     @include square-dimensions(200px);
   }
 
   @media (min-width: #{$md-min}) {
-    margin-top: 7px;
+    margin-top: 6px;
     @include square-dimensions(220px);
   }
 
   @media (min-width: #{$lg-min}) {
-    margin-top: 0;
     @include square-dimensions(300px);
   }
 
@@ -132,12 +131,16 @@ img.profile-pic {
     display: block;
   }
   // Hide a bit of text at this size. It's too long otherwise.
-  span.extra-text {
+  .extra-text {
     display: none;
   }
 }
 
 @media (min-width: #{$md-min}) {
+  p.extra-text {
+    display: block;
+  }
+
   span.extra-text {
     display: inline;
   }
