@@ -94,20 +94,22 @@ img.profile-pic {
   @include center-horizontally();
 
   @media (max-width: #{$md-min - 1}) {
-    margin-top: -6px;
+    margin-top: 15px;
     @include square-dimensions(200px);
   }
 
   @media (min-width: #{$md-min}) {
-    margin-top: 6px;
+    margin-top: 5px;
     @include square-dimensions(220px);
   }
 
   @media (min-width: #{$lg-min}) {
+    margin-top: 10px;
     @include square-dimensions(300px);
   }
 
   @media (min-width: #{$xl-min}) {
+    margin-top: 0px;
     @include square-dimensions(300px);
   }
 }
@@ -134,6 +136,15 @@ img.profile-pic {
   .extra-text {
     display: none;
   }
+
+  // Show replacement text.
+  p.extra-text-replacement {
+    display: block;
+  }
+
+  span.extra-text-replacement {
+    display: inline;
+  }
 }
 
 @media (min-width: #{$md-min}) {
@@ -143,6 +154,10 @@ img.profile-pic {
 
   span.extra-text {
     display: inline;
+  }
+
+  span.extra-text-replacement {
+    display: none;
   }
 }
 

@@ -117,7 +117,7 @@ img.profile-pic {
 
 @media (max-width: 767px) {
   img.profile-pic {
-    margin-top: -6px;
+    margin-top: 15px;
     width: 200px;
     height: 200px;
   }
@@ -125,7 +125,7 @@ img.profile-pic {
 
 @media (min-width: 768px) {
   img.profile-pic {
-    margin-top: 6px;
+    margin-top: 5px;
     width: 220px;
     height: 220px;
   }
@@ -133,6 +133,7 @@ img.profile-pic {
 
 @media (min-width: 992px) {
   img.profile-pic {
+    margin-top: 10px;
     width: 300px;
     height: 300px;
   }
@@ -140,6 +141,7 @@ img.profile-pic {
 
 @media (min-width: 1200px) {
   img.profile-pic {
+    margin-top: 0px;
     width: 300px;
     height: 300px;
   }
@@ -164,6 +166,12 @@ img.profile-pic {
   .extra-text {
     display: none;
   }
+  p.extra-text-replacement {
+    display: block;
+  }
+  span.extra-text-replacement {
+    display: inline;
+  }
 }
 
 @media (min-width: 768px) {
@@ -172,6 +180,9 @@ img.profile-pic {
   }
   span.extra-text {
     display: inline;
+  }
+  span.extra-text-replacement {
+    display: none;
   }
 }
 
