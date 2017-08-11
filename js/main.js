@@ -1,23 +1,5 @@
 (function () {
   /**
-   * Show the full details for the given project.
-   * @param {object} project The project to display.
-   */
-  function showProjectDetails (project) {
-    console.log('yes: ' + project.url)
-    window.location = project.url
-  }
-
-  /**
-   * Hide the full details for the given project.
-   * @param {object} project The project to hide.
-   */
-  function hideProjectDetails (project) {
-    console.log('no')
-  }
-
-
-  /**
    * Sets the height of each of the si
    * @param {jQuery} $elements - The element(s) to resize.
    */
