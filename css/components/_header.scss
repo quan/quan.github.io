@@ -36,23 +36,23 @@ div.top-header-wrapper-row {
 // the page. The right column wraps two rows.
 div.top-header-wrapper-col {
   @media (max-width: #{$sm-min - 1}) {
-    @include padding-horizontal(0);
-  }
-
-  @media (min-width: #{$sm-min}) {
     @include padding-horizontal(10px);
   }
 
-  @media (min-width: #{$md-min}) {
+  @media (min-width: #{$sm-min}) {
     @include padding-horizontal(20px);
   }
 
-  @media (min-width: #{$lg-min}) {
+  @media (min-width: #{$md-min}) {
     @include padding-horizontal(30px);
   }
 
+  @media (min-width: #{$lg-min}) {
+    @include padding-horizontal(80px);
+  }
+
   @media (min-width: #{$xl-min}) {
-    @include padding-horizontal(40px);
+    @include padding-horizontal(160px);
   }
 }
 
@@ -132,6 +132,9 @@ img.profile-pic {
   div.profile-pic-mobile-col {
     display: block;
   }
+}
+
+@media (max-width: #{$md-min - 1}) {
   // Hide a bit of text at this size. It's too long otherwise.
   .extra-text {
     display: none;

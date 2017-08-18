@@ -44,36 +44,36 @@ div.top-header-wrapper-row {
 
 @media (max-width: 575px) {
   div.top-header-wrapper-col {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (min-width: 576px) {
-  div.top-header-wrapper-col {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   div.top-header-wrapper-col {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   div.top-header-wrapper-col {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
+@media (min-width: 992px) {
+  div.top-header-wrapper-col {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
 @media (min-width: 1200px) {
   div.top-header-wrapper-col {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 
@@ -163,6 +163,9 @@ img.profile-pic {
   div.profile-pic-mobile-col {
     display: block;
   }
+}
+
+@media (max-width: 767px) {
   .extra-text {
     display: none;
   }
