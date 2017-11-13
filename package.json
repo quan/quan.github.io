@@ -1,7 +1,7 @@
 {
   "name": "quan.github.io",
   "author": "quan",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "description": "A static personal web page.",
   "main": "index.html",
   "scripts": {
