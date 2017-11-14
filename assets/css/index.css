@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  background: #f4f4f4 url("../assets/graphics/bg-light.png") repeat;
+  background: #f4f4f4 url("../graphics/bg-light.png") repeat;
 }
 
 div.project-container {
@@ -22,7 +22,7 @@ div.project-container {
         - div.title-wrapper-row
           - div.title-wrapper-col
             - h2.title
-            - a.github-link
+            - h6 a.github-link
         - div.about-wrapper-row
           - div.profile-pic-mobile-col
             - img.profile-pic.square
@@ -78,7 +78,7 @@ div.top-header-wrapper-row {
 }
 
 div.title-wrapper-row {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 div.title-wrapper-col {
@@ -94,17 +94,22 @@ div.title-wrapper-col {
 h2.title {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
+  margin-bottom: 10px;
 }
 
-a.github-link {
+h6.outgoing-link {
+  font-size: .95rem;
+}
+
+h6.outgoing-link a {
   color: powderblue;
 }
 
-a.github-link:visited {
+h6.outgoing-link a:visited {
   color: powderblue;
 }
 
-a.github-link:hover {
+h6.outgoing-link a:hover {
   color: deepskyblue;
 }
 
