@@ -1,0 +1,79 @@
+$nav-menu-width: 200px;
+$nav-menu-content-height: 80vh;
+$nav-menu-skew-width: 160px;
+$nav-menu-skew-height: 1024px;
+
+$nav-menu-bg-color: #EE9B00;
+$nav-menu-accent-color: #D25A1E;
+
+
+header.nav-menu-header {
+  @media screen and (max-width: #{$mobile-cutoff-width}) {
+    display: none;
+  }
+  @media screen and (min-width: #{$mobile-cutoff-width + 1}) {
+    display: block;
+  }
+
+  width: $nav-menu-width;
+  height: $nav-menu-content-height;
+  padding: calc((100vh - #{$nav-menu-content-height}) / 2) 0;
+  overflow: hidden;
+  background-color: $nav-menu-bg-color;
+
+  ul.nav-menu {
+    position: absolute;
+    left: calc(145px - 14vh);
+    bottom: 10%;
+    z-index: 10;
+  }
+
+  li.nav-menu-item {
+    margin: 5% 0;
+    font-size: 150%;
+    font-weight: 500;
+    text-align: right;
+
+    @include navigation-link();
+
+    /* Keeps the iems along an angle. */
+    &.menu-item-0 {
+      padding-right: 0;
+    }
+    &.menu-item-1 {
+      padding-right: 8px;
+    }
+    &.menu-item-2 {
+      padding-right: 16px;
+    }
+    &.menu-item-3 {
+      padding-right: 24px;
+    }
+  }
+
+  // Skewed sections.
+  &::before, &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 0;
+    height: 0;
+  }
+
+  // Inner layer on top of the header.
+  &::before {
+    $-inner-multiplier: .4;
+    $-skew-height: $-inner-multiplier * $nav-menu-skew-height;
+    $-skew-width: $-inner-multiplier * $nav-menu-skew-width;
+    left: 0;
+    border-top: $-skew-height solid $nav-menu-accent-color;
+    border-right: $-skew-width solid transparent;
+  }
+
+  // Outer section, protruding from the header.
+  &::after {
+    left: $nav-menu-width;
+    border-top: $nav-menu-skew-height solid $nav-menu-bg-color;
+    border-right: $nav-menu-skew-width solid transparent;
+  }
+}
