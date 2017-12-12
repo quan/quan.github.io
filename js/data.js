@@ -1,5 +1,11 @@
 const PROJECTS = [
   {
+    "title": 'jsish',
+    'url': null,
+    'image': null,
+    'description': ''
+  },
+  {
     'title': 'Persona 5 Items',
     'url': 'https://quan.github.io/persona5-items/',
     'image': 'assets/images/persona5-items.png',
