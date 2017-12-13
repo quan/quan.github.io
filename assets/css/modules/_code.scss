@@ -1,0 +1,30 @@
+$code-constructor-color: #336666;
+$code-string-color: #006600;
+$code-punctuation-color: #ff3333;
+$code-function-color: #660099;
+
+code {
+  // font-family: 'Cousine';
+  font-family: 'Roboto Mono';
+  font-size: 1em;
+}
+
+span.c-constr {
+  color: $code-constructor-color;
+}
+
+span.c-string {
+  color: $code-string-color;
+}
+
+span.c-punc {
+  color: $code-punctuation-color;
+}
+
+span.c-func {
+  color: $code-function-color;
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

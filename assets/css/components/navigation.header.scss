@@ -1,0 +1,13 @@
+$nav-menu-min-cutoff-width: 320px; // This is the width of the iPhone 5s.
+
+$nav-menu-content-height: 80vh;
+$nav-menu-width: 150px;
+$nav-menu-skew-width: 160px;
+$nav-menu-skew-height: 1024px;
+$nav-menu-bg-color: #EE9B00;
+$nav-menu-accent-color: #D25A1E;
+$nav-menu-skew-offset: 7px;
+
+@import "navigation/header-menu";
+@import "navigation/mobile-menu";
+@import "navigation/mobile-menu-button";

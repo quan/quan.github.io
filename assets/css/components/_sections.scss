@@ -1,43 +1,56 @@
-h2.section-header {
-  font-family: $slab-font-stack;
+$lang-list-item-spacing: 20px;
+$lang-list-inset: 1em;
+
+$about-code-padding: 50px;
+
+section.large-section {
+  min-height: 100vh;
 }
 
-/* card tree
-- div.card-wrapper
-  - div.card.card
-    - img.card-img-top.card-img
-    - div.card-block
-      - h5.card-title.card-title
-      - p.card-text
-      - a.btn.btn-primary
-      - a.btn.btn-primary
- */
-
-// Project card wrapper wrapping .card.
-div.card-wrapper {
-  padding: 24px;
-}
-
-// Project card div wrapping .card-img and .card-title.
-div.card {
-  //-webkit-border-radius: 0;
-  //-moz-border-radius: 0;
-  //border-radius: 0;
-  //border: 3px dashed $hf-color;
-}
-
-// The image displayed at the top of the card.
-img.card-img {
-  border-top: solid darken(white, 12.5%) 1px;
-
-  &:hover {
-    cursor: pointer;
-    opacity: .8;
+section#about {
+  ul.about-lang-opt-list {
+    list-style: none;
+    position: absolute;
+    right: $lang-list-inset;
+    top: $lang-list-inset;
   }
-}
 
-// Project card title. Appears below card-img.
-h5.card-title {
-  font-family: $slab-font-stack;
-  font-weight: 400;
+  li.about-lang-opt-item {
+    float: left;
+
+    margin-right: $lang-list-item-spacing;
+
+    text-transform: uppercase;
+    // font-family: 'Lato';
+    font-family: 'Roboto Slab';
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: .1em;
+
+    a {
+      color: black;
+      
+      &:visited {
+        color: black;
+      }
+
+      &:hover {
+        color: #CC6666;
+      }
+    }
+
+    &[data-selected="true"] a {
+      color: #993333;
+
+      &:hover {
+        color: #CC6666;
+      }
+    }
+  }
+
+  // See code.scss for colors.
+  div.code-wrapper {
+    padding: 20px $about-code-padding 0;
+    clear: both;
+  }
 }

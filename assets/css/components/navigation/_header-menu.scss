@@ -1,60 +1,54 @@
+$query-under-max-header-height: "screen and (max-height: #{$nav-menu-skew-height})";
+$query-over-max-header-height: "screen and (min-height: #{$nav-menu-skew-height + 1})";
+
 header#nav-menu-header {
-  @media screen and (max-width: #{$mobile-cutoff-width}) {
+  @media #{$query-mobile} {
     display: none;
   }
-  @media screen and (min-width: #{$mobile-cutoff-width + 1}) {
+  @media #{$query-desktop} {
     display: block;
   }
-
-  @media screen and (max-height: #{$nav-menu-skew-height}) {
+  @media #{$query-under-max-header-height} {
     width: $nav-menu-width;
   }
-  @media screen and (min-height: #{$nav-menu-skew-height + 1}) {
+  @media #{$query-over-max-header-height} {
     width: $nav-menu-width * 2;
   }
-
   position: fixed;
   top: 0;
   left: 0;
   height: $nav-menu-content-height;
   padding: calc((100vh - #{$nav-menu-content-height}) / 2) 0;
-  // overflow-y: hidden;
-  background-color: $nav-menu-bg-color;
+  background-color: $theme-color;
 
   ul.nav-menu {
     margin: 0;
-
     position: absolute;
     bottom: 9%;
-
-    @media screen and (max-height: #{$nav-menu-skew-height}) {
+    @media #{$query-under-max-header-height} {
       left: calc(#{$nav-menu-width} - 50px - 14vh);
     }
-    @media screen and (min-height: #{$nav-menu-skew-height + 1}) {
+    @media #{$query-over-max-header-height} {
       left: calc(#{$nav-menu-width} * 2 - 50px - 14vh);
     }
-
     z-index: 10;
   }
 
   li.nav-menu-item {
     margin: 7% 0;
-
     font-size: 1.5em;
     font-weight: 500;
     text-align: right;
     z-index: 10;
-
     @include navigation-link();
-
     /* Keeps the nav menu iems along an angle. */
-    @media screen and (max-height: #{$nav-menu-skew-height}) {
+    @media #{$query-under-max-header-height} {
       &.menu-item-0 { padding-right: 0; }
       &.menu-item-1 { padding-right: $nav-menu-skew-offset; }
       &.menu-item-2 { padding-right: $nav-menu-skew-offset * 2; }
       &.menu-item-3 { padding-right: $nav-menu-skew-offset * 3; }
     }
-    @media screen and (min-height: #{$nav-menu-skew-height + 1}) {
+    @media #{$query-over-max-header-height} {
       &.menu-item-0 { padding-right: 0; }
       &.menu-item-1 { padding-right: $nav-menu-skew-offset * 2; }
       &.menu-item-2 { padding-right: $nav-menu-skew-offset * 4; }
@@ -66,7 +60,7 @@ header#nav-menu-header {
     
   }
 
-  // Skewed sections.
+  // Bezel slices.
   &::before, &::after {
     content: '';
     position: fixed;
@@ -76,34 +70,31 @@ header#nav-menu-header {
     z-index: 1;
   }
 
-  // Inner layer on top of the header.
+  // Inner slice layered on top of the header.
   &::before {
-    $-inner-multiplier: .4;
     left: 0;
-
-    @media screen and (max-height: #{$nav-menu-skew-height}) {
+    $-inner-multiplier: .4;
+    @media #{$query-under-max-header-height} {
       border-right: ($-inner-multiplier * $nav-menu-skew-width) solid transparent;
-      border-top: ($-inner-multiplier * $nav-menu-skew-height)solid $nav-menu-accent-color;
+      border-top: ($-inner-multiplier * $nav-menu-skew-height)solid $accent-color;
     }
-    // Adjust the skew width for screens taller than 1024px. Or zoom.
-    @media screen and (min-height: #{$nav-menu-skew-height} + 1) {
+    @media #{$query-over-max-header-height} {
       border-right: ($-inner-multiplier * $nav-menu-skew-width * 2) solid transparent;
-      border-top: calc(#{$-inner-multiplier} * 100vh) solid $nav-menu-accent-color;
+      border-top: calc(#{$-inner-multiplier} * 100vh) solid $accent-color;
     }
   }
 
-  // Outer section, protruding from the header.
+  // Outer slice protruding from the header.
   &::after {
-    @media screen and (max-height: #{$nav-menu-skew-height}) {
+    @media #{$query-under-max-header-height} {
       left: $nav-menu-width;
       border-right: $nav-menu-skew-width solid transparent;
-      border-top: $nav-menu-skew-height solid $nav-menu-bg-color;
+      border-top: $nav-menu-skew-height solid $theme-color;
     }
-    // Adjust the skew width for screens taller than 1024px. Or zoom.
-    @media screen and (min-height: #{$nav-menu-skew-height} + 1) {
+    @media #{$query-over-max-header-height} {
       left: $nav-menu-width * 2;
       border-right: ($nav-menu-skew-width * 2) solid transparent;
-      border-top: 100vh solid $nav-menu-bg-color;
+      border-top: 100vh solid $theme-color;
     }
   }
 }

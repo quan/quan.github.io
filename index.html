@@ -1,238 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-
-  <title>quan@github</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">">
+  <meta name="theme-color" content="#000000">
 
   <link rel="shortcut icon" href="assets/graphics/favicon.ico">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500|Roboto+Slab:100,300,400|Roboto+Mono:100,300,400,500">
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/index.css"/>
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <script src="js/MobileNavigationMenu.js"></script>
 
-  ga('create', 'UA-103252792-2', 'auto');
-  ga('send', 'pageview');
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-103252792-2', 'auto'); ga('send', 'pageview');
 </script>
+
+  <title>quan@github</title>
+  <style>
+    body {
+      background: #f3f3f3;
+    }
+  </style>
 </head>
 <body>
-
-<header>
-  <div class="jumbotron jumbotron-header" id="top">
-    <div class="container">
-      <div class="row top-header-wrapper-row">
-        <!-- large display profile pic -->
-        <div class="col top-header-wrapper-col profile-pic-col">
-          <img class="profile-pic square" src="assets/images/placeholder-square.jpg"/>
-        </div>
-        <div class="col top-header-wrapper-col">
-          <div class="row title-wrapper-row">
-            <div class="col title-wrapper-col">
-              <!-- title and github link -->
-              <h2 class="title">quan.github.io</h2>
-              <h6 class="outgoing-link">
-                <a href="https://www.github.com/quan">quan@github</a> 
-                •
-                <a href="https://www.linkedin.com/in/quantrantheory">quan@linkedin</a></h6>
-            </div>
-          </div>
-          <div class="row about-wrapper-row">
-            <!-- small display profile pic -->
-            <div class="col profile-pic-mobile-col">
-              <img class="profile-pic square" src="assets/images/placeholder-square.jpg"/>
-            </div>
-            <div class="col text-box">
-              <!-- about -->
-              <div class="text-box">
-                <p class="about">
-                  I'm a computer nerd/curry enthusiast finishing up my B.S. in Software Engineering from Cal Poly.
-                </p>
-                <p class="about">My academic interests lie in programming languages, natural language processing, and functional programming. Outside of academia, my coding time has been spent mostly on web development, API construction, and avoiding Java.</p>
-
-                <p class="about">If I'm not at a computer, I'm probably cooking or doing something musical. Feel free to email me at quan at curryti.me if you'd like to reach me.</p>
-                <!--<p class="about">He started his first software company, <em>Trendtech Ventures</em>, in 2012 and has since seen many more failures (and the occasional success).</p>-->
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</header>
-
-<section id="projects">
-  <div class="container project-container">
-    <h2 class="section-header">Projects</h2>
-    <div class="row project-list">
-      <!-- ProntoBev-->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">ProntoBev</h5>
-            <p class="card-text">Just before their Shark Tank debut, Pronto Concepts needed someone to perfect their storefront. Turns out Shopify has a really cool templating system.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/prontobev.png"
-               onclick="window.open('https://prontoconcepts.com', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Persona 5 Items -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Persona 5 Items</h5>
-            <p class="card-text">A filterable, tabular Persona 5 item database I made because Googling was detracting from my playing time.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/persona5-items.png"
-               onclick="window.open('https://quan.github.io/persona5-items/', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Madotsuki Walker -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Madotsuki Walker</h5>
-            <p class="card-text">An experiment in rendering sprite animation using DOM elements instead of a canvas. Turns out it was a terrible idea.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/madotsuki-walk.png"
-               onclick="window.open('https://quan.github.io/madotsuki/', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Inkwell -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Inkwell</h5>
-            <p class="card-text">A draw and chat app available on iOS, Android, and Windows.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/inkwell.png"
-               onclick="window.open('https://quan.github.io/inkwell-website/', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- PolyRents -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Polyrents</h5>
-            <p class="card-text">Renting, simplified.</p>
-          </div>
-          <img class="card-img-bottom card-img img-fluid"
-               src="assets/images/polyrents.png"
-               onclick="window.open('https://polyrents.com', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Cru -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Cru</h5>
-            <p class="card-text">A mobile app commissioned by Cru Central Coast.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/cru.png"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- slamrater.com -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">slamrater.com</h5>
-            <p class="card-text">A university Greek life website for sharing images. Not tasteful ones.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/slamrater.png"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Facebook vs. Fake News -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Facebook vs. Fake News</h5>
-            <p class="card-text">An ethical analysis of Facebook's response to false news following the 2016 Presidential Election. Spoiler alert: fake news sucks.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/facebook-vs-fake-news.png"
-               onclick="window.open('https://quan.github.io/facebook-', '_blank')"
-               alt="" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container-fluid footer">
-    <ul class="footer-list">
-      <li class="footer-list-item">
-        <a class="footer-list-anchor" href="#">Top</a>
+  <!-- Mobile Navigation Menu -->
+  <!-- TODO?: populate dynamically -->
+  <div class="mobile-nav-menu" data-status="closed">
+    <ul class="mobile-nav-menu-flex">
+      <li class="mobile-nav-menu-item">
+        <a href="#">About</a>
       </li>
-      <li class="footer-list-divider">|</li>
-      <li class="footer-list-item">
-        <a class="footer-list-anchor"
-           href="mailto:quan@curryti.me">Email</a>
+      <li class="mobile-nav-menu-item">
+        <a href="#">Projects</a>
       </li>
-      <li class="footer-list-divider">|</li>
-      <li class="footer-list-item">
-        <a class="footer-list-anchor"
-           href="https://www.github.com/quan">GitHub</a>
+      <li class="mobile-nav-menu-item">
+        <a href="#">Resume</a>
       </li>
-      <li class="footer-list-divider">|</li>
-      <li class="footer-list-item">
-        <a class="footer-list-anchor"
-           href="https://www.linkedin.com/in/quantrantheory">LinkedIn</a>
+      <li class="mobile-nav-menu-item">
+        <a href="#">Contact</a>
       </li>
-      <!--<li class="footer-list-divider">|</li>-->
-      <!--<li class="footer-list-item">-->
-        <!--<a class="footer-list-anchor" href="">Something</a>-->
-      <!--</li>-->
     </ul>
   </div>
-</footer>
+  <div class="mobile-nav-button" data-status="off"></div>
 
+  <!-- Header Navigation Menu -->
+  <!-- TODO?: populate dynamically -->
+  <header id="nav-menu-header">
+    <ul class="nav-menu">
+      <li class="nav-menu-item menu-item-0 current">
+        <a href="#">About</a>
+      </li>
+      <li class="nav-menu-item menu-item-1">
+        <a href="#">Projects</a>
+      </li>
+      <li class="nav-menu-item menu-item-2">
+        <a href="#">Resume</a>
+      </li>
+      <li class="nav-menu-item menu-item-3">
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </header>
 
-<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"-->
-        <!--integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="-->
-        <!--crossorigin="anonymous"></script>-->
+  <div class="content">
+    <!-- About Section -->
+    <section id="about" class="large-section">
+      <div class="about-lang-opt-div">
+        <ul class="about-lang-opt-list">
+          <li class="about-lang-opt-item" data-selected="false">
+            <a href="#">English</a>
+          </li>
+          <li class="about-lang-opt-item" data-selected="true">
+            <a href="#">Python</a>
+          </li>
+          <li class="about-lang-opt-item" data-selected="false">
+            <a href="#">Javascript</a>
+          </li>
+          <li class="about-lang-opt-item" data-selected="false">
+            <a href="#">Swift</a>
+          </li>
+          <li class="about-lang-opt-item" data-selected="false">
+            <a href="#">Java</a>
+          </li>
+          <li class="about-lang-opt-item" data-selected="false">
+            <a href="#">C</a>
+          </li>
+          <li class="about-lang-opt-item" data-selected="false">
+            <a href="#">PHP</a>
+          </li>
+          <li class="about-lang-opt-item" data-selected="false">
+            <a href="#">ML</a>
+          </li>
+        </ul>
+      </div>
+      <div class="code-wrapper">
+        <pre><code>
+quan = <span class="c-constr">SoftwareEngineer</span>()
 
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
+quan<span class="c-punc">.</span>interests <span class="c-punc">=</span> [
+  <span class="c-string">'programming languages'</span>,
+  <span class="c-string">'web development'</span>,
+  <span class="c-string">'building APIs'</span>,
+  <span class="c-string">'functional programming'</span>,
+  <span class="c-string">'natural languages'</span>,
+  <span class="c-string">'avoiding Java'</span>
+]
+
+quan<span class="c-punc">.</span>education <span class="c-punc">=</span> {
+  <span class="c-string">'degree'</span><span class="c-punc">:</span> <span class="c-string">'B.S.'</span>,
+  <span class="c-string">'major'</span><span class="c-punc">:</span> <span class="c-string">'Software Engineering'</span>,
+  <span class="c-string">'alma_mater'</span><span class="c-punc">:</span> <span class="c-string">'Cal Poly'</span>
+}
+
+quan<span class="c-punc">.</span><span class="c-func"><a href="#">list_projects</a></span>()
+quan<span class="c-punc">.</span><span class="c-func"><a href="#">show_resume</a></span>()
+quan<span class="c-punc">.</span><span class="c-func"><a href="#">contact</a></span>()
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="large-section">
+      <div>
+        <pre><code>
+          hei
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div>
+        <pre><code>
+          hei
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <pre><code>
+          hei
+        </code></pre>
+      </div>
+    </footer>
+  </div>
+
 </body>
+<script type="text/javascript">
+  /* global $, MobileNavigationMenu */
+  $(document).ready(function () {
+    MobileNavigationMenu.init()
+  })
+</script>
 </html>

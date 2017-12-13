@@ -1,0 +1,5 @@
+$mobile-max-width: 640px;
+$desktop-min-width: $mobile-max-width + 1;
+
+$query-mobile: "screen and (max-width: #{$mobile-max-width})";
+$query-desktop: "screen and (min-width: #{$desktop-min-width} + 1)";
