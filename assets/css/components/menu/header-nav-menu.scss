@@ -71,13 +71,16 @@ header.nav-menu-header {
     $-inner-multiplier: .4;
     $-inner-skew-height: $-inner-multiplier * $nav-menu-skew-height;
     $-inner-skew-width: $-inner-multiplier * $nav-menu-skew-width;
+
     left: 0;
     border-right: $-inner-skew-width solid transparent;
+
+    // Adjust the skew width for screens taller than 1024px. Or zoom.
     @media screen and (max-width: #{$nav-menu-skew-height}) {
       border-top: $-inner-skew-height solid $nav-menu-accent-color;
     }
     @media screen and (min-width: #{$nav-menu-skew-height} + 1) {
-      border-top: calc(#{$-inner-multiplier * 100vh}) solid $nav-menu-accent-color;
+      border-top: calc(#{$-inner-multiplier} * 100vh) solid $nav-menu-accent-color;
     }
   }
 
@@ -85,6 +88,8 @@ header.nav-menu-header {
   &::after {
     left: $nav-menu-width;
     border-right: $nav-menu-skew-width solid transparent;
+
+    // Adjust the skew width for screens taller than 1024px. Or zoom.
     @media screen and (max-width: #{$nav-menu-skew-height}) {
       border-top: $nav-menu-skew-height solid $nav-menu-bg-color;
     }
