@@ -34,22 +34,6 @@ $link-current-color: #933;
   transform: $value;
 }
 
-@mixin navigation-link() {
-  font-family: $sans-serif-font-stack;
-  font-weight: 100;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  
-  list-style: none;
-
-  a {
-    color: black;
-    &:hover {
-      color: red;
-    }
-  }
-}
-
 /* Body */
 body {
   margin: 0;
