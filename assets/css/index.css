@@ -2,15 +2,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", serif;
   background: #f3f3f3;
 }
 
 a {
-  text-decoration: none;
   -webkit-transition: 0.25s;
   -moz-transition: 0.25s;
   transition: 0.25s;
+  text-decoration: none;
 }
 
 a:visited {
@@ -50,6 +50,29 @@ span.c-func a:visited {
   color: #009;
 }
 
+h1.title {
+  margin: 0;
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  cursor: default;
+}
+
+@media screen and (max-width: 640px) {
+  h1.title {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  h1.title {
+    display: block;
+  }
+}
+
 header#nav-menu-header {
   position: fixed;
   top: 0;
@@ -65,7 +88,7 @@ header#nav-menu-header {
   }
 }
 
-@media screen and (min-width: 642px) {
+@media screen and (min-width: 641px) {
   header#nav-menu-header {
     display: block;
   }
@@ -108,7 +131,7 @@ header#nav-menu-header li.nav-menu-item {
   font-weight: 500;
   text-align: right;
   z-index: 10;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 100;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -222,7 +245,7 @@ div.mobile-nav-menu {
   }
 }
 
-@media screen and (min-width: 642px) {
+@media screen and (min-width: 641px) {
   div.mobile-nav-menu {
     display: none;
   }
@@ -253,7 +276,7 @@ div.mobile-nav-menu li.mobile-nav-menu-item {
   font-size: 150%;
   font-weight: 500;
   text-align: center;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 100;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -292,7 +315,7 @@ div.mobile-nav-button {
   }
 }
 
-@media screen and (min-width: 642px) {
+@media screen and (min-width: 641px) {
   div.mobile-nav-button {
     display: none;
   }
@@ -361,7 +384,7 @@ div.content {
   }
 }
 
-@media screen and (min-width: 642px) {
+@media screen and (min-width: 641px) {
   div.content {
     margin-left: 310px;
     min-width: 490px;
@@ -370,80 +393,23 @@ div.content {
 
 section {
   box-sizing: border-box;
-}
-
-section.large-section {
   padding: 50px;
-  min-height: 100vh;
 }
 
 @media screen and (max-width: 320px) {
-  section.large-section {
+  section {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
 section#about {
+  min-height: 100vh;
   display: flex;
+  justify-content: center;
 }
 
-section#about ul.about-lang-opt-list {
-  list-style: none;
-  position: absolute;
-  right: 1em;
-  bottom: 1em;
-}
-
-@media screen and (max-width: 640px) {
-  section#about ul.about-lang-opt-list {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 642px) {
-  section#about ul.about-lang-opt-list {
-    display: block;
-  }
-}
-
-section#about li.about-lang-opt-item {
-  float: left;
-  margin-right: 20px;
-  text-transform: uppercase;
-  font-family: "Roboto Slab", serif;
-  font-size: 1em;
-  font-weight: 300;
-  letter-spacing: .1em;
-}
-
-section#about li.about-lang-opt-item a {
-  color: black;
-}
-
-section#about li.about-lang-opt-item a:visited {
-  color: black;
-}
-
-section#about li.about-lang-opt-item a:hover {
-  color: #C66;
-}
-
-section#about li.about-lang-opt-item[data-selected="true"] a {
-  color: #933;
-}
-
-section#about li.about-lang-opt-item[data-selected="true"] a:hover {
-  color: #C66;
-}
-
-@media screen and (max-width: 640px) {
-  section#about {
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 642px) {
+@media screen and (min-width: 641px) {
   section#about {
     align-items: center;
   }
@@ -462,4 +428,73 @@ section#about div.code-wrapper {
 
 section#about div.code-wrapper pre {
   margin: 0;
+}
+
+ul.about-lang-opt-list {
+  list-style: none;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
+@media screen and (max-width: 640px) {
+  ul.about-lang-opt-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  ul.about-lang-opt-list {
+    display: block;
+  }
+}
+
+li.about-lang-opt-item {
+  float: left;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: .1em;
+}
+
+li.about-lang-opt-item a {
+  color: black;
+}
+
+li.about-lang-opt-item a:visited {
+  color: black;
+}
+
+li.about-lang-opt-item a:hover {
+  color: #C66;
+}
+
+li.about-lang-opt-item[data-selected="true"] a {
+  color: #933;
+}
+
+li.about-lang-opt-item[data-selected="true"] a:hover {
+  color: #C66;
+}
+
+section#projects {
+  display: flex;
+}
+
+section#projects a.project-link {
+  -webkit-transition: 0.02s;
+  -moz-transition: 0.02s;
+  transition: 0.02s;
+  color: blue;
+}
+
+section#projects a.project-link:hover {
+  color: rebeccapurple;
+  text-decoration: underline;
+}
+
+section#projects a.project-link:visited {
+  color: blue;
 }

@@ -22,6 +22,8 @@
   <title>quan@github</title>
 </head>
 <body>
+  <!-- <h1 class="title">Quan Tran</h1> -->
+
   <!-- Mobile Navigation Menu -->
   <!-- TODO?: populate dynamically -->
   <div class="mobile-nav-menu" data-status="closed">
@@ -47,16 +49,16 @@
   <header id="nav-menu-header">
     <ul class="nav-menu">
       <li class="nav-menu-item menu-item-0 current">
-        <a href="#">About</a>
+        <a href="#about">About</a>
       </li>
       <li class="nav-menu-item menu-item-1">
-        <a href="#">Projects</a>
+        <a href="#projects">Projects</a>
       </li>
       <li class="nav-menu-item menu-item-2">
-        <a href="#">Resume</a>
+        <a href="#resume">Resume</a>
       </li>
       <li class="nav-menu-item menu-item-3">
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
     </ul>
   </header>
@@ -116,10 +118,46 @@ quan<span class="c-punc">.</span><span class="c-func"><a href="#">contact</a></s
 
     <!-- Projects Section -->
     <section id="projects" class="large-section">
-      <div>
-        <pre><code>
-          hei
-        </code></pre>
+      <div class="projects-wrapper">
+
+        <!-- - - - -->
+        <!-- JSISH -->
+        <!-- - - - -->
+        <div class="project-div" id="jsish-section">
+          <h2 class="project-title">jsish</h2>
+
+          <p class="project-description">This began as a quarter-long assignment in a programming languages course. <em>jsish</em> is an interpreter for (you guessed it) a Javascript-like language written in Standard ML but implemented with type safety and the restrictions of single token lookahead.</p>
+
+          <p class="project-description">It was a good exercise in bad language design, as the semantics my professor had assigned included many of Javascript's faults.</p>
+
+          <p class="project-description">I genuinely enjoy Javascript and implementing a light clone certainly helped deepen my understanding of the language, but I thought it would be nice to take it a little further. I continued the project by fixing some of Javascript's bad design decisions (like binding variables to the global scope if declared implicitly and the entire concept of the global object) to make a simpler, safer version of the language. I haven't found a use for it yet, but it was fun.</p>
+          <p class="project-description">Check it out on GitHub <a class="project-link" href="https://www.github.com/quan/jsish">here</a>.</p>
+        </div>
+
+        <!-- - - - - - - -->
+        <!-- MARKOV POET -->
+        <!-- - - - - - - -->
+        <div id="markov-poet-section" class="project-div">
+          <h2 class="project-title">Markov Poet</h2>
+
+          <p class="project-description">Hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor, hodor, hodor hodor. Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor hodor, hodor, hodor hodor. Hodor hodor - hodor... Hodor hodor hodor, hodor. Hodor hodor?! Hodor hodor - hodor, hodor. Hodor hodor - hodor hodor hodor hodor! </p>
+
+          <p class="project-description">Hodor, hodor, hodor. Hodor hodor. Hodor. Hodor, hodor - hodor, hodor. Hodor hodor hodor! Hodor. Hodor hodor; hodor hodor... Hodor hodor hodor; hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor hodor; hodor hodor hodor. Hodor! Hodor hodor, hodor hodor HODOR hodor, hodor hodor?! Hodor hodor - HODOR hodor, hodor hodor - hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor. Hodor hodor. Hodor. Hodor. Hodor hodor hodor?!</p>
+
+          <p class="project-description">Check it out on GitHub <a class="project-link" href="https://www.github.com/quan/markov-poet">here</a>.</p>
+        </div>
+
+        <!-- - - - - - -->
+        <!-- PRONTOBEV -->
+        <!-- - - - - - -->
+        <div id="prontobev-section" class="project-div">
+          <h2 class="project-title">ProntoBev</h2>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex rebus enim timiditas, non ex vocabulis nascitur. Quo modo autem philosophus loquitur? Qualem igitur hominem natura inchoavit? Memini me adesse P. Apparet statim, quae sint officia, quae actiones. Duo Reges: constructio interrete. Quae quidem sapientes sequuntur duce natura tamquam videntes; Sed haec quidem liberius ab eo dicuntur et saepius. Mihi enim erit isdem istis fortasse iam utendum.</p>
+
+          <p class="project-description">Huius, Lyco, oratione locuples, rebus ipsis ielunior. Scio enim esse quosdam, qui quavis lingua philosophari possint; Utrum igitur tibi litteram videor an totas paginas commovere? De malis autem et bonis ab iis animalibus, quae nondum depravata sint, ait optime iudicari. At ego quem huic anteponam non audeo dicere; Quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? Quamquam te quidem video minime esse deterritum.</p>
+
+          <p class="project-description">Purchase your own ProntoBev <a class="project-link" href="https://www.prontoconcepts.com">here</a>.</p>
+        </div>
       </div>
     </section>
 

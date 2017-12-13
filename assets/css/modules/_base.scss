@@ -1,6 +1,6 @@
-$sans-serif-font-stack: 'Roboto', Arial, Helvetica, sans-serif;
 $mono-font-stack: 'Roboto Mono', monospace;
 $slab-font-stack: 'Roboto Slab', serif;
+$sans-serif-font-stack: 'Roboto', Arial, Helvetica, sans-serif;
 
 $bg-color: #f3f3f3;
 $theme-color: #EE9B00;
@@ -37,15 +37,13 @@ $min-page-width: 800px;
 body {
   margin: 0;
   padding: 0;
-  font-family: $sans-serif-font-stack;
+  font-family: $slab-font-stack;
   // font-size: 16px;
   background: $bg-color;
 }
 
 a {
-  text-decoration: none;
   @include transition(.25s);
-  &:visited {
-    text-decoration: none;
-  }
+  text-decoration: none;
+  &:visited { text-decoration: none; }
 }

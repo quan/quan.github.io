@@ -5,44 +5,11 @@ $lang-list-link-hover-color: #C66;
 $lang-list-link-color: #933;
 
 section#about {
-  ul.about-lang-opt-list {
-    @media #{$query-mobile} {
-      display: none;
-    }
-    @media #{$query-desktop} {
-      display: block;
-    }
-    list-style: none;
-    position: absolute;
-    right: $lang-list-inset;
-    bottom: $lang-list-inset;
-  }
-
-  li.about-lang-opt-item {
-    float: left;
-    margin-right: $lang-list-item-spacing;
-    text-transform: uppercase;
-    font-family: $slab-font-stack;
-    font-size: 1em;
-    font-weight: 300;
-    letter-spacing: .1em;
-
-    a {
-      color: black;
-      &:visited { color: black; }
-      &:hover { color: $lang-list-link-hover-color; }
-    }
-    &[data-selected="true"] a {
-      color: $lang-list-link-color;
-      &:hover { color: $lang-list-link-hover-color; }
-    }
-  }
-
+  min-height: 100vh;
   // Center the code block.
   display: flex;
-  @media #{$query-mobile} {
-    justify-content: center;
-  }
+  justify-content: center;
+
   @media #{$query-desktop} {
     align-items: center;
   }
@@ -57,5 +24,39 @@ section#about {
     pre {
       margin: 0;
     }
+  }
+}
+
+// Language options list
+ul.about-lang-opt-list {
+  @media #{$query-mobile} {
+    display: none;
+  }
+  @media #{$query-desktop} {
+    display: block;
+  }
+  list-style: none;
+  position: absolute;
+  right: $lang-list-inset;
+  bottom: $lang-list-inset;
+}
+
+li.about-lang-opt-item {
+  float: left;
+  margin-right: $lang-list-item-spacing;
+  text-transform: uppercase;
+  font-family: $slab-font-stack;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: .1em;
+
+  a {
+    color: black;
+    &:visited { color: black; }
+    &:hover { color: $lang-list-link-hover-color; }
+  }
+  &[data-selected="true"] a {
+    color: $lang-list-link-color;
+    &:hover { color: $lang-list-link-hover-color; }
   }
 }

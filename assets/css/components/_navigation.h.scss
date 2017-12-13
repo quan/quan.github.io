@@ -11,7 +11,7 @@ $nav-menu-link-color: white;
 $nav-menu-link-hover-color: #F66;
 
 @mixin navigation-link() {
-  font-family: $sans-serif-font-stack;
+  font-family: $slab-font-stack;
   font-weight: 100;
   letter-spacing: .1em;
   text-transform: uppercase;
