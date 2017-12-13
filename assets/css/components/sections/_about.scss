@@ -8,13 +8,15 @@ section#about {
   min-height: 100vh;
   // Center the code block.
   display: flex;
-  justify-content: center;
 
-  @media #{$query-desktop} {
-    align-items: center;
-  }
   @media #{$query-sm-mobile} {
     justify-content: start;
+  }
+  @media #{$query-mobile} {
+    justify-content: center;
+  }
+  @media #{$query-desktop} {
+    align-items: center;
   }
 
   // See code.scss for colors.
@@ -24,6 +26,10 @@ section#about {
     pre {
       margin: 0;
     }
+  }
+
+  p.about-en {
+    font-size: 1.2em;
   }
 }
 

@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="assets/css/index.css"/>
 
   <script src="js/MobileNavigationMenu.js"></script>
+  <script src="js/language_code_mapping.js"></script>
+  <script src="js/code_switch.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -68,47 +70,55 @@
     <section id="about" class="large-section">
       <div class="about-lang-opt-div">
         <ul class="about-lang-opt-list">
-          <li class="about-lang-opt-item" data-selected="false">
+          <li class="about-lang-opt-item" data-selected="false"
+          data-lang="en">
             <a href="#">En</a>
           </li>
-          <li class="about-lang-opt-item" data-selected="true">
+          <li class="about-lang-opt-item" data-selected="true"
+          data-lang="py">
             <a href="#">Py</a>
           </li>
-          <li class="about-lang-opt-item" data-selected="false">
+          <li class="about-lang-opt-item" data-selected="false"
+          data-lang="js">
             <a href="#">JS</a>
           </li>
-          <li class="about-lang-opt-item" data-selected="false">
+          <li class="about-lang-opt-item" data-selected="false"
+          data-lang="swift">
             <a href="#">Swift</a>
           </li>
-          <li class="about-lang-opt-item" data-selected="false">
+          <li class="about-lang-opt-item" data-selected="false"
+          data-lang="java">
             <a href="#">Java</a>
           </li>
-          <li class="about-lang-opt-item" data-selected="false">
+          <li class="about-lang-opt-item" data-selected="false"
+          data-lang="c">
             <a href="#">C</a>
           </li>
-          <li class="about-lang-opt-item" data-selected="false">
+          <li class="about-lang-opt-item" data-selected="false"
+          data-lang="php">
             <a href="#">PHP</a>
           </li>
-          <li class="about-lang-opt-item" data-selected="false">
+          <li class="about-lang-opt-item" data-selected="false"
+          data-lang="ml">
             <a href="#">ML</a>
           </li>
         </ul>
       </div>
-      <div class="code-wrapper"><pre><code>quan <span class="c-punc">=</span> <span class="c-constr">SoftwareEngineer</span>()
+      <div class="code-wrapper"><pre><code>quan <span class="c-punc">=</span> <span class="c-func">SoftwareEngineer</span>()
 
 quan<span class="c-punc">.</span>interests <span class="c-punc">=</span> [
-  <span class="c-string">'programming languages'</span>,
-  <span class="c-string">'web development'</span>,
-  <span class="c-string">'building APIs'</span>,
-  <span class="c-string">'functional programming'</span>,
-  <span class="c-string">'natural languages'</span>,
-  <span class="c-string">'avoiding Java'</span>
+    <span class="c-str">'programming languages'</span>,
+    <span class="c-str">'web development'</span>,
+    <span class="c-str">'building APIs'</span>,
+    <span class="c-str">'functional programming'</span>,
+    <span class="c-str">'natural languages'</span>,
+    <span class="c-str">'avoiding Java'</span>
 ]
 
 quan<span class="c-punc">.</span>education <span class="c-punc">=</span> {
-  <span class="c-string">'degree'</span><span class="c-punc">:</span> <span class="c-string">'B.S.'</span>,
-  <span class="c-string">'major'</span><span class="c-punc">:</span> <span class="c-string">'Software Engineering'</span>,
-  <span class="c-string">'alma_mater'</span><span class="c-punc">:</span> <span class="c-string">'Cal Poly'</span>
+    <span class="c-str">'degree'</span><span class="c-punc">:</span> <span class="c-str">'B.S.'</span>,
+    <span class="c-str">'major'</span><span class="c-punc">:</span> <span class="c-str">'Software Engineering'</span>,
+    <span class="c-str">'alma_mater'</span><span class="c-punc">:</span> <span class="c-str">'Cal Poly'</span>
 }
 
 quan<span class="c-punc">.</span><span class="c-func"><a href="#">list_projects</a></span>()
@@ -119,19 +129,18 @@ quan<span class="c-punc">.</span><span class="c-func"><a href="#">contact</a></s
     <!-- Projects Section -->
     <section id="projects" class="large-section">
       <div class="projects-wrapper">
+        <h1 class="projects-header">Things I've Made</h1>
 
         <!-- - - - -->
         <!-- JSISH -->
         <!-- - - - -->
-        <div class="project-div" id="jsish-section">
+        <div id="jsish-section" class="project-div">
           <h2 class="project-title">jsish</h2>
 
-          <p class="project-description">This began as a quarter-long assignment in a programming languages course. <em>jsish</em> is an interpreter for (you guessed it) a Javascript-like language written in Standard ML but implemented with type safety and the restrictions of single token lookahead.</p>
-
+          <p class="project-description"><emph>jsish</emph> is a Javascript-like language that began in a programming languages course. The interpreter is written in Standard ML and is implemented with type safety and the restrictions of single token lookahead.</p>
           <p class="project-description">It was a good exercise in bad language design, as the semantics my professor had assigned included many of Javascript's faults.</p>
-
           <p class="project-description">I genuinely enjoy Javascript and implementing a light clone certainly helped deepen my understanding of the language, but I thought it would be nice to take it a little further. I continued the project by fixing some of Javascript's bad design decisions (like binding variables to the global scope if declared implicitly and the entire concept of the global object) to make a simpler, safer version of the language. I haven't found a use for it yet, but it was fun.</p>
-          <p class="project-description">Check it out on GitHub <a class="project-link" href="https://www.github.com/quan/jsish">here</a>.</p>
+          <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/jsish" target="_blank">GitHub</a>.</p>
         </div>
 
         <!-- - - - - - - -->
@@ -141,10 +150,9 @@ quan<span class="c-punc">.</span><span class="c-func"><a href="#">contact</a></s
           <h2 class="project-title">Markov Poet</h2>
 
           <p class="project-description">Hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor, hodor, hodor hodor. Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor hodor, hodor, hodor hodor. Hodor hodor - hodor... Hodor hodor hodor, hodor. Hodor hodor?! Hodor hodor - hodor, hodor. Hodor hodor - hodor hodor hodor hodor! </p>
-
           <p class="project-description">Hodor, hodor, hodor. Hodor hodor. Hodor. Hodor, hodor - hodor, hodor. Hodor hodor hodor! Hodor. Hodor hodor; hodor hodor... Hodor hodor hodor; hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor hodor; hodor hodor hodor. Hodor! Hodor hodor, hodor hodor HODOR hodor, hodor hodor?! Hodor hodor - HODOR hodor, hodor hodor - hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor. Hodor hodor. Hodor. Hodor. Hodor hodor hodor?!</p>
 
-          <p class="project-description">Check it out on GitHub <a class="project-link" href="https://www.github.com/quan/markov-poet">here</a>.</p>
+          <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/markov-poet" target="_blank">GitHub</a>.</p>
         </div>
 
         <!-- - - - - - -->
@@ -153,38 +161,44 @@ quan<span class="c-punc">.</span><span class="c-func"><a href="#">contact</a></s
         <div id="prontobev-section" class="project-div">
           <h2 class="project-title">ProntoBev</h2>
           <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex rebus enim timiditas, non ex vocabulis nascitur. Quo modo autem philosophus loquitur? Qualem igitur hominem natura inchoavit? Memini me adesse P. Apparet statim, quae sint officia, quae actiones. Duo Reges: constructio interrete. Quae quidem sapientes sequuntur duce natura tamquam videntes; Sed haec quidem liberius ab eo dicuntur et saepius. Mihi enim erit isdem istis fortasse iam utendum.</p>
-
           <p class="project-description">Huius, Lyco, oratione locuples, rebus ipsis ielunior. Scio enim esse quosdam, qui quavis lingua philosophari possint; Utrum igitur tibi litteram videor an totas paginas commovere? De malis autem et bonis ab iis animalibus, quae nondum depravata sint, ait optime iudicari. At ego quem huic anteponam non audeo dicere; Quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? Quamquam te quidem video minime esse deterritum.</p>
 
-          <p class="project-description">Purchase your own ProntoBev <a class="project-link" href="https://www.prontoconcepts.com">here</a>.</p>
+          <p class="project-description">Purchase your own <a class="project-link" href="https://www.prontoconcepts.com" target="_blank">ProntoBev</a>.</p>
+        </div>
+
+        <!-- - - - - - - - - -->
+        <!-- PERSONA 5 ITEMS -->
+        <!-- - - - - - - - - -->
+        <div id="persona5-items-section" class="project-div">
+          <h2 class="project-title">Persona 5 Items</h2>
+          <p class="project-description">Foreign Nikuman Despite the name, it's a kebab. Restores 20 HP to one ally. Central Street (Convenience Store)  150 Protein Increases training efficiency. Restores 30% HP to one ally. Central Street (Rocinante - Discount Store) 2000 Moist Protein Rainy day-only. Helps training. Restores 30% HP to one ally.  Central Street (Rocinante - Discount Store) 4500 Fried Bread Bread with a nostalgic taste. Restores 10 HP to one ally. Shujin Academy Store  90 Jam Bread Bread with strawberry jam spread. Restores 20 HP to one ally. Shujin Academy Store  120 Yakisoba Pan  Fast-selling bread. Restores 50 HP and cures Hunger for one ally. Shujin Academy Store (Friday) 150 Melon Pan A limited product that rejuvenates. Revives one fallen ally with full HP. Teikyu Building (Bakery, Weekly)  1000 Moist Katsu Bun Rainy day special with a terrific texture. Restores 200 HP to one ally. Teikyu Building (Bakery)  2000 Sandwich  Yon-Germain's staple sandwich. Restores 10 HP to one ally.</p>
+          <p class="project-description">Try it out on <a class="project-link" href="https://quan.github.io/persona5-items" target="_blank">GitHub</a> or check out the <a class="project-link" href="https://www.github.com/quan/persona5-items" target="_blank">source code</a>.</p>
         </div>
       </div>
     </section>
 
+    <!-- Resume Section -->
+    <section id="resume">
+      <div>What to do with this</div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
-      <div>
-        <pre><code>
-          hei
-        </code></pre>
-      </div>
+      <div>Call me maybe</div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div>
-        <pre><code>
-          hei
-        </code></pre>
-      </div>
+      <div>Do I even need a footer?</div>
     </footer>
   </div>
 
 </body>
 <script type="text/javascript">
-  /* global $, MobileNavigationMenu */
+  /* global $, MobileNavigationMenu, AboutSection */
   $(document).ready(function () {
     MobileNavigationMenu.init()
+    AboutSection.init()
   })
 </script>
 </html>

@@ -22,31 +22,39 @@ code {
   font-size: 1.1em;
 }
 
-span.c-constr {
-  color: #909;
-}
-
-span.c-string {
-  color: #060;
-}
-
 span.c-punc {
   color: #f33;
 }
 
+span.c-val {
+  color: black;
+}
+
+span.c-str {
+  color: #060;
+}
+
+span.c-kw {
+  color: #f33;
+}
+
 span.c-func {
+  color: #909;
+}
+
+span.c-link {
   color: #009;
 }
 
-span.c-func a {
+span.c-link a {
   color: #009;
 }
 
-span.c-func a:hover {
+span.c-link a:hover {
   text-decoration: underline;
 }
 
-span.c-func a:visited {
+span.c-link a:visited {
   color: #009;
 }
 
@@ -418,18 +426,23 @@ section {
 section#about {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-}
-
-@media screen and (min-width: 641px) {
-  section#about {
-    align-items: center;
-  }
 }
 
 @media screen and (max-width: 320px) {
   section#about {
     justify-content: start;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section#about {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  section#about {
+    align-items: center;
   }
 }
 
@@ -440,6 +453,10 @@ section#about div.code-wrapper {
 
 section#about div.code-wrapper pre {
   margin: 0;
+}
+
+section#about p.about-en {
+  font-size: 1.2em;
 }
 
 ul.about-lang-opt-list {
@@ -491,8 +508,23 @@ li.about-lang-opt-item[data-selected="true"] a:hover {
   color: #C66;
 }
 
+h1.projects-header {
+  margin: 0;
+  padding: 20px 0;
+  text-align: right;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  border-top: dashed 4px #ccc;
+  border-bottom: dashed 4px #ccc;
+}
+
 section#projects {
   display: flex;
+}
+
+section#projects div.project-div {
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-bottom: dashed 4px #ccc;
 }
 
 section#projects a.project-link {

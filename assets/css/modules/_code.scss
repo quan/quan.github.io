@@ -1,7 +1,9 @@
-$code-constructor-color: #909;
-$code-string-color: #060;
 $code-punctuation-color: #f33;
-$code-function-color: #009;
+$code-string-color: #060;
+$code-value-color: black;
+$code-keyword-color: $code-punctuation-color;
+$code-function-color: #909;
+$code-link-color: #009;
 $code-font-size: 1.1em;
 
 code {
@@ -9,29 +11,37 @@ code {
   font-size: $code-font-size;
 }
 
-span.c-constr {
-  color: $code-constructor-color;
-}
-
-span.c-string {
-  color: $code-string-color;
-}
-
 span.c-punc {
   color: $code-punctuation-color;
 }
 
+span.c-val {
+  color: $code-value-color;
+}
+
+span.c-str {
+  color: $code-string-color;
+}
+
+span.c-kw {
+  color: $code-keyword-color;
+}
+
 span.c-func {
   color: $code-function-color;
+}
+
+span.c-link {
+  color: $code-link-color;
 
   a {
-    color: $code-function-color;
+    color: $code-link-color;
 
     &:hover {
       text-decoration: underline;
     }
     &:visited {
-      color: $code-function-color;
+      color: $code-link-color;
     }
   }
 }
