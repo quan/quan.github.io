@@ -56,7 +56,7 @@ header#nav-menu-header {
   left: 0;
   height: 80vh;
   padding: calc((100vh - 80vh) / 2) 0;
-  background-color: #EE9B00;
+  background: url("../graphics/bg-theme.png") repeat;
 }
 
 @media screen and (max-width: 640px) {
@@ -117,11 +117,11 @@ header#nav-menu-header li.nav-menu-item {
 }
 
 header#nav-menu-header li.nav-menu-item a {
-  color: black;
+  color: white;
 }
 
 header#nav-menu-header li.nav-menu-item a:hover {
-  color: red;
+  color: #F66;
 }
 
 @media screen and (max-height: 1024px) {
@@ -156,7 +156,7 @@ header#nav-menu-header li.nav-menu-item a:hover {
 
 header#nav-menu-header::before, header#nav-menu-header::after {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 0;
   height: 0;
@@ -184,16 +184,20 @@ header#nav-menu-header::before {
 @media screen and (max-height: 1024px) {
   header#nav-menu-header::after {
     left: 150px;
-    border-right: 160px solid transparent;
-    border-top: 1024px solid #EE9B00;
+    border-left: 150px solid transparent;
+    border-bottom: 1024px solid #f3f3f3;
+    background-image: url(../graphics/bg-theme.png);
+    background-position: 67px;
   }
 }
 
 @media screen and (min-height: 1025px) {
   header#nav-menu-header::after {
     left: 300px;
-    border-right: 320px solid transparent;
-    border-top: 100vh solid #EE9B00;
+    border-left: 320px solid transparent;
+    border-bottom: 100vh solid #f3f3f3;
+    background-image: url(../graphics/bg-theme.png);
+    background-position: 67px;
   }
 }
 
@@ -257,11 +261,11 @@ div.mobile-nav-menu li.mobile-nav-menu-item {
 }
 
 div.mobile-nav-menu li.mobile-nav-menu-item a {
-  color: black;
+  color: white;
 }
 
 div.mobile-nav-menu li.mobile-nav-menu-item a:hover {
-  color: red;
+  color: #F66;
 }
 
 /* I shamelessly stole this from toyfight.co. */
@@ -321,6 +325,7 @@ div.mobile-nav-button::before {
 }
 
 div.mobile-nav-button[data-status='on']::before {
+  background-color: white;
   -webkit-transform: rotate(45deg) translateY(0);
   -moz-transform: rotate(45deg) translateY(0);
   -ms-transform: rotate(45deg) translateY(0);
@@ -337,11 +342,16 @@ div.mobile-nav-button::after {
 }
 
 div.mobile-nav-button[data-status='on']::after {
+  background-color: white;
   -webkit-transform: rotate(-45deg) translateY(0);
   -moz-transform: rotate(-45deg) translateY(0);
   -ms-transform: rotate(-45deg) translateY(0);
   -o-transform: rotate(-45deg) translateY(0);
   transform: rotate(-45deg) translateY(0);
+}
+
+div.content {
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 640px) {
@@ -354,6 +364,7 @@ div.mobile-nav-button[data-status='on']::after {
 @media screen and (min-width: 642px) {
   div.content {
     margin-left: 310px;
+    min-width: 490px;
   }
 }
 
@@ -366,6 +377,13 @@ section.large-section {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 320px) {
+  section.large-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 section#about {
   display: flex;
 }
@@ -374,7 +392,7 @@ section#about ul.about-lang-opt-list {
   list-style: none;
   position: absolute;
   right: 1em;
-  top: 1em;
+  bottom: 1em;
 }
 
 @media screen and (max-width: 640px) {
@@ -431,8 +449,13 @@ section#about li.about-lang-opt-item[data-selected="true"] a:hover {
   }
 }
 
+@media screen and (max-width: 320px) {
+  section#about {
+    justify-content: start;
+  }
+}
+
 section#about div.code-wrapper {
-  margin-top: 50px;
   padding-left: 25px;
   padding-right: 25px;
 }

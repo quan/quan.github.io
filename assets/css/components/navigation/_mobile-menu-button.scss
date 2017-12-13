@@ -1,7 +1,4 @@
 /* I shamelessly stole this from toyfight.co. */
-
-$query-under-min-menu-width: "screen and (max-width: #{$nav-menu-min-cutoff-width})";
-
 $nav-button-color: #212121;
 $nav-button-size: 60px;
 $nav-button-inset: 15px;
@@ -13,7 +10,7 @@ $nav-button-line-width: 50%;
 $nav-button-line-separation: 8px;
 
 div.mobile-nav-button {
-  @media #{$query-under-min-menu-width} {
+  @media #{$query-sm-mobile} {
     left: $nav-button-inset;
   }
   @media #{$query-mobile} {
@@ -53,6 +50,7 @@ div.mobile-nav-button::before {
 }
 
 div.mobile-nav-button[data-status='on']::before {
+  background-color: white;
   @include transform(rotate(45deg) translateY(0));
 }
 
@@ -61,5 +59,6 @@ div.mobile-nav-button::after {
 }
 
 div.mobile-nav-button[data-status='on']::after {
+  background-color: white;
   @include transform(rotate(-45deg) translateY(0));
 }

@@ -1,5 +1,7 @@
 $query-under-max-header-height: "screen and (max-height: #{$nav-menu-skew-height})";
 $query-over-max-header-height: "screen and (min-height: #{$nav-menu-skew-height + 1})";
+$header-bg-image: url('../graphics/bg-theme.png');
+$header-bg-image-width: 67px;
 
 header#nav-menu-header {
   @media #{$query-mobile} {
@@ -19,7 +21,8 @@ header#nav-menu-header {
   left: 0;
   height: $nav-menu-content-height;
   padding: calc((100vh - #{$nav-menu-content-height}) / 2) 0;
-  background-color: $theme-color;
+  // background-color: $theme-color;
+  background: $header-bg-image repeat;
 
   ul.nav-menu {
     margin: 0;
@@ -63,7 +66,7 @@ header#nav-menu-header {
   // Bezel slices.
   &::before, &::after {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 0;
     height: 0;
@@ -88,13 +91,29 @@ header#nav-menu-header {
   &::after {
     @media #{$query-under-max-header-height} {
       left: $nav-menu-width;
-      border-right: $nav-menu-skew-width solid transparent;
-      border-top: $nav-menu-skew-height solid $theme-color;
+      // Solid color fill border.
+      // border-right: $nav-menu-skew-width solid transparent;
+      // border-top: $nav-menu-skew-height solid $theme-color;
+
+      // Hacky tiled bg image fill border.
+      // Can covers some of the content.
+      border-left: $nav-menu-width solid transparent;
+      border-bottom: $nav-menu-skew-height solid $bg-color;
+      background-image: url(../graphics/bg-theme.png);
+      background-position: $header-bg-image-width;
     }
     @media #{$query-over-max-header-height} {
       left: $nav-menu-width * 2;
-      border-right: ($nav-menu-skew-width * 2) solid transparent;
-      border-top: 100vh solid $theme-color;
+      // Solid color fill border.
+      // border-right: ($nav-menu-skew-width * 2) solid transparent;
+      // border-top: 100vh solid $theme-color;
+
+      // Hacky tiled bg image fill border.
+      // Can covers some of the content.
+      border-left: ($nav-menu-skew-width * 2) solid transparent;
+      border-bottom: 100vh solid $bg-color;
+      background-image: url(../graphics/bg-theme.png);
+      background-position: $header-bg-image-width;
     }
   }
 }

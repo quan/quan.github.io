@@ -6,8 +6,7 @@ $bg-color: #f3f3f3;
 $theme-color: #EE9B00;
 $accent-color: #D25A1E;
 
-$link-hover-color: #C66;
-$link-current-color: #933;
+$min-page-width: 800px;
 
 @mixin center-horizontally() {
   display: block;

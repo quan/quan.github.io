@@ -1,6 +1,9 @@
 $lang-list-item-spacing: 20px;
 $lang-list-inset: 1em;
 
+$lang-list-link-hover-color: #C66;
+$lang-list-link-color: #933;
+
 section#about {
   ul.about-lang-opt-list {
     @media #{$query-mobile} {
@@ -12,7 +15,7 @@ section#about {
     list-style: none;
     position: absolute;
     right: $lang-list-inset;
-    top: $lang-list-inset;
+    bottom: $lang-list-inset;
   }
 
   li.about-lang-opt-item {
@@ -27,11 +30,11 @@ section#about {
     a {
       color: black;
       &:visited { color: black; }
-      &:hover { color: $link-hover-color; }
+      &:hover { color: $lang-list-link-hover-color; }
     }
     &[data-selected="true"] a {
-      color: $link-current-color;
-      &:hover { color: $link-hover-color; }
+      color: $lang-list-link-color;
+      &:hover { color: $lang-list-link-hover-color; }
     }
   }
 
@@ -43,10 +46,12 @@ section#about {
   @media #{$query-desktop} {
     align-items: center;
   }
+  @media #{$query-sm-mobile} {
+    justify-content: start;
+  }
 
   // See code.scss for colors.
   div.code-wrapper {
-    margin-top: 50px;
     @include padding-horizontal(25px);
 
     pre {
