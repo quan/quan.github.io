@@ -1,0 +1,28 @@
+// 
+// Sections header file.
+//
+
+$section-padding: 50px;
+$content-left-margin: $nav-menu-width + $nav-menu-skew-width;
+
+// Section wrapper.
+div.content {
+  @media #{$query-mobile} {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media #{$query-desktop} {
+    margin-left: $content-left-margin;
+  }
+}  
+
+section {
+  box-sizing: border-box;
+}
+
+section.large-section {
+  padding: $section-padding;
+  min-height: 100vh;
+}
+
+@import "sections/about";

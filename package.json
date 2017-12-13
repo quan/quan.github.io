@@ -19,5 +19,6 @@
   "homepage": "https://github.com/quan/quan.github.io",
   "devDependencies": {
     "standard": "^10.0.2"
-  }
+  },
+  "dependencies": {}
 }

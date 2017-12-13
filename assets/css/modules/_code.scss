@@ -1,12 +1,12 @@
-$code-constructor-color: #336666;
-$code-string-color: #006600;
-$code-punctuation-color: #ff3333;
-$code-function-color: #660099;
+$code-constructor-color: #909;
+$code-string-color: #060;
+$code-punctuation-color: #f33;
+$code-function-color: #009;
+$code-font-size: 1.1em;
 
 code {
-  // font-family: 'Cousine';
-  font-family: 'Roboto Mono';
-  font-size: 1em;
+  font-family: $mono-font-stack;
+  font-size: $code-font-size;
 }
 
 span.c-constr {
@@ -24,7 +24,14 @@ span.c-punc {
 span.c-func {
   color: $code-function-color;
 
-  a:hover {
-    text-decoration: underline;
+  a {
+    color: $code-function-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $code-function-color;
+    }
   }
 }

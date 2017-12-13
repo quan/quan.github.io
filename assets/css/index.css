@@ -18,28 +18,36 @@ a:visited {
 }
 
 code {
-  font-family: 'Roboto Mono';
-  font-size: 1em;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.1em;
 }
 
 span.c-constr {
-  color: #336666;
+  color: #909;
 }
 
 span.c-string {
-  color: #006600;
+  color: #060;
 }
 
 span.c-punc {
-  color: #ff3333;
+  color: #f33;
 }
 
 span.c-func {
-  color: #660099;
+  color: #009;
+}
+
+span.c-func a {
+  color: #009;
 }
 
 span.c-func a:hover {
   text-decoration: underline;
+}
+
+span.c-func a:visited {
+  color: #009;
 }
 
 header#nav-menu-header {
@@ -201,6 +209,7 @@ div.mobile-nav-menu {
   -moz-transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
   transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
   opacity: 0.0;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 640px) {
@@ -217,6 +226,7 @@ div.mobile-nav-menu {
 
 div.mobile-nav-menu[data-status='open'] {
   opacity: 1.0;
+  visibility: visible;
 }
 
 div.mobile-nav-menu ul.mobile-nav-menu-flex {
@@ -343,12 +353,21 @@ div.mobile-nav-button[data-status='on']::after {
 
 @media screen and (min-width: 642px) {
   div.content {
-    margin-left: 330px;
+    margin-left: 310px;
   }
 }
 
+section {
+  box-sizing: border-box;
+}
+
 section.large-section {
+  padding: 50px;
   min-height: 100vh;
+}
+
+section#about {
+  display: flex;
 }
 
 section#about ul.about-lang-opt-list {
@@ -358,11 +377,23 @@ section#about ul.about-lang-opt-list {
   top: 1em;
 }
 
+@media screen and (max-width: 640px) {
+  section#about ul.about-lang-opt-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 642px) {
+  section#about ul.about-lang-opt-list {
+    display: block;
+  }
+}
+
 section#about li.about-lang-opt-item {
   float: left;
   margin-right: 20px;
   text-transform: uppercase;
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab", serif;
   font-size: 1em;
   font-weight: 300;
   letter-spacing: .1em;
@@ -377,18 +408,35 @@ section#about li.about-lang-opt-item a:visited {
 }
 
 section#about li.about-lang-opt-item a:hover {
-  color: #CC6666;
+  color: #C66;
 }
 
 section#about li.about-lang-opt-item[data-selected="true"] a {
-  color: #993333;
+  color: #933;
 }
 
 section#about li.about-lang-opt-item[data-selected="true"] a:hover {
-  color: #CC6666;
+  color: #C66;
+}
+
+@media screen and (max-width: 640px) {
+  section#about {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 642px) {
+  section#about {
+    align-items: center;
+  }
 }
 
 section#about div.code-wrapper {
-  padding: 20px 50px 0;
-  clear: both;
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+section#about div.code-wrapper pre {
+  margin: 0;
 }

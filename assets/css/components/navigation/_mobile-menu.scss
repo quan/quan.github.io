@@ -19,8 +19,10 @@ div.mobile-nav-menu {
   background: $nav-bg-color;
   @include transition($nav-menu-transition);
   opacity: 0.0;
+  visibility: hidden;
   &[data-status='open'] {
     opacity: 1.0;
+    visibility: visible;
   }
 
   ul.mobile-nav-menu-flex {
