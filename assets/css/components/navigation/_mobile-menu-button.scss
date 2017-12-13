@@ -24,10 +24,18 @@ div.mobile-nav-button {
   top: $nav-button-inset;
   width: $nav-button-size;
   height: $nav-button-size;
-
   z-index: 300;
-  @include transition(.32s);
 
+  opacity: 1.0;
+  &[data-hidden='hiding'] {
+    @include transition(.8s);
+    opacity: 0;
+  }
+  &[data-hidden='true'] {
+    opacity: 0;
+  }
+
+  @include transition(.32s);
   &:hover {
     cursor: pointer;
   }

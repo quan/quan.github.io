@@ -298,6 +298,7 @@ div.mobile-nav-button {
   width: 60px;
   height: 60px;
   z-index: 300;
+  opacity: 1.0;
   -webkit-transition: 0.32s;
   -moz-transition: 0.32s;
   transition: 0.32s;
@@ -319,6 +320,17 @@ div.mobile-nav-button {
   div.mobile-nav-button {
     display: none;
   }
+}
+
+div.mobile-nav-button[data-hidden='hiding'] {
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  transition: 0.8s;
+  opacity: 0;
+}
+
+div.mobile-nav-button[data-hidden='true'] {
+  opacity: 0;
 }
 
 div.mobile-nav-button:hover {
