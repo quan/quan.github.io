@@ -1,4 +1,4 @@
-$nav-menu-width: 200px;
+$nav-menu-width: 150px;
 $nav-menu-content-height: 80vh;
 $nav-menu-skew-width: 160px;
 $nav-menu-skew-height: 1024px;
@@ -6,6 +6,7 @@ $nav-menu-skew-height: 1024px;
 $nav-menu-bg-color: #EE9B00;
 $nav-menu-accent-color: #D25A1E;
 
+$nav-menu-skew-offset: 7px;
 
 header.nav-menu-header {
   @media screen and (max-width: #{$mobile-cutoff-width}) {
@@ -22,15 +23,20 @@ header.nav-menu-header {
   background-color: $nav-menu-bg-color;
 
   ul.nav-menu {
+    $-nav-list-offset: $nav-menu-width - 50px;
+    margin: 0;
+
     position: absolute;
-    left: calc(145px - 14vh);
-    bottom: 10%;
+    left: calc(#{$-nav-list-offset} - 14vh);
+    bottom: 9%;
+
     z-index: 10;
   }
 
   li.nav-menu-item {
-    margin: 5% 0;
-    font-size: 150%;
+    margin: 7% 0;
+
+    font-size: 1.5em;
     font-weight: 500;
     text-align: right;
 
@@ -41,13 +47,13 @@ header.nav-menu-header {
       padding-right: 0;
     }
     &.menu-item-1 {
-      padding-right: 8px;
+      padding-right: $nav-menu-skew-offset;
     }
     &.menu-item-2 {
-      padding-right: 16px;
+      padding-right: $nav-menu-skew-offset * 2;
     }
     &.menu-item-3 {
-      padding-right: 24px;
+      padding-right: $nav-menu-skew-offset * 3;
     }
   }
 
@@ -63,17 +69,27 @@ header.nav-menu-header {
   // Inner layer on top of the header.
   &::before {
     $-inner-multiplier: .4;
-    $-skew-height: $-inner-multiplier * $nav-menu-skew-height;
-    $-skew-width: $-inner-multiplier * $nav-menu-skew-width;
+    $-inner-skew-height: $-inner-multiplier * $nav-menu-skew-height;
+    $-inner-skew-width: $-inner-multiplier * $nav-menu-skew-width;
     left: 0;
-    border-top: $-skew-height solid $nav-menu-accent-color;
-    border-right: $-skew-width solid transparent;
+    border-right: $-inner-skew-width solid transparent;
+    @media screen and (max-width: #{$nav-menu-skew-height}) {
+      border-top: $-inner-skew-height solid $nav-menu-accent-color;
+    }
+    @media screen and (min-width: #{$nav-menu-skew-height} + 1) {
+      border-top: calc(#{$-inner-multiplier * 100vh}) solid $nav-menu-accent-color;
+    }
   }
 
   // Outer section, protruding from the header.
   &::after {
     left: $nav-menu-width;
-    border-top: $nav-menu-skew-height solid $nav-menu-bg-color;
     border-right: $nav-menu-skew-width solid transparent;
+    @media screen and (max-width: #{$nav-menu-skew-height}) {
+      border-top: $nav-menu-skew-height solid $nav-menu-bg-color;
+    }
+    @media screen and (min-width: #{$nav-menu-skew-height} + 1) {
+      border-top: 100vh solid $nav-menu-bg-color;
+    }
   }
 }
