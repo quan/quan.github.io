@@ -1,4 +1,5 @@
 /* Body */
+@import "tags" h1;
 body {
   margin: 0;
   padding: 0;
@@ -52,6 +53,7 @@ span.c-link a {
 }
 
 span.c-link a:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -70,13 +72,13 @@ h1.title {
   cursor: default;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
   h1.title {
     display: none;
   }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 768px) {
   h1.title {
     display: block;
   }
@@ -93,13 +95,13 @@ header#nav-menu-header {
   background: url("../graphics/bg-theme.png") repeat;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
   header#nav-menu-header {
     display: none;
   }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 768px) {
   header#nav-menu-header {
     display: block;
   }
@@ -145,7 +147,6 @@ header#nav-menu-header ul.nav-menu {
 header#nav-menu-header li.nav-menu-item {
   margin: 7% 0;
   font-size: 1.5em;
-  font-weight: 500;
   text-align: right;
   z-index: 10;
   font-family: "Roboto Slab", serif;
@@ -256,13 +257,13 @@ div.mobile-nav-menu {
   visibility: hidden;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
   div.mobile-nav-menu {
     display: block;
   }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 768px) {
   div.mobile-nav-menu {
     display: none;
   }
@@ -327,13 +328,13 @@ div.mobile-nav-button {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
   div.mobile-nav-button {
     right: 15px;
   }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 768px) {
   div.mobile-nav-button {
     display: none;
   }
@@ -402,14 +403,14 @@ div.mobile-nav-button[data-status='on']::after {
   transform: rotate(-45deg) translateY(0);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
   div.content {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 768px) {
   div.content {
     margin-left: 310px;
     min-width: 490px;
@@ -439,13 +440,13 @@ section#about {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 767px) {
   section#about {
     justify-content: center;
   }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 768px) {
   section#about {
     align-items: center;
   }
@@ -461,29 +462,30 @@ section#about div.code-wrapper pre {
 }
 
 section#about p.about-en {
-  font-size: 1.2em;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
 }
 
-ul.about-lang-opt-list {
+ul.language-list {
   list-style: none;
   position: absolute;
   right: 1em;
   bottom: 1em;
 }
 
-@media screen and (max-width: 640px) {
-  ul.about-lang-opt-list {
+@media screen and (max-width: 767px) {
+  ul.language-list {
     display: none;
   }
 }
 
-@media screen and (min-width: 641px) {
-  ul.about-lang-opt-list {
+@media screen and (min-width: 768px) {
+  ul.language-list {
     display: block;
   }
 }
 
-li.about-lang-opt-item {
+li.language {
   float: left;
   margin-right: 20px;
   text-transform: uppercase;
@@ -493,31 +495,30 @@ li.about-lang-opt-item {
   letter-spacing: .1em;
 }
 
-li.about-lang-opt-item a {
+li.language a {
   color: black;
 }
 
-li.about-lang-opt-item a:visited {
+li.language a:visited {
   color: black;
 }
 
-li.about-lang-opt-item a:hover {
+li.language a:hover {
   color: #C66;
 }
 
-li.about-lang-opt-item[data-selected="true"] a {
+li.language[data-selected="true"] a {
   color: #933;
 }
 
-li.about-lang-opt-item[data-selected="true"] a:hover {
+li.language[data-selected="true"] a:hover {
   color: #C66;
 }
 
-h1.projects-header {
+.projects-header {
   margin: 0;
   padding: 20px 0;
   text-align: right;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   border-top: dashed 4px #ccc;
   border-bottom: dashed 4px #ccc;
 }
@@ -546,24 +547,4 @@ section#projects a:hover {
 
 section#projects a:visited {
   color: blue;
-}
-
-section#projects div.project-tags-wrapper {
-  height: 40px;
-}
-
-section#projects ul {
-  list-style: none;
-}
-
-section#projects li.project-tag {
-  float: right;
-  height: 40px;
-  padding: 5px;
-  margin-left: 10px;
-  background-color: #ccc;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
 }

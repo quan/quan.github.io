@@ -29,12 +29,13 @@ section#about {
   }
 
   p.about-en {
-    font-size: 1.2em;
+    font-family: $slab-font-stack;
+    font-size: 1em;
   }
 }
 
 // Language options list
-ul.about-lang-opt-list {
+ul.language-list {
   @media #{$query-mobile} {
     display: none;
   }
@@ -47,7 +48,7 @@ ul.about-lang-opt-list {
   bottom: $lang-list-inset;
 }
 
-li.about-lang-opt-item {
+li.language {
   float: left;
   margin-right: $lang-list-item-spacing;
   text-transform: uppercase;

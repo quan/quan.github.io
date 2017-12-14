@@ -2,7 +2,7 @@ const languageMap = {
   'en': "<p class='about-en'>Hi, I'm Quan.</p>\
   <p class='about-en'>I'm a software engineer.</p>\
   <p class='about-en'>I have interests and stuff.</p>\
-  <p class='about-en'>Check out my projects, my resume, or contact me.</p>\
+  <p class='about-en'>Check out some of my <a class='func-projects'>projects</a>, my <a class='func-resume'>resume</a>, or <a class='func-contact'>contact</a> me.</p>\
   <p class='about-en'>Bruh.</p>",
   //
   // Python
@@ -14,7 +14,7 @@ quan<span class='c-punc'>.</span>interests <span class='c-punc'>=</span> [<br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'web development'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'building APIs'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'functional programming'</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural languages'</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural language processing'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'avoiding Java'</span><br />\
 ]<br />\
 <br />\
@@ -24,9 +24,9 @@ quan<span class='c-punc'>.</span>education <span class='c-punc'>=</span> {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'alma_mater'</span><span class='c-punc'>:</span> <span class='c-str'>'Cal Poly'</span><br />\
 }<br />\
 <br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>list_projects</a></span>()<br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>show_resume</a></span>()<br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></span>()",
+quan<span class='c-punc'>.</span><span class='c-link'><a class='func-projects'>list_projects</a></span>()<br />\
+quan<span class='c-punc'>.</span><span class='c-link'><a class='func-resume'>show_resume</a></span>()<br />\
+quan<span class='c-punc'>.</span><span class='c-link'><a class='func-contact'>contact</a></span>()",
   //
   // Javascript
   //
@@ -37,7 +37,7 @@ quan<span class='c-punc'>.</span>interests <span class='c-punc'>=</span> [<br />
 &nbsp;&nbsp;<span class='c-str'>'web development'</span>,<br />\
 &nbsp;&nbsp;<span class='c-str'>'building APIs'</span>,<br />\
 &nbsp;&nbsp;<span class='c-str'>'functional programming'</span>,<br />\
-&nbsp;&nbsp;<span class='c-str'>'natural languages'</span>,<br />\
+&nbsp;&nbsp;<span class='c-str'>'natural language processing'</span>,<br />\
 &nbsp;&nbsp;<span class='c-str'>'avoiding Java'</span><br />\
 ]<br />\
 <br />\
@@ -47,9 +47,9 @@ quan<span class='c-punc'>.</span>education <span class='c-punc'>=</span> {<br />
 &nbsp;&nbsp;almaMater<span class='c-punc'>:</span> <span class='c-str'>'Cal Poly'</span><br />\
 }<br />\
 <br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>listProjects</a></span>()<br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>showResume</a></span>()<br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></span>()",
+quan<span class='c-punc'>.</span><span class='c-link'><a class='func-projects'>listProjects</a></span>()<br />\
+quan<span class='c-punc'>.</span><span class='c-link'><a class='func-resume'>showResume</a></span>()<br />\
+quan<span class='c-punc'>.</span><span class='c-link'><a class='func-contact'>contact</a></span>()",
   //
   // Swift
   //
@@ -62,7 +62,7 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"web development"</span>,<br />\
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"building APIs"</span>,<br />\
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"functional programming"</span>,<br />\
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural languages"</span>,<br />\
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural language processing"</span>,<br />\
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"avoiding Java"</span><br />\
     ]<br />\
     <br />\
@@ -72,9 +72,9 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"almaMater"</span><span class="c-punc">:</span> <span class="c-str">"Cal Poly"</span><br />\
     ]<br />\
     <br />\
-    quan<span class="c-punc">.</span><span class="c-link"><a href="#">listProjects</a></span>()<br />\
-    quan<span class="c-punc">.</span><span class="c-link"><a href="#">showResume</a></span>()<br />\
-    quan<span class="c-punc">.</span><span class="c-link"><a href="#">contact</a></span>()<br />\
+    quan<span class="c-punc">.</span><span class="c-link"><a  class="func-projects">listProjects</a></span>()<br />\
+    quan<span class="c-punc">.</span><span class="c-link"><a  class="func-resume">showResume</a></span>()<br />\
+    quan<span class="c-punc">.</span><span class="c-link"><a  class="func-contact">contact</a></span>()<br />\
 }',
   //
   // Java
@@ -89,7 +89,7 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"web development"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"building APIs"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"functional programming"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural languages"</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural language processing"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"avoiding this"</span><br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;));<br />\
 <br />\
@@ -97,9 +97,9 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ed.<span class="c-func">put</span>(<span class="c-str">"major"</span class="c-str">, <span class="c-str">"Software Engineering"</span>);<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ed.<span class="c-func">put</span>(<span class="c-str">"almaMater"</span>, <span class="c-str">"Cal Poly"</span>);<br />\
 <br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a href="">listProjects</a></span>();<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a href="">showResume</a></span>();<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a href="">contact</a></span>();<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a  class="func-projects">listProjects</a></span>();<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a  class="func-resume">showResume</a></span>();<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a  class="func-contact">contact</a></span>();<br />\
 &nbsp;&nbsp;&nbsp;}<br />\
 }',
   //
@@ -123,9 +123,9 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>major, <span class="c-str">"S.E."</span>);<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>school, <span class="c-str">"CPSLO"</span>);<br />\
 <br />\
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">list_projects</span>();<br />\
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">show_resume</span>();<br />\
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">contact</span>();<br />\
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a  class="func-projects">list_projects</a>/span>();<br />\
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a  class="func-resume">show_resume</a></span>();<br />\
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a  class="func-contact">contact</a></span>();<br />\
 <br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">return</span> <span class="c-val">0</span>;<br />\
 }',
@@ -140,7 +140,7 @@ $quan<span class='c-punc'>-></span>interests <span class='c-punc'>=</span> <span
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'web development'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'building APIs'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'functional programming'</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural languages'</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural language processing'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'avoiding Java'</span><br />\
 );<br />\
 <br />\
@@ -150,9 +150,9 @@ $quan<span class='c-punc'>-></span>education <span class='c-punc'>=</span> <span
 &nbsp;&nbsp;&nbsp;&nbsp;'alma_mater' <span class='c-punc'>=></span> <span class='c-str'>'Cal Poly'</span><br />\
 );<br />\
 <br />\
-$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>list_projects</a></span>();<br />\
-$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>show_resume</a></span>();<br />\
-$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a></span>();",
+$quan<span class='c-punc'>-></span><span class='c-link'><a class='func-projects'>list_projects</a></span>();<br />\
+$quan<span class='c-punc'>-></span><span class='c-link'><a class='func-resume'>show_resume</a></span>();<br />\
+$quan<span class='c-punc'>-></span><span class='c-link'><a class='func-contact'>contact</a></span>();",
   //
   // ML
   //
@@ -162,7 +162,7 @@ $quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a><
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"web development"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"building APIs"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"functional programming"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural languages"</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural language processing"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"avoiding Java"</span><br />\
 &nbsp;&nbsp;&nbsp;&nbsp;],<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;education<span class="c-punc">=</span>{<br />\
@@ -173,6 +173,6 @@ $quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a><
 };<br />\
 <br />\
 <span class="c-func">app</span> (<span class="c-kw">fn</span> f <span class="c-punc">=></span> f quan) [<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-link"><a href="#">list_projects</a></span>, <span class="c-link"><a href="#">show_resume</a></span>, <span class="c-link"><a href="#">contact</a></span><br />\
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-link"><a  class="func-projects">list_projects</a></span>, <span class="c-link"><a  class="func-resume">show_resume</a></span>, <span class="c-link"><a  class="func-contact">contact</a></span><br />\
 ];'
 }

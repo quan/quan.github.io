@@ -3,11 +3,12 @@ $project-padding-h: 15px;
 $project-padding: $project-padding-v $project-padding-h;
 $project-border: dashed 4px #ccc;
 
+@import "tags"
+
 h1.projects-header {
   margin: 0;
   padding: $project-padding-v 0;
   text-align: right;
-  font-family: $sans-font-stack;
   border-top: $project-border;
   border-bottom: $project-border;
 }

@@ -1,6 +1,5 @@
 $mono-font-stack: 'Roboto Mono', monospace;
 $slab-font-stack: 'Roboto Slab', serif;
-$sans-font-stack: 'Roboto', Arial, Helvetica, sans-serif;
 
 $bg-color: #f3f3f3;
 $theme-color: #EE9B00;
@@ -44,7 +43,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: $slab-font-stack;
-  // font-size: 16px;
   background: $bg-color;
   overflow-x: hidden;
 }
