@@ -1,7 +1,11 @@
+$nav-menu-bg-image: url('../graphics/bg-theme.png');
+$nav-menu-content-padding: 10vh 0;
+$nav-menu-bg-image-width: 67px;
+$nav-menu-min-height: 300px;
+
+$query-under-min-header-height: "screen and (max-height: #{$nav-menu-min-height})";
 $query-under-max-header-height: "screen and (max-height: #{$nav-menu-skew-height})";
 $query-over-max-header-height: "screen and (min-height: #{$nav-menu-skew-height + 1})";
-$header-bg-image: url('../graphics/bg-theme.png');
-$header-bg-image-width: 67px;
 
 header#nav-menu-header {
   @media #{$query-mobile} {
@@ -19,20 +23,25 @@ header#nav-menu-header {
   position: fixed;
   top: 0;
   left: 0;
+  min-height: $nav-menu-min-height;
   height: $nav-menu-content-height;
-  padding: calc((100vh - #{$nav-menu-content-height}) / 2) 0;
+  box-sizing: border-box;
+  padding: $nav-menu-content-padding;
   // background-color: $theme-color;
-  background: $header-bg-image repeat;
+  background: $nav-menu-bg-image repeat;
 
   ul.nav-menu {
     margin: 0;
     position: absolute;
     bottom: 9%;
+    @media #{$query-over-max-header-height} {
+      left: calc(#{$nav-menu-width} * 2 - 50px - 14vh);
+    }
     @media #{$query-under-max-header-height} {
       left: calc(#{$nav-menu-width} - 50px - 14vh);
     }
-    @media #{$query-over-max-header-height} {
-      left: calc(#{$nav-menu-width} * 2 - 50px - 14vh);
+    @media #{$query-under-min-header-height} {
+      left: 58px;
     }
     z-index: 10;
   }
@@ -100,7 +109,7 @@ header#nav-menu-header {
       border-left: $nav-menu-width solid transparent;
       border-bottom: $nav-menu-skew-height solid $bg-color;
       background-image: url(../graphics/bg-theme.png);
-      background-position: $header-bg-image-width;
+      background-position: $nav-menu-bg-image-width;
     }
     @media #{$query-over-max-header-height} {
       left: $nav-menu-width * 2;
@@ -113,7 +122,7 @@ header#nav-menu-header {
       border-left: ($nav-menu-skew-width * 2) solid transparent;
       border-bottom: 100vh solid $bg-color;
       background-image: url(../graphics/bg-theme.png);
-      background-position: $header-bg-image-width;
+      background-position: $nav-menu-bg-image-width;
     }
   }
 }

@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: "Roboto Slab", serif;
   background: #f3f3f3;
+  overflow-x: hidden;
 }
 
 a {
@@ -85,8 +86,10 @@ header#nav-menu-header {
   position: fixed;
   top: 0;
   left: 0;
-  height: 80vh;
-  padding: calc((100vh - 80vh) / 2) 0;
+  min-height: 300px;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10vh 0;
   background: url("../graphics/bg-theme.png") repeat;
 }
 
@@ -121,15 +124,21 @@ header#nav-menu-header ul.nav-menu {
   z-index: 10;
 }
 
+@media screen and (min-height: 1025px) {
+  header#nav-menu-header ul.nav-menu {
+    left: calc(150px * 2 - 50px - 14vh);
+  }
+}
+
 @media screen and (max-height: 1024px) {
   header#nav-menu-header ul.nav-menu {
     left: calc(150px - 50px - 14vh);
   }
 }
 
-@media screen and (min-height: 1025px) {
+@media screen and (max-height: 300px) {
   header#nav-menu-header ul.nav-menu {
-    left: calc(150px * 2 - 50px - 14vh);
+    left: 58px;
   }
 }
 
@@ -393,10 +402,6 @@ div.mobile-nav-button[data-status='on']::after {
   transform: rotate(-45deg) translateY(0);
 }
 
-div.content {
-  overflow-x: hidden;
-}
-
 @media screen and (max-width: 640px) {
   div.content {
     margin-left: auto;
@@ -527,18 +532,38 @@ section#projects div.project-div {
   border-bottom: dashed 4px #ccc;
 }
 
-section#projects a.project-link {
+section#projects a {
   -webkit-transition: 0.02s;
   -moz-transition: 0.02s;
   transition: 0.02s;
   color: blue;
 }
 
-section#projects a.project-link:hover {
+section#projects a:hover {
   color: rebeccapurple;
   text-decoration: underline;
 }
 
-section#projects a.project-link:visited {
+section#projects a:visited {
   color: blue;
+}
+
+section#projects div.project-tags-wrapper {
+  height: 40px;
+}
+
+section#projects ul {
+  list-style: none;
+}
+
+section#projects li.project-tag {
+  float: right;
+  height: 40px;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }

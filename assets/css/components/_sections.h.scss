@@ -8,7 +8,6 @@ $content-left-margin: $nav-menu-width + $nav-menu-skew-width;
 // Wrapper for all of the sections.
 div.content {
   // To prevent the fake header from covering content.
-  overflow-x: hidden;
   @media #{$query-mobile} {
     margin-left: auto;
     margin-right: auto;

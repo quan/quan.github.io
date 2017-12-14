@@ -1,0 +1,34 @@
+$project-padding-v: 20px;
+$project-padding-h: 15px;
+$project-padding: $project-padding-v $project-padding-h;
+$project-border: dashed 4px #ccc;
+
+h1.projects-header {
+  margin: 0;
+  padding: $project-padding-v 0;
+  text-align: right;
+  font-family: $sans-font-stack;
+  border-top: $project-border;
+  border-bottom: $project-border;
+}
+
+section#projects {
+  display: flex;
+
+  div.project-div {
+    box-sizing: border-box;
+    padding: $project-padding;
+
+    border-bottom: $project-border;
+  }
+
+  a {
+    @include transition(.02s);
+    color: blue;
+    &:hover { 
+      color: rebeccapurple;
+      text-decoration: underline;
+    }
+    &:visited { color: blue; }
+  }
+}

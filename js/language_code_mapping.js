@@ -85,12 +85,12 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-func">Map</span><<span class="c-func">String</span>, <span class="c-func">String</span>> ed <span class="c-punc">=</span> quan.<span class="c-func">getEd</span>();<br />\
 <br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-func">setInterests</span>(Arrays.<span class="c-func">asList</span>(<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">programming languages"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">web development"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">building APIs"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">functional programming"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">natural languages"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">avoiding this"</span><br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"programming languages"</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"web development"</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"building APIs"</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"functional programming"</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural languages"</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"avoiding this"</span><br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;));<br />\
 <br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ed.<span class="c-func">put</span>(<span class="c-str">"degree"</span class="c-str">, <span class="c-str">"B.S."</span>);<br />\
@@ -108,6 +108,7 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
   'c': '<span class="c-kw">int</span> <span class="c-func">main</span>(<span class="c-kw">int</span> argc, <span class="c-kw">char</span> *argv[]) {<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">int</span> i;<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">SoftwareEngineer</span> *quan <span class="c-punc">=</span> <span class="c-func">malloc_se</span>();<br />\
+<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">char</span> *interests[] <span class="c-punc">=</span> {<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"programming languages"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"web dev"</span>, <span class="c-str">"building APIs"</span>,<br />\
@@ -115,7 +116,7 @@ quan<span class='c-punc'>.</span><span class='c-link'><a href='#'>contact</a></s
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"NLP"</span>, <span class="c-str">"avoiding Java"</span><br />\
 &nbsp;&nbsp;&nbsp;};<br />\
 <br />\
-&nbsp;&nbsp;&nbsp;<span class="c-kw">for</span> (i <span class="c-func">=</span> <span class="c-val">0</span>; i <span class="c-func"><</span> <span class="c-val">6</span>; i++)<br />\
+&nbsp;&nbsp;&nbsp;<span class="c-kw">for</span> (i <span class="c-punc">=</span> <span class="c-val">0</span>; i <span class="c-punc"><</span> <span class="c-val">6</span>; i++)<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>interests[i],<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">%s"</span>, interests[i]);<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>degree, <span class="c-str">"B.S."</span>);<br />\
