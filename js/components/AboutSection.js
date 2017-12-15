@@ -10,7 +10,7 @@ const AboutSection = {
 
   // Sets about section listeners and the initial language.
   init: function (_scope) {
-    // Attached to the function links.
+    // Used in click handler of function links.
     this.scrollTo = _scope.navigation.scrollTo
 
     // Create the click handler in this context to have access to this.
@@ -20,7 +20,7 @@ const AboutSection = {
     this.languages.forEach(language => {
       document
         .querySelector('li.language[data-lang="' + language + '"]')
-        .addEventListener('click', () => {
+        .addEventListener('click', function () {
           clickHandler(language)
         })
     })
@@ -33,15 +33,11 @@ const AboutSection = {
 
   // Changes the language that appears in the about section.
   setLanguage: function (language) {
-    if (this.languages.indexOf(language) < 0) {
-      console.log('unrecognized language "' + language + '"')
-      return
-    }
-
     // Toggle the current language in the language list.
     document
-      .querySelector('li.language[data-selected="true"]')
-      .setAttribute('data-selected', 'false')
+      .querySelectorAll('li.language')
+      .forEach(element => element.setAttribute('data-selected', 'false'))
+
     document
       .querySelector('li.language[data-lang="' + language + '"]')
       .setAttribute('data-selected', 'true')

@@ -2,8 +2,20 @@
 // Sections header file.
 //
 
-$section-padding: 50px;
+// The offset from the left, encompassing the navigation bar.
 $content-left-margin: $nav-menu-width + $nav-menu-skew-width;
+
+$section-padding-v: 20px;
+$section-padding-h: 50px;
+$section-padding: $section-padding-v $section-padding-h;
+$section-hdr-padding: $section-padding-v 0;
+
+$section-border: dashed 4px #ccc;
+$subsection-border: dashed 4px #e9e9e9;
+
+$footer-margin-v: 15px;
+$footer-margin-h: 100px;
+$footer-margin: $footer-margin-v $footer-margin-h;
 
 // Wrapper for all of the sections.
 div.content {
@@ -26,5 +38,33 @@ section {
   }
 }
 
+h1.section-header {
+  margin: 0;
+  padding: $section-hdr-padding;
+
+  font-size: 1.8em;
+  text-align: right;
+
+  border-top: $section-border;
+  border-bottom: $section-border;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+footer {
+  margin-left: $content-left-margin;
+  text-align: center;
+  p {
+    // font-size: .8em;
+    // margin: $footer-margin;
+    // padding: $footer-margin-v 0;
+    // border-top: $subsection-border; 
+  }
+}
+
 @import "sections/about";
 @import "sections/projects";
+// @import "sections/projects";
+@import "sections/contact";

@@ -59,7 +59,7 @@ const Navigation = {
       .scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-        inline: 'start'
+        inline: 'nearest'
       })
   }
 }

@@ -19,6 +19,7 @@ $nav-menu-link-hover-color: #333;
   list-style: none;
 
   a {
+    // @include transition(.1s); 
     color: $nav-menu-link-color;
     &:hover {
       color: $nav-menu-link-hover-color;

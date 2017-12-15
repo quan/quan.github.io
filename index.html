@@ -48,16 +48,16 @@
   <!-- TODO?: populate dynamically -->
   <header id="nav-menu-header">
     <ul class="nav-menu">
-      <li class="nav-menu-item menu-item-0 current">
+      <li class="nav-menu-item current" data-item="0">
         <a class="nav-link" data-target="about">About</a>
       </li>
-      <li class="nav-menu-item menu-item-1">
+      <li class="nav-menu-item" data-item="1">
         <a class="nav-link" data-target="projects">Projects</a>
       </li>
-      <li class="nav-menu-item menu-item-2">
+      <li class="nav-menu-item" data-item="2">
         <a class="nav-link" data-target="resume">Resume</a>
       </li>
-      <li class="nav-menu-item menu-item-3">
+      <li class="nav-menu-item" data-item="3">
         <a class="nav-link" data-target="contact">Contact</a>
       </li>
     </ul>
@@ -70,35 +70,35 @@
         <ul class="language-list">
           <li class="language" data-selected="false"
           data-lang="en">
-            <a href="#">En</a>
+            <a>En</a>
           </li>
           <li class="language" data-selected="true"
           data-lang="py">
-            <a href="#">Py</a>
+            <a>Py</a>
           </li>
           <li class="language" data-selected="false"
           data-lang="js">
-            <a href="#">JS</a>
+            <a>JS</a>
           </li>
           <li class="language" data-selected="false"
           data-lang="swift">
-            <a href="#">Swift</a>
+            <a>Swift</a>
           </li>
           <li class="language" data-selected="false"
           data-lang="java">
-            <a href="#">Java</a>
+            <a>Java</a>
           </li>
           <li class="language" data-selected="false"
           data-lang="c">
-            <a href="#">C</a>
+            <a>C</a>
           </li>
           <li class="language" data-selected="false"
           data-lang="php">
-            <a href="#">PHP</a>
+            <a>PHP</a>
           </li>
           <li class="language" data-selected="false"
           data-lang="ml">
-            <a href="#">ML</a>
+            <a>ML</a>
           </li>
         </ul>
       </div>
@@ -107,149 +107,139 @@
 
     <!-- Projects Section -->
     <section id="projects" class="large-section">
-      <div class="projects-wrapper">
-        <h1 class="projects-header">Things I've Made</h1>
+      <h1 class="projects-header section-header">Creations</h1>
 
-        <!-- - - - -->
-        <!-- JSISH -->
-        <!-- - - - -->
-        <div id="jsish-section" class="project-div">
-          <h2 class="project-title">jsish</h2>
-          <p class="project-tags">Keywords: Standard ML, Javascript, Interpreter</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description"><emph>jsish</emph> is a Javascript-like language written in Standard ML and is implemented with type safety and the restrictions of single token lookahead.</p>
-              <p class="project-description">It began in a programming languages course and was a good exercise in bad language design, as the its semantics included many of Javascript's faults.</p>
-              <p class="project-description">I genuinely enjoy Javascript and implementing a light clone certainly helped deepen my understanding of the language, but I thought it would be nice to take it a little further. I continued the project by fixing some of Javascript's bad design decisions (like binding variables to the global scope if declared implicitly and the entire concept of the global object) to make a simpler, safer version of the language. I haven't found a use for it yet, but it was fun.</p>
-              <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/jsish" target="_blank">GitHub</a>.</p>
-            </div>
-            <div class="project-tags-wrapper">
-              <ul>
-                <li class="project-tag">Standard ML</li>
-                <li class="project-tag">Interpreter</li>
-                <li class="project-tag">Functional</li>
-              </ul>
-            </div>
+      <!-- - - - -->
+      <!-- JSISH -->
+      <!-- - - - -->
+      <div id="jsish-section" class="project-div">
+        <h2 class="project-title">jsish</h2>
+        <p class="project-tags">Keywords: Standard ML, Javascript, Interpreter</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description"><emph>jsish</emph> is a Javascript-like language written in Standard ML. It began in a programming languages course and was a good exercise in bad language design, as the its semantics included many of Javascript's faults -- though it is implemented with type safety.</p>
+            <p class="project-description">I genuinely enjoy Javascript and writing a light clone certainly helped deepen my understanding of the language, but I thought it would be nice to take it a little further. I continued the project by fixing some of Javascript's bad design decisions (like binding variables to the global scope if declared implicitly and the entire concept of the global object) to make a simpler, safer version of the language. I haven't found a use for it yet, but it was fun.</p>
+            <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/jsish" target="_blank">GitHub</a>.</p>
           </div>
         </div>
+      </div>
 
-        <!-- - - - - - - -->
-        <!-- MARKOV POET -->
-        <!-- - - - - - - -->
-        <div id="markov-poet-section" class="project-div">
-          <h2 class="project-title">Markov Poet</h2>
-          <p class="project-tags">Keywords: Python, Text Generation, NLP</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor, hodor, hodor hodor. Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor hodor, hodor, hodor hodor. Hodor hodor - hodor... Hodor hodor hodor, hodor. Hodor hodor?! Hodor hodor - hodor, hodor. Hodor hodor - hodor hodor hodor hodor! </p>
-              <p class="project-description">Hodor, hodor, hodor. Hodor hodor. Hodor. Hodor, hodor - hodor, hodor. Hodor hodor hodor! Hodor. Hodor hodor; hodor hodor... Hodor hodor hodor; hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor hodor; hodor hodor hodor. Hodor! Hodor hodor, hodor hodor HODOR hodor, hodor hodor?! Hodor hodor - HODOR hodor, hodor hodor - hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor. Hodor hodor. Hodor. Hodor. Hodor hodor hodor?!</p>
+      <!-- - - - - - - -->
+      <!-- MARKOV POET -->
+      <!-- - - - - - - -->
+      <div id="markov-poet-section" class="project-div">
+        <h2 class="project-title">Markov Poet</h2>
+        <p class="project-tags">Keywords: Python, Text Generation, NLP</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Hodor, hodor hodor... Hodor hodor hodor... Hodor hodor hodor, hodor, hodor hodor. Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor hodor, hodor, hodor hodor. Hodor hodor - hodor... Hodor hodor hodor, hodor. Hodor hodor?! Hodor hodor - hodor, hodor. Hodor hodor - hodor hodor hodor hodor! </p>
+            <p class="project-description">Hodor, hodor, hodor. Hodor hodor. Hodor. Hodor, hodor - hodor, hodor. Hodor hodor hodor! Hodor. Hodor hodor; hodor hodor... Hodor hodor hodor; hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor hodor; hodor hodor hodor. Hodor! Hodor hodor, hodor hodor HODOR hodor, hodor hodor?! Hodor hodor - HODOR hodor, hodor hodor - hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor. Hodor hodor. Hodor. Hodor. Hodor hodor hodor?!</p>
 
-              <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/markov-poet" target="_blank">GitHub</a>.</p>
-            </div>
+            <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/markov-poet" target="_blank">GitHub</a>.</p>
           </div>
         </div>
+      </div>
 
-        <!-- - - - - - -->
-        <!-- PRONTOBEV -->
-        <!-- - - - - - -->
-        <div id="prontobev-section" class="project-div">
-          <h2 class="project-title">ProntoBev</h2>
-          <p class="project-tags">Keywords: Web, Javascript, CSS, Shopify</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex rebus enim timiditas, non ex vocabulis nascitur. Quo modo autem philosophus loquitur? Qualem igitur hominem natura inchoavit? Memini me adesse P. Apparet statim, quae sint officia, quae actiones. Duo Reges: constructio interrete. Quae quidem sapientes sequuntur duce natura tamquam videntes; Sed haec quidem liberius ab eo dicuntur et saepius. Mihi enim erit isdem istis fortasse iam utendum.</p>
-              <p class="project-description">Huius, Lyco, oratione locuples, rebus ipsis ielunior. Scio enim esse quosdam, qui quavis lingua philosophari possint; Utrum igitur tibi litteram videor an totas paginas commovere? De malis autem et bonis ab iis animalibus, quae nondum depravata sint, ait optime iudicari. At ego quem huic anteponam non audeo dicere; Quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? Quamquam te quidem video minime esse deterritum.</p>
+      <!-- - - - - - -->
+      <!-- PRONTOBEV -->
+      <!-- - - - - - -->
+      <div id="prontobev-section" class="project-div">
+        <h2 class="project-title">ProntoBev</h2>
+        <p class="project-tags">Keywords: Web, Javascript, CSS, Shopify</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ex rebus enim timiditas, non ex vocabulis nascitur. Quo modo autem philosophus loquitur? Qualem igitur hominem natura inchoavit? Memini me adesse P. Apparet statim, quae sint officia, quae actiones. Duo Reges: constructio interrete. Quae quidem sapientes sequuntur duce natura tamquam videntes; Sed haec quidem liberius ab eo dicuntur et saepius. Mihi enim erit isdem istis fortasse iam utendum.</p>
+            <p class="project-description">Huius, Lyco, oratione locuples, rebus ipsis ielunior. Scio enim esse quosdam, qui quavis lingua philosophari possint; Utrum igitur tibi litteram videor an totas paginas commovere? De malis autem et bonis ab iis animalibus, quae nondum depravata sint, ait optime iudicari. At ego quem huic anteponam non audeo dicere; Quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? Quamquam te quidem video minime esse deterritum.</p>
 
-              <p class="project-description">Purchase your own <a class="project-link" href="https://www.prontoconcepts.com" target="_blank">ProntoBev</a>.</p>
-            </div>
+            <p class="project-description">Purchase your own <a class="project-link" href="https://www.prontoconcepts.com" target="_blank">ProntoBev</a>.</p>
           </div>
         </div>
+      </div>
 
-        <!-- - - - - - - - - -->
-        <!-- PERSONA 5 ITEMS -->
-        <!-- - - - - - - - - -->
-        <div id="persona5-items-section" class="project-div">
-          <h2 class="project-title">Persona 5 Items</h2>
-          <p class="project-tags">Keywords: Web, Javascript, React</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Foreign Nikuman Despite the name, it's a kebab. Restores 20 HP to one ally. Central Street (Convenience Store)  150 Protein Increases training efficiency. Restores 30% HP to one ally. Central Street (Rocinante - Discount Store) 2000 Moist Protein Rainy day-only. Helps training. Restores 30% HP to one ally.  Central Street (Rocinante - Discount Store) 4500 Fried Bread Bread with a nostalgic taste. Restores 10 HP to one ally. Shujin Academy Store  90 Jam Bread Bread with strawberry jam spread. Restores 20 HP to one ally. Shujin Academy Store  120 Yakisoba Pan  Fast-selling bread. Restores 50 HP and cures Hunger for one ally. Shujin Academy Store (Friday) 150 Melon Pan A limited product that rejuvenates. Revives one fallen ally with full HP. Teikyu Building (Bakery, Weekly)  1000 Moist Katsu Bun Rainy day special with a terrific texture. Restores 200 HP to one ally. Teikyu Building (Bakery)  2000 Sandwich  Yon-Germain's staple sandwich. Restores 10 HP to one ally.</p>
-              <p class="project-description">Try it out on <a class="project-link" href="https://quan.github.io/persona5-items" target="_blank">GitHub</a> or check out the <a class="project-link" href="https://www.github.com/quan/persona5-items" target="_blank">source code</a>.</p>
-            </div>
+      <!-- - - - - - - - - -->
+      <!-- PERSONA 5 ITEMS -->
+      <!-- - - - - - - - - -->
+      <div id="persona5-items-section" class="project-div">
+        <h2 class="project-title">Persona 5 Items</h2>
+        <p class="project-tags">Keywords: Web, Javascript, React</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Foreign Nikuman Despite the name, it's a kebab. Restores 20 HP to one ally. Central Street (Convenience Store)  150 Protein Increases training efficiency. Restores 30% HP to one ally. Central Street (Rocinante - Discount Store) 2000 Moist Protein Rainy day-only. Helps training. Restores 30% HP to one ally.  Central Street (Rocinante - Discount Store) 4500 Fried Bread Bread with a nostalgic taste. Restores 10 HP to one ally. Shujin Academy Store  90 Jam Bread Bread with strawberry jam spread. Restores 20 HP to one ally. Shujin Academy Store  120 Yakisoba Pan  Fast-selling bread. Restores 50 HP and cures Hunger for one ally. Shujin Academy Store (Friday) 150 Melon Pan A limited product that rejuvenates. Revives one fallen ally with full HP. Teikyu Building (Bakery, Weekly)  1000 Moist Katsu Bun Rainy day special with a terrific texture. Restores 200 HP to one ally. Teikyu Building (Bakery)  2000 Sandwich  Yon-Germain's staple sandwich. Restores 10 HP to one ally.</p>
+            <p class="project-description">Try it out on <a class="project-link" href="https://quan.github.io/persona5-items" target="_blank">GitHub</a> or check out the <a class="project-link" href="https://www.github.com/quan/persona5-items" target="_blank">source code</a>.</p>
           </div>
         </div>
+      </div>
 
-        <!--- - - - - - - - - -->
-        <!-- MADOTSUKI WALKER -->
-        <!--- - - - - - - - - -->
-        <div id="madotsuki-section" class="project-div">
-          <h2 class="project-title">Madotsuki Walker</h2>
-          <p class="project-tags">Keywords: Web, Javascript, jQuery</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Once upon a time, I hacked together a web-based visual novel by turning DOM elements into menu bars and sprites. This was an attempt to apply this idea to something more dynamic.</p>
-              <p class="project-description">Thus came the Madotsuki Walker (sprite/name stolen from <a href="http://yumenikki.wikia.com/wiki/Yume_Nikki" target="_blank">Yume Nikki</a>, because I am not an artist), which was an experiment in animating sprite movement in a browser using the DOM and CSS instead of with a canvas. Not my best idea.</p>
-              <p class="project-description">Try it out on <a class="project-link" href="https://quan.github.io/madotsuki" target="_blank">GitHub</a> or check out the <a class="project-link" href="https://www.github.com/quan/madotsuki" target="_blank">source code</a>.</p>
-            </div>
-            <!-- <div class="project-img">
-              <img src="assets/images/madotsuki-walk.png" alt="There's a reason HTML5 has a canvas element." style="padding: 20px;"/>
-            </div> -->
+      <!--- - - - - - - - - -->
+      <!-- MADOTSUKI WALKER -->
+      <!--- - - - - - - - - -->
+      <div id="madotsuki-section" class="project-div">
+        <h2 class="project-title">Madotsuki Walker</h2>
+        <p class="project-tags">Keywords: Web, Javascript, jQuery</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Once upon a time, I hacked together a web-based visual novel by turning DOM elements into menu bars and sprites. This was an attempt to apply this idea to something more dynamic.</p>
+            <p class="project-description">Thus came the Madotsuki Walker (sprite/name stolen from <a href="http://yumenikki.wikia.com/wiki/Yume_Nikki" target="_blank">Yume Nikki</a>, because I am not an artist), which was an experiment in animating sprite movement in a browser using the DOM and CSS instead of with a canvas. Not my best idea.</p>
+            <p class="project-description">Try it out on <a class="project-link" href="https://quan.github.io/madotsuki" target="_blank">GitHub</a> or check out the <a class="project-link" href="https://www.github.com/quan/madotsuki" target="_blank">source code</a>.</p>
+          </div>
+          <!-- <div class="project-img">
+            <img src="assets/images/madotsuki-walk.png" alt="There's a reason HTML5 has a canvas element." style="padding: 20px;"/>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- - - - - -->
+      <!-- INKWELL -->
+      <!-- - - - - -->
+      <div id="inkwell-section" class="project-div">
+        <h2 class="project-title">Inkwell</h2>
+        <p class="project-tags">Keywords: Mobile, Web, C#, Javascript</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Multoque hoc melius nos veriusque quam Stoici. Illa argumenta propria videamus, cur omnia sint paria peccata.</p>
+            <p class="project-description">Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere. Sapiens autem semper beatus est et est aliquando in dolore; Hoc mihi cum tuo fratre convenit. Immo alio genere; Tu vero, inquam, ducas licet, si sequetur;</p>
           </div>
         </div>
+      </div>
 
-        <!-- - - - - -->
-        <!-- INKWELL -->
-        <!-- - - - - -->
-        <div id="inkwell-section" class="project-div">
-          <h2 class="project-title">Inkwell</h2>
-          <p class="project-tags">Keywords: Mobile, Web, C#, Javascript</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Multoque hoc melius nos veriusque quam Stoici. Illa argumenta propria videamus, cur omnia sint paria peccata.</p>
-              <p class="project-description">Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere. Sapiens autem semper beatus est et est aliquando in dolore; Hoc mihi cum tuo fratre convenit. Immo alio genere; Tu vero, inquam, ducas licet, si sequetur;</p>
-            </div>
+      <!-- - - - - - -->
+      <!-- POLYRENTS -->
+      <!-- - - - - - -->
+      <div id="polyrents-section" class="project-div">
+        <h2 class="project-title">PolyRents</h2>
+        <p class="project-tags">Keywords: Web, Javascript, React, Python, Django, Postgres</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Hella vaporware palo santo messenger bag, plaid authentic try-hard austin taiyaki neutra kitsch coloring book quinoa farm-to-table cred. Gochujang jianbing bitters yuccie post-ironic.</p>
+            <p class="project-description">Artisan mlkshk meditation drinking vinegar green juice knausgaard cred iPhone. Gentrify activated charcoal asymmetrical pop-up la croix sriracha pok pok, vape fanny pack taiyaki gochujang vaporware listicle. Pickled tote bag four dollar toast unicorn master cleanse PBR&amp;B.</p>
           </div>
         </div>
+      </div>
 
-        <!-- - - - - - -->
-        <!-- POLYRENTS -->
-        <!-- - - - - - -->
-        <div id="polyrents-section" class="project-div">
-          <h2 class="project-title">PolyRents</h2>
-          <p class="project-tags">Keywords: Web, Javascript, React, Python, Django, Postgres</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Hella vaporware palo santo messenger bag, plaid authentic try-hard austin taiyaki neutra kitsch coloring book quinoa farm-to-table cred. Gochujang jianbing bitters yuccie post-ironic.</p>
-              <p class="project-description">Artisan mlkshk meditation drinking vinegar green juice knausgaard cred iPhone. Gentrify activated charcoal asymmetrical pop-up la croix sriracha pok pok, vape fanny pack taiyaki gochujang vaporware listicle. Pickled tote bag four dollar toast unicorn master cleanse PBR&amp;B.</p>
-            </div>
+      <!-- - - - - - -->
+      <!-- SLAMRATER -->
+      <!-- - - - - - -->
+      <div id="slamrater-section" class="project-div">
+        <h2 class="project-title">slamrater.com</h2>
+        <p class="project-tags">Keywords: Web, Javascript, PHP, MySQL</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Bacon ipsum dolor amet kielbasa pork chop tenderloin pig cow ham turkey doner jerky chicken kevin pastrami short loin. Shoulder t-bone flank pancetta fatback ribeye venison jowl drumstick kielbasa sirloin cow swine tri-tip biltong.</p>
+            <p class="project-description">Meatball ham landjaeger chuck corned beef brisket. Capicola bacon leberkas pork belly turkey ball tip beef ribs porchetta cupim ham hock tenderloin. Shank chicken biltong cow.</p>
           </div>
         </div>
+      </div>
 
-        <!-- - - - - - -->
-        <!-- SLAMRATER -->
-        <!-- - - - - - -->
-        <div id="slamrater-section" class="project-div">
-          <h2 class="project-title">slamrater.com</h2>
-          <p class="project-tags">Keywords: Web, Javascript, PHP, MySQL</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Bacon ipsum dolor amet kielbasa pork chop tenderloin pig cow ham turkey doner jerky chicken kevin pastrami short loin. Shoulder t-bone flank pancetta fatback ribeye venison jowl drumstick kielbasa sirloin cow swine tri-tip biltong.</p>
-              <p class="project-description">Meatball ham landjaeger chuck corned beef brisket. Capicola bacon leberkas pork belly turkey ball tip beef ribs porchetta cupim ham hock tenderloin. Shank chicken biltong cow.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- - - - - - - - - - - - -->
-        <!-- FACEBOOK v. FAKE NEWS -->
-        <!-- - - - - - - - - - - - -->
-        <div id="fb-fake-news-section" class="project-div">
-          <h2 class="project-title">Facebook vs. Fake News</h2>
-          <p class="project-tags">Keywords: LaTeX, Paper</p>
-          <div class="project-content-wrapper">
-            <div class="project-text">
-              <p class="project-description">Lorizzle daahng dawg dolor mammasay mammasa mamma oo sa amizzle, that's the shizzle adipiscing elit. Da bomb sapizzle velizzle, funky fresh volutpizzle, suscipizzle quis, gravida vizzle, ghetto. Pellentesque the bizzle tortor. Sed erizzle.</p>
-              <p class="project-description">Bling bling izzle break it down things fo shizzle my nizzle tempizzle its fo rizzle. Mauris pellentesque nibh izzle stuff. Things izzle tortor. Pellentesque eleifend rhoncizzle nisi. In hac habitasse fizzle dictumst. Rizzle dapibizzle. Dope tellus shiz, boom shackalack my shizz, mattizzle ac, eleifend vitae, nunc. Black suscipizzle. Integizzle gangsta velit phat dope.</p>
-            </div>
+      <!-- - - - - - - - - - - - -->
+      <!-- FACEBOOK v. FAKE NEWS -->
+      <!-- - - - - - - - - - - - -->
+      <div id="fb-fake-news-section" class="project-div last">
+        <h2 class="project-title">Facebook vs. Fake News</h2>
+        <p class="project-tags">Keywords: LaTeX, Paper</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Lorizzle daahng dawg dolor mammasay mammasa mamma oo sa amizzle, that's the shizzle adipiscing elit. Da bomb sapizzle velizzle, funky fresh volutpizzle, suscipizzle quis, gravida vizzle, ghetto. Pellentesque the bizzle tortor. Sed erizzle.</p>
+            <p class="project-description">Bling bling izzle break it down things fo shizzle my nizzle tempizzle its fo rizzle. Mauris pellentesque nibh izzle stuff. Things izzle tortor. Pellentesque eleifend rhoncizzle nisi. In hac habitasse fizzle dictumst. Rizzle dapibizzle. Dope tellus shiz, boom shackalack my shizz, mattizzle ac, eleifend vitae, nunc. Black suscipizzle. Integizzle gangsta velit phat dope.</p>
           </div>
         </div>
       </div>
@@ -257,19 +247,27 @@
 
     <!-- Resume Section -->
     <section id="resume">
-      <div>What to do with this</div>
+      <h1 class="resume-header section-header">Resume</h1>
+      <div class="resume-wrapper">What to do with this</div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-      <div>GitHub</div>
-      <div>LinkedIn</div>
-      <div>Email</div>
+      <h1 class="contact-header section-header">Contact</h1>
+        <div class="contact-content">
+          <h3>Let's get in touch.</h3>
+          <ul>
+            <li class="contact-email"><a class="contact-link" data-contact="email">Email</a></li>
+            <li class="contact-github"><a class="contact-link" data-contact="github">GitHub</a></li>
+            <li class="contact-linkedin"><a class="contact-link" data-contact="linkedin">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div>Do I even need a footer?</div>
+      <p>Quan Tran. 2017.</p>
     </footer>
   </div>
 </body>

@@ -3,9 +3,9 @@ $nav-menu-content-padding: 10vh 0;
 $nav-menu-bg-image-width: 67px;
 $nav-menu-min-height: 300px;
 
-$query-under-min-header-height: "screen and (max-height: #{$nav-menu-min-height})";
-$query-under-max-header-height: "screen and (max-height: #{$nav-menu-skew-height})";
-$query-over-max-header-height: "screen and (min-height: #{$nav-menu-skew-height + 1})";
+$query-under-min-header-height: 'screen and (max-height: #{$nav-menu-min-height})';
+$query-under-max-header-height: 'screen and (max-height: #{$nav-menu-skew-height})';
+$query-over-max-header-height: 'screen and (min-height: #{$nav-menu-skew-height + 1})';
 
 header#nav-menu-header {
   @media #{$query-mobile} {
@@ -54,16 +54,16 @@ header#nav-menu-header {
     @include navigation-link();
     /* Keeps the nav menu iems along an angle. */
     @media #{$query-under-max-header-height} {
-      &.menu-item-0 { padding-right: 0; }
-      &.menu-item-1 { padding-right: $nav-menu-skew-offset; }
-      &.menu-item-2 { padding-right: $nav-menu-skew-offset * 2; }
-      &.menu-item-3 { padding-right: $nav-menu-skew-offset * 3; }
+      &[data-item='0'] { padding-right: 0; }
+      &[data-item='1'] { padding-right: $nav-menu-skew-offset; }
+      &[data-item='2'] { padding-right: $nav-menu-skew-offset * 2; }
+      &[data-item='3'] { padding-right: $nav-menu-skew-offset * 3; }
     }
     @media #{$query-over-max-header-height} {
-      &.menu-item-0 { padding-right: 0; }
-      &.menu-item-1 { padding-right: $nav-menu-skew-offset * 2; }
-      &.menu-item-2 { padding-right: $nav-menu-skew-offset * 4; }
-      &.menu-item-3 { padding-right: $nav-menu-skew-offset * 6; }
+      &[data-item='0'] { padding-right: 0; }
+      &[data-item='1'] { padding-right: $nav-menu-skew-offset * 2; }
+      &[data-item='2'] { padding-right: $nav-menu-skew-offset * 4; }
+      &[data-item='3'] { padding-right: $nav-menu-skew-offset * 6; }
     }
   }
 

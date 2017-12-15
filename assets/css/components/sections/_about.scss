@@ -1,8 +1,11 @@
 $lang-list-item-spacing: 20px;
-$lang-list-inset: 1em;
+$lang-list-inset: .9em;
 
 $lang-list-link-hover-color: #C66;
 $lang-list-link-color: #933;
+
+$code-wrapper-padding-v: 55px;
+$code-wrapper-padding-h: 25px;
 
 section#about {
   min-height: 100vh;
@@ -21,8 +24,8 @@ section#about {
 
   // See code.scss for colors.
   div.code-wrapper {
-    @include padding-horizontal(25px);
-
+    @include padding-horizontal($code-wrapper-padding-h);
+    padding-top: $code-wrapper-padding-v;
     pre {
       margin: 0;
     }
@@ -45,7 +48,7 @@ ul.language-list {
   list-style: none;
   position: absolute;
   right: $lang-list-inset;
-  bottom: $lang-list-inset;
+  top: $lang-list-inset;
 }
 
 li.language {

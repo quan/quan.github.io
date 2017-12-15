@@ -44,11 +44,13 @@ body {
   padding: 0;
   font-family: $slab-font-stack;
   background: $bg-color;
-  overflow-x: hidden;
+  @media #{$query-desktop} {
+    overflow-x: hidden;
+  }
 }
 
 a {
-  @include transition(.25s);
+  @include transition(.17s);
   text-decoration: none;
   &:hover { cursor: pointer; }
   &:visited { text-decoration: none; }

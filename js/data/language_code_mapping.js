@@ -123,7 +123,7 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>major, <span class="c-str">"S.E."</span>);<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>school, <span class="c-str">"CPSLO"</span>);<br />\
 <br />\
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="projects">list_projects</a>/span>();<br />\
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="projects">list_projects</a></span>();<br />\
 &nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="resume">show_resume</a></span>();<br />\
 &nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="contact">contact</a></span>();<br />\
 <br />\
@@ -140,19 +140,19 @@ $quan<span class='c-punc'>-></span>interests <span class='c-punc'>=</span> <span
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'web development'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'building APIs'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'functional programming'</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural language processing'</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural languages'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'avoiding Java'</span><br />\
 );<br />\
 <br />\
 $quan<span class='c-punc'>-></span>education <span class='c-punc'>=</span> <span class='c-func'>array</span>(<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;'degree' <span class='c-punc'>=></span> <span class='c-str'>'B.S.'</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;'major' <span class='c-punc'>=></span> <span class='c-str'>'Software Engineering'</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;'alma_mater' <span class='c-punc'>=></span> <span class='c-str'>'Cal Poly'</span><br />\
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'degree'</span> <span class='c-punc'>=></span> <span class='c-str'>'B.S.'</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'major'</span> <span class='c-punc'>=></span> <span class='c-str'>'Software Engineering'</span>,<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'alma_mater'</span> <span class='c-punc'>=></span> <span class='c-str'>'Cal Poly'</span><br />\
 );<br />\
 <br />\
-$quan<span class='c-punc'>-></span><span class='c-link'><a class='code-link' data-target='projects'>list_projects</a></span>();<br />\
-$quan<span class='c-punc'>-></span><span class='c-link'><a class='code-link' data-target='resume'>show_resume</a></span>();<br />\
-$quan<span class='c-punc'>-></span><span class='c-link'><a class='code-link' data-target='contact'>contact</a></span>();",
+$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>list_projects</a></span>();<br />\
+$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>show_resume</a></span>();<br />\
+$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a></span>();",
   //
   // ML
   //

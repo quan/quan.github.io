@@ -10,9 +10,9 @@ $nav-button-line-width: 50%;
 $nav-button-line-separation: 8px;
 
 div.mobile-nav-button {
-  @media #{$query-sm-mobile} {
-    left: $nav-button-inset;
-  }
+  // @media #{$query-sm-mobile} {
+  //   left: $nav-button-inset;
+  // }
   @media #{$query-mobile} {
     right: $nav-button-inset;
   }
