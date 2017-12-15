@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 a:visited {
   text-decoration: none;
 }
@@ -53,7 +57,6 @@ span.c-link a {
 }
 
 span.c-link a:hover {
-  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -162,7 +165,7 @@ header#nav-menu-header li.nav-menu-item a {
 }
 
 header#nav-menu-header li.nav-menu-item a:hover {
-  color: #F66;
+  color: #333;
 }
 
 @media screen and (max-height: 1024px) {
@@ -306,7 +309,7 @@ div.mobile-nav-menu li.mobile-nav-menu-item a {
 }
 
 div.mobile-nav-menu li.mobile-nav-menu-item a:hover {
-  color: #F66;
+  color: #333;
 }
 
 /* I shamelessly stole this from toyfight.co. */
@@ -463,7 +466,7 @@ section#about div.code-wrapper pre {
 
 section#about p.about-en {
   font-family: "Roboto Slab", serif;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 ul.language-list {

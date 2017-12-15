@@ -50,5 +50,6 @@ body {
 a {
   @include transition(.25s);
   text-decoration: none;
+  &:hover { cursor: pointer; }
   &:visited { text-decoration: none; }
 }

@@ -8,7 +8,7 @@ $nav-menu-skew-width: 160px;
 $nav-menu-skew-height: 1024px;
 $nav-menu-skew-offset: 7px;
 $nav-menu-link-color: white;
-$nav-menu-link-hover-color: #F66;
+$nav-menu-link-hover-color: #333;
 
 @mixin navigation-link() {
   font-family: $slab-font-stack;
