@@ -405,14 +405,14 @@ div.mobile-nav-button[data-status='on']::after {
 }
 
 @media screen and (max-width: 767px) {
-  div.content {
+  div.content, footer {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  div.content {
+  div.content, footer {
     margin-left: 310px;
     min-width: 490px;
   }
@@ -434,9 +434,20 @@ h1.section-header {
   margin: 0;
   padding: 20px 0;
   font-size: 1.8em;
-  text-align: right;
   border-top: dashed 4px #ccc;
   border-bottom: dashed 4px #ccc;
+}
+
+@media screen and (max-width: 767px) {
+  h1.section-header {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1.section-header {
+    text-align: right;
+  }
 }
 
 h1.section-header:hover {
@@ -444,7 +455,6 @@ h1.section-header:hover {
 }
 
 footer {
-  margin-left: 310px;
   text-align: center;
 }
 
@@ -568,36 +578,80 @@ section#contact div.contact-content {
   justify-content: center;
 }
 
-section#contact h3 {
-  margin: 50px 0;
+section#contact p {
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 767px) {
+  section#contact p {
+    margin: 50px 0 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#contact p {
+    margin: 50px 0;
+  }
 }
 
 section#contact ul {
   padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   list-style: none;
 }
 
-section#contact li {
-  float: left;
-  margin: 0 30px;
-  -webkit-border-radius: calc(120px / 2);
-  -moz-border-radius: calc(120px / 2);
-  -ms-border-radius: calc(120px / 2);
-  border-radius: calc(120px / 2);
-  width: 120px;
-  height: 120px;
+@media screen and (max-width: 767px) {
+  section#contact li {
+    margin: 15px 3%;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#contact li {
+    margin: 30px 3%;
+    width: 90px;
+    height: 90px;
+  }
 }
 
 section#contact li.contact-github {
-  background-color: #333;
+  background: url("../graphics/github.svg") no-repeat;
+  background-size: cover;
 }
 
 section#contact li.contact-linkedin {
-  background-color: #0077B5;
+  background: url("../graphics/linkedin.png") no-repeat;
+  background-size: cover;
 }
 
 section#contact li.contact-email {
-  background-color: #ea4335;
+  background: #ea4335 url("../graphics/email.svg") no-repeat;
+  background-size: 78%;
+  background-position: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  section#contact li.contact-email {
+    -webkit-border-radius: calc(45px / 2);
+    -moz-border-radius: calc(45px / 2);
+    -ms-border-radius: calc(45px / 2);
+    border-radius: calc(45px / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#contact li.contact-email {
+    -webkit-border-radius: calc(90px / 2);
+    -moz-border-radius: calc(90px / 2);
+    -ms-border-radius: calc(90px / 2);
+    border-radius: calc(90px / 2);
+  }
 }
 
 section#contact a.contact-link {
@@ -606,5 +660,5 @@ section#contact a.contact-link {
   height: 100%;
   color: white;
   text-align: center;
-  line-height: 120px;
+  line-height: 90px;
 }

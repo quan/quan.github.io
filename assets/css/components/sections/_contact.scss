@@ -1,12 +1,21 @@
 $contact-vertical-spacing: 50px;
+$contact-vertical-spacing-mobile: $contact-vertical-spacing / 2;
 
-$contact-item-margin: 30px;
-$contact-item-dim: 120px;
+$contact-item-margin-v: 30px;
+$contact-item-margin-h: 3%;
+$contact-item-margin: $contact-item-margin-v $contact-item-margin-h;
+$contact-item-margin-mobile: $contact-item-margin-v / 2 $contact-item-margin-h;
+$contact-item-dim: 90px;
+$contact-item-dim-mobile: $contact-item-dim / 2;
 $contact-item-bg-color: #333;
 
-$linkedin-blue: #0077B5;
-$github-dark-gray: #333;
-$email-red: #ea4335;
+// $linkedin-blue: #0077B5;
+// $github-dark-gray: #333;
+$linkedin-icon: url('../graphics/linkedin.png');
+$github-icon: url('../graphics/github.svg');
+$email-bg-color: #ea4335;
+$email-icon: url('../graphics/email.svg');
+
 
 section#contact {
   div.contact-content {
@@ -16,32 +25,58 @@ section#contact {
     justify-content: center;
   }
 
-  h3 {
-    margin: $contact-vertical-spacing 0;
+  p {
+    font-size: 1.3em;
+
+    @media #{$query-mobile} {
+      margin: $contact-vertical-spacing 0 $contact-vertical-spacing-mobile;
+    }
+    @media #{$query-desktop} {
+      margin: $contact-vertical-spacing 0;
+    }
   }
 
   ul {
     padding: 0;
-    // height: $contact-height;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
     list-style: none;
   }
 
   li {
-    float: left;
-    margin: 0 $contact-item-margin;
-    @include border-radius(calc(#{$contact-item-dim} / 2));
-    @include square-dimensions($contact-item-dim);
+    @media #{$query-mobile} {
+      margin: $contact-item-margin-mobile;
+      @include square-dimensions($contact-item-dim-mobile);
+    }
+    @media #{$query-desktop} {
+      margin: $contact-item-margin;
+      @include square-dimensions($contact-item-dim);
+    }
 
     &.contact-github {
-      background-color: $github-dark-gray;
+      background: $github-icon no-repeat;
+      background-size: cover;
     }
     &.contact-linkedin {
-      background-color: $linkedin-blue;
+      background: $linkedin-icon no-repeat;
+      background-size: cover;
     }
     &.contact-email {
-      background-color: $email-red; 
+      background: $email-bg-color $email-icon no-repeat;
+      background-size: 78%;
+      background-position: 50%; 
+      @media #{$query-mobile} {
+        @include border-radius(calc(#{$contact-item-dim-mobile} / 2));
+      }
+      @media #{$query-desktop} {
+        @include border-radius(calc(#{$contact-item-dim} / 2));
+      }
     }
-
   }
 
   a.contact-link {

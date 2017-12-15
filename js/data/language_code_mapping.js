@@ -117,15 +117,14 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
 &nbsp;&nbsp;&nbsp;};<br />\
 <br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">for</span> (i <span class="c-punc">=</span> <span class="c-val">0</span>; i <span class="c-punc"><</span> <span class="c-val">6</span>; i++)<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>interests[i],<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">%s"</span>, interests[i]);<br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>interests[i], <span class="c-str">"%s"</span>, interests[i]);<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>degree, <span class="c-str">"B.S."</span>);<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>major, <span class="c-str">"S.E."</span>);<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>school, <span class="c-str">"CPSLO"</span>);<br />\
 <br />\
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="projects">list_projects</a></span>();<br />\
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="resume">show_resume</a></span>();<br />\
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="contact">contact</a></span>();<br />\
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">list_projects</span>();<br />\
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">show_resume</span>();<br />\
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">contact</span>();<br />\
 <br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">return</span> <span class="c-val">0</span>;<br />\
 }',

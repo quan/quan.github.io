@@ -18,7 +18,7 @@ $footer-margin-h: 100px;
 $footer-margin: $footer-margin-v $footer-margin-h;
 
 // Wrapper for all of the sections.
-div.content {
+div.content, footer {
   // To prevent the fake header from covering content.
   @media #{$query-mobile} {
     margin-left: auto;
@@ -43,7 +43,12 @@ h1.section-header {
   padding: $section-hdr-padding;
 
   font-size: 1.8em;
-  text-align: right;
+  @media #{$query-mobile} {
+    text-align: center;
+  }
+  @media #{$query-desktop} {
+    text-align: right;
+  }
 
   border-top: $section-border;
   border-bottom: $section-border;
@@ -54,14 +59,7 @@ h1.section-header {
 }
 
 footer {
-  margin-left: $content-left-margin;
   text-align: center;
-  p {
-    // font-size: .8em;
-    // margin: $footer-margin;
-    // padding: $footer-margin-v 0;
-    // border-top: $subsection-border; 
-  }
 }
 
 @import "sections/about";
