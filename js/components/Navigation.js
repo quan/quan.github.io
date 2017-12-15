@@ -10,7 +10,7 @@ const Navigation = {
     // Attach listeners to the desktop navigation links.
     const clickHandler = this.scrollTo
     document
-      .querySelectorAll('li.rnav-menu-item a.nav-link')
+      .querySelectorAll('li.nav-menu-item a.nav-link')
       .forEach(element => {
         element.addEventListener('click', function () {
           clickHandler(element.dataset.target)
