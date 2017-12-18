@@ -423,7 +423,7 @@ section {
   padding: 20px 50px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
   section {
     padding-left: 0;
     padding-right: 0;
@@ -460,24 +460,14 @@ footer {
 
 section#about {
   min-height: 100vh;
+  overflow-x: scroll;
   display: flex;
-}
-
-@media screen and (max-width: 320px) {
-  section#about {
-    justify-content: start;
-  }
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
   section#about {
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  section#about {
-    align-items: center;
+    justify-content: start;
   }
 }
 

@@ -33,7 +33,7 @@ div.content, footer {
 section {
   box-sizing: border-box;
   padding: $section-padding;
-  @media #{$query-sm-mobile} {
+  @media #{$query-mobile} {
     @include padding-horizontal(0);
   }
 }

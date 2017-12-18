@@ -10,16 +10,14 @@ $code-wrapper-padding-h: 25px;
 section#about {
   min-height: 100vh;
   // Center the code block.
+  overflow-x: scroll;
   display: flex;
+  align-items: center;
 
-  @media #{$query-sm-mobile} {
-    justify-content: start;
+  @media #{$query-desktop} {
   }
   @media #{$query-mobile} {
-    justify-content: center;
-  }
-  @media #{$query-desktop} {
-    align-items: center;
+    justify-content: start;
   }
 
   // See code.scss for colors.
