@@ -43,7 +43,7 @@ const AboutSection = {
       .setAttribute('data-selected', 'true')
 
     document
-      .querySelector('div.code-wrapper code')
+      .querySelector('div.code-wrapper')
       .innerHTML = languageMap[language]
 
     // Attach listeners to the function links.

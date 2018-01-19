@@ -1,13 +1,12 @@
 const languageMap = {
   'en': "<p class='about-en'>Hi, I'm Quan.</p>\
-  <p class='about-en'>I'm a software engineer.</p>\
-  <p class='about-en'>I have interests and stuff.</p>\
+  <p class='about-en'>I'm a software engineer interested in programming languages, web development, functional programming, and avoiding Java.</p>\
   <p class='about-en'>Check out some of my <a class='code-link' data-target='projects'>projects</a>, my <a class='code-link' data-target='resume'>resume</a>, or <a class='code-link' data-target='contact'>contact</a> me.</p>\
-  <p class='about-en'>Bruh.</p>",
+  <p class='about-en'>Enjoy your stay.</p>",
   //
   // Python
   //
-  'py': "quan <span class='c-punc'>=</span> <span class='c-func'>SoftwareEngineer</span>()<br />\
+  'py': "<code>quan <span class='c-punc'>=</span> <span class='c-func'>SoftwareEngineer</span>()<br />\
 <br />\
 quan<span class='c-punc'>.</span>interests <span class='c-punc'>=</span> [<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'programming languages'</span>,<br />\
@@ -27,11 +26,11 @@ quan<span class='c-punc'>.</span>education <span class='c-punc'>=</span> {<br />
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='switch'>switch_language</a></span>()<br />\
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='projects'>list_projects</a></span>()<br />\
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='resume'>show_resume</a></span>()<br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='contact'>contact</a></span>()",
+quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='contact'>contact</a></span>()</code>",
   //
   // Javascript
   //
-  'js': "<span class='c-kw'>const</span> quan <span class='c-punc'>=</span> <span class='c-kw'>new</span> <span class='c-func'>SoftwareEngineer</span>()<br />\
+  'js': "<code><span class='c-kw'>const</span> quan <span class='c-punc'>=</span> <span class='c-kw'>new</span> <span class='c-func'>SoftwareEngineer</span>()<br />\
 <br />\
 quan<span class='c-punc'>.</span>interests <span class='c-punc'>=</span> [<br />\
 &nbsp;&nbsp;<span class='c-str'>'programming languages'</span>,<br />\
@@ -50,11 +49,11 @@ quan<span class='c-punc'>.</span>education <span class='c-punc'>=</span> {<br />
 <br />\
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='projects'>listProjects</a></span>()<br />\
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='resume'>showResume</a></span>()<br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='contact'>contact</a></span>()",
+quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='contact'>contact</a></span>()</code>",
   //
   // Swift
   //
-  'swift': '<span class="c-punc">@UIApplicationMain</span><br />\
+  'swift': '<code><span class="c-punc">@UIApplicationMain</span><br />\
 <span class="c-kw">func</span> <span class="c-func">main</span>() {<br />\
     <span class="c-kw">let</span> quan <span class="c-punc">=</span> <span class="c-func">SoftwareEngineer</span>()<br />\
     <br />\
@@ -76,11 +75,11 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
     quan<span class="c-punc">.</span><span class="c-link"><a class="code-link" data-target="projects">listProjects</a></span>()<br />\
     quan<span class="c-punc">.</span><span class="c-link"><a class="code-link" data-target="resume">showResume</a></span>()<br />\
     quan<span class="c-punc">.</span><span class="c-link"><a class="code-link" data-target="contact">contact</a></span>()<br />\
-}',
+}</code>',
   //
   // Java
   //
-  'java': '<span class="c-kw">public class</span> <span class="c-func">SoftwareEngineer</span> <span class="c-kw">extends</span> <span class="c-func">Person</span> {<br />\
+  'java': '<code><span class="c-kw">public class</span> <span class="c-func">SoftwareEngineer</span> <span class="c-kw">extends</span> <span class="c-func">Person</span> {<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">public static void</span> <span class="c-func">main</span>(<span class="c-func">String</span>[] args) {<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-func">SoftwareEngineer</span> quan <span class="c-punc">=</span> new <span class="c-func">SoftwareEngineer</span>();<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-func">Map</span><<span class="c-func">String</span>, <span class="c-func">String</span>> ed <span class="c-punc">=</span> quan.<span class="c-func">getEd</span>();<br />\
@@ -102,11 +101,11 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a class="code-link" data-target="resume">showResume</a></span>();<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quan.<span class="c-link"><a class="code-link" data-target="contact">contact</a></span>();<br />\
 &nbsp;&nbsp;&nbsp;}<br />\
-}',
+}</code>',
   //
   // C
   //
-  'c': '<span class="c-kw">int</span> <span class="c-func">main</span>(<span class="c-kw">int</span> argc, <span class="c-kw">char</span> *argv[]) {<br />\
+  'c': '<code><span class="c-kw">int</span> <span class="c-func">main</span>(<span class="c-kw">int</span> argc, <span class="c-kw">char</span> *argv[]) {<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">int</span> i;<br />\
 &nbsp;&nbsp;&nbsp;<span class="c-func">SoftwareEngineer</span> *quan <span class="c-punc">=</span> <span class="c-func">malloc_se</span>();<br />\
 <br />\
@@ -128,11 +127,11 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
 &nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">contact</span>();<br />\
 <br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">return</span> <span class="c-val">0</span>;<br />\
-}',
+}</code>',
   //
   // PHP
   //
-  'php': "&lt;?<br />\
+  'php': "<code>&lt;?<br />\
 $quan <span class='c-punc'>=</span> <span class='c-kw'>new</span> <span class='c-func'>SoftwareEngineer</span>;<br />\
 <br />\
 $quan<span class='c-punc'>-></span>interests <span class='c-punc'>=</span> <span class='c-func'>array</span>(<br />\
@@ -152,11 +151,11 @@ $quan<span class='c-punc'>-></span>education <span class='c-punc'>=</span> <span
 <br />\
 $quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>list_projects</a></span>();<br />\
 $quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>show_resume</a></span>();<br />\
-$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a></span>();",
+$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a></span>();</code>",
   //
   // ML
   //
-  'ml': '<span class="c-kw">val</span> quan <span class="c-punc">=</span> <span class="c-func">SoftwareEngineer</span> {<br />\
+  'ml': '<code><span class="c-kw">val</span> quan <span class="c-punc">=</span> <span class="c-func">SoftwareEngineer</span> {<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;interests<span class="c-punc">=</span>[<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"programming languages"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"web development"</span>,<br />\
@@ -174,5 +173,5 @@ $quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a><
 <br />\
 <span class="c-func">app</span> (<span class="c-kw">fn</span> f <span class="c-punc">=></span> f quan) [<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-link"><a class="code-link" data-target="projects">list_projects</a></span>, <span class="c-link"><a class="code-link" data-target="resume">show_resume</a></span>, <span class="c-link"><a class="code-link" data-target="contact">contact</a></span><br />\
-];'
+];</code>'
 }
