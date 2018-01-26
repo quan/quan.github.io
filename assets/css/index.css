@@ -39,12 +39,13 @@ span.c-func {
 
 span.c-link {
   color: #009; }
-  span.c-link a {
+
+a.code-link {
+  color: #009; }
+  a.code-link:hover {
+    text-decoration: underline; }
+  a.code-link:visited {
     color: #009; }
-    span.c-link a:hover {
-      text-decoration: underline; }
-    span.c-link a:visited {
-      color: #009; }
 
 h1.title {
   margin: 0;

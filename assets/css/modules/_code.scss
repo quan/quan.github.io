@@ -33,15 +33,15 @@ span.c-func {
 
 span.c-link {
   color: $code-link-color;
+}
 
-  a {
+a.code-link {
+  color: $code-link-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
     color: $code-link-color;
-
-    &:hover {
-      text-decoration: underline;
-    }
-    &:visited {
-      color: $code-link-color;
-    }
   }
 }

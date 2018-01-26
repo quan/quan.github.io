@@ -1,6 +1,7 @@
 const languageMap = {
   'en': "<p class='about-en'>Hi, I'm Quan.</p>\
-  <p class='about-en'>I'm a software engineer interested in programming languages, web development, functional programming, and avoiding Java.</p>\
+  <p class='about-en'>I'm a software engineer interested in programming languages, web development, and functional programming.</p>\
+  <p class='about-en'>When I'm not coding, I'm probably cooking or doing something musical (or both).</p>\
   <p class='about-en'>Check out some of my <a class='code-link' data-target='projects'>projects</a>, my <a class='code-link' data-target='resume'>resume</a>, or <a class='code-link' data-target='contact'>contact</a> me.</p>\
   <p class='about-en'>Enjoy your stay.</p>",
   //
@@ -14,7 +15,6 @@ quan<span class='c-punc'>.</span>interests <span class='c-punc'>=</span> [<br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'building APIs'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'functional programming'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural language processing'</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'avoiding Java'</span><br />\
 ]<br />\
 <br />\
 quan<span class='c-punc'>.</span>education <span class='c-punc'>=</span> {<br />\
@@ -37,7 +37,6 @@ quan<span class='c-punc'>.</span>interests <span class='c-punc'>=</span> [<br />
 &nbsp;&nbsp;<span class='c-str'>'building APIs'</span>,<br />\
 &nbsp;&nbsp;<span class='c-str'>'functional programming'</span>,<br />\
 &nbsp;&nbsp;<span class='c-str'>'natural language processing'</span>,<br />\
-&nbsp;&nbsp;<span class='c-str'>'avoiding Java'</span><br />\
 ]<br />\
 <br />\
 quan<span class='c-punc'>.</span>education <span class='c-punc'>=</span> {<br />\
@@ -62,7 +61,6 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"building APIs"</span>,<br />\
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"functional programming"</span>,<br />\
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural language processing"</span>,<br />\
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"avoiding Java"</span><br />\
     ]<br />\
     <br />\
     quan<span class="c-punc">.</span>education <span class="c-punc">=</span> [<br />\
@@ -112,7 +110,7 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"programming languages"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"web dev"</span>, <span class="c-str">"building APIs"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"functional programming"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"NLP"</span>, <span class="c-str">"avoiding Java"</span><br />\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"NLP"</span><br />\
 &nbsp;&nbsp;&nbsp;};<br />\
 <br />\
 &nbsp;&nbsp;&nbsp;<span class="c-kw">for</span> (i <span class="c-punc">=</span> <span class="c-val">0</span>; i <span class="c-punc"><</span> <span class="c-val">6</span>; i++)<br />\
@@ -139,7 +137,6 @@ $quan<span class='c-punc'>-></span>interests <span class='c-punc'>=</span> <span
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'building APIs'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'functional programming'</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'natural languages'</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'avoiding Java'</span><br />\
 );<br />\
 <br />\
 $quan<span class='c-punc'>-></span>education <span class='c-punc'>=</span> <span class='c-func'>array</span>(<br />\
@@ -161,7 +158,6 @@ $quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a><
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"building APIs"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"functional programming"</span>,<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"natural language processing"</span>,<br />\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-str">"avoiding Java"</span><br />\
 &nbsp;&nbsp;&nbsp;&nbsp;],<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;education<span class="c-punc">=</span>{<br />\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;degree<span class="c-punc">=</span><span class="c-str">"B.S."</span>,<br />\
