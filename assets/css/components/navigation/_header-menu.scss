@@ -35,13 +35,13 @@ header#nav-menu-header {
     position: absolute;
     bottom: 9%;
     @media #{$query-over-max-header-height} {
-      left: calc(#{$nav-menu-width} * 2 - 50px - 14vh);
+      left: calc(#{$nav-menu-width} * 2 - 50px - 8vh);
     }
     @media #{$query-under-max-header-height} {
-      left: calc(#{$nav-menu-width} - 50px - 14vh);
+      left: calc(#{$nav-menu-width} - 50px - 8vh);
     }
     @media #{$query-under-min-header-height} {
-      left: 58px;
+      left: 78px;
     }
     z-index: 10;
   }
