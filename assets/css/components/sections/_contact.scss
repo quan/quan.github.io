@@ -32,7 +32,7 @@ section#contact {
       margin: $contact-vertical-spacing 0 $contact-vertical-spacing-mobile;
     }
     @media #{$query-desktop} {
-      margin: $contact-vertical-spacing 0;
+      margin: $contact-vertical-spacing 0 $contact-vertical-spacing / 2;
     }
   }
 

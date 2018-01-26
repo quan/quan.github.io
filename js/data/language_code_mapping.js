@@ -23,7 +23,6 @@ quan<span class='c-punc'>.</span>education <span class='c-punc'>=</span> {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'alma_mater'</span><span class='c-punc'>:</span> <span class='c-str'>'Cal Poly'</span><br />\
 }<br />\
 <br />\
-quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='switch'>switch_language</a></span>()<br />\
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='projects'>list_projects</a></span>()<br />\
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='resume'>show_resume</a></span>()<br />\
 quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-target='contact'>contact</a></span>()</code>",

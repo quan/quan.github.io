@@ -10,13 +10,15 @@ $code-wrapper-padding-h: 25px;
 section#about {
   min-height: 100vh;
   // Center the code block.
-  overflow-x: scroll;
+  overflow-x: hidden;
   display: flex;
   align-items: center;
+  justify-content: start;
 
-  @media #{$query-desktop} {
-  }
   @media #{$query-mobile} {
+    justify-content: center;
+  }
+  @media #{$query-sm-mobile} {
     justify-content: start;
   }
 

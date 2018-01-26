@@ -1,21 +1,13 @@
-$project-padding-v: 20px;
-$project-padding-h: 15px;
-$project-padding: $project-padding-v $project-padding-h;
-$project-border: $subsection-border;
+$pr-padding-v: 20px;
+$pr-padding-h: 15px;
 
-// @import "tags"
+$pr-padding: $pr-padding-v $pr-padding-h;
+$pr-border: $subsection-border;
 
-section#projects {
-  div.project-div {
-    box-sizing: border-box;
-    padding: $project-padding;
 
-    border-bottom: $project-border;
-    // The resume section has a border.
-    &.last { border-bottom: none; }
-  }
+// Style Projects and Resume sections together, since they're pretty similar.
 
-  a {
+section#projects a, section#resume a {
     @include transition(.02s);
     color: blue;
     &:hover { 
@@ -23,5 +15,13 @@ section#projects {
       text-decoration: underline;
     }
     &:visited { color: blue; }
-  }
+}
+div.project-div, div.resume-div {
+  box-sizing: border-box;
+  
+  padding: $pr-padding;
+
+  border-bottom: $pr-border;
+  // The following section's header has a border.
+  &.last { border-bottom: none; }
 }
