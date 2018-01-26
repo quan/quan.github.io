@@ -1,0 +1,72 @@
+/* I shamelessly stole this from toyfight.co. */
+$nav-button-color: #212121;
+$nav-button-size: 60px;
+$nav-button-inset: 15px;
+$nav-button-transition: .29s cubic-bezier(.52,.01,.16,1);
+
+$nav-button-line-height: 3px;
+$nav-button-line-width: 50%;
+// The distance between the two menu lines.
+$nav-button-line-separation: 8px;
+
+div.mobile-nav-button {
+  // @media #{$query-sm-mobile} {
+  //   left: $nav-button-inset;
+  // }
+  @media #{$query-mobile} {
+    right: $nav-button-inset;
+  }
+  @media #{$query-desktop} {
+    display: none;
+  }
+
+  position: fixed;
+  top: $nav-button-inset;
+  width: $nav-button-size;
+  height: $nav-button-size;
+  z-index: 300;
+
+  opacity: 1.0;
+  &[data-hidden='hiding'] {
+    @include transition(.8s);
+    opacity: 0;
+  }
+  &[data-hidden='true'] {
+    opacity: 0;
+  }
+
+  @include transition(.32s);
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: $nav-button-line-height;
+    width: $nav-button-line-width;
+    left: calc((100% - #{$nav-button-line-width}) / 2);
+    top: 50%;
+    margin-top: -1px;
+    background-color: $nav-button-color;
+    @include transition($nav-button-transition); 
+  }
+}
+
+div.mobile-nav-button::before {
+  @include transform(rotate(0) translateY(-#{$nav-button-line-separation}));
+}
+
+div.mobile-nav-button[data-status='on']::before {
+  background-color: white;
+  @include transform(rotate(45deg) translateY(0));
+}
+
+div.mobile-nav-button::after {
+  @include transform(rotate(0) translateY($nav-button-line-separation));
+}
+
+div.mobile-nav-button[data-status='on']::after {
+  background-color: white;
+  @include transform(rotate(-45deg) translateY(0));
+}

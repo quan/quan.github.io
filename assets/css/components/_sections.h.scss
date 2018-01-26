@@ -1,0 +1,67 @@
+// 
+// Sections header file.
+//
+
+// The offset from the left, encompassing the navigation bar.
+$content-left-margin: $nav-menu-width + $nav-menu-skew-width;
+
+$section-padding-v: 20px;
+$section-padding-h: 50px;
+$section-padding: $section-padding-v $section-padding-h;
+$section-hdr-padding: $section-padding-v 0;
+
+$section-border: dashed 4px #ccc;
+$subsection-border: dashed 4px #e9e9e9;
+
+$footer-margin-v: 15px;
+$footer-margin-h: 100px;
+$footer-margin: $footer-margin-v $footer-margin-h;
+
+// Wrapper for all of the sections.
+div.content, footer {
+  // To prevent the fake header from covering content.
+  @media #{$query-mobile} {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media #{$query-desktop} {
+    margin-left: $content-left-margin;
+    min-width: $min-page-width - $content-left-margin;
+  }
+}  
+
+section {
+  box-sizing: border-box;
+  padding: $section-padding;
+  @media #{$query-mobile} {
+    @include padding-horizontal(0);
+  }
+}
+
+h1.section-header {
+  margin: 0;
+  padding: $section-hdr-padding;
+
+  font-size: 1.8em;
+  @media #{$query-mobile} {
+    text-align: center;
+  }
+  @media #{$query-desktop} {
+    text-align: right;
+  }
+
+  border-top: $section-border;
+  border-bottom: $section-border;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+@import "sections/about";
+@import "sections/projects";
+@import "sections/contact";

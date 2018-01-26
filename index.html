@@ -1,239 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-
-  <title>quan@github</title>
-
+  <meta name="theme-color" content="#EE9B00">
   <link rel="shortcut icon" href="assets/graphics/favicon.ico">
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300,400" rel="stylesheet">
-
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto+Mono">
   <link rel="stylesheet" href="assets/css/index.css"/>
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- global data for now... -->
+  <script src="js/data/language_code_mapping.js"></script>
 
-  ga('create', 'UA-103252792-2', 'auto');
-  ga('send', 'pageview');
-</script>
+  <script src="js/components/Navigation.js"></script>
+  <script src="js/components/AboutSection.js"></script>
+  
+  <script src="js/main.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-103252792-2', 'auto'); ga('send', 'pageview');
+  </script>
+  <title>quan@github</title>
 </head>
 <body>
+  <!-- <h1 class="title">Quan Tran</h1> -->
 
-<header>
-  <div class="jumbotron jumbotron-header" id="top">
-    <div class="container">
-      <div class="row top-header-wrapper-row">
-        <!-- desktop profile pic -->
-        <!-- <div class="col top-header-wrapper-col profile-pic-col">
-          <img class="profile-pic square" src="assets/images/placeholder-square.jpg"/>
-        </div> -->
-        <div class="col top-header-wrapper-col">
-          <div class="row title-wrapper-row">
-            <div class="col title-wrapper-col">
-              <!-- title and github link -->
-              <h2 class="title">quan.github.io</h2>
-              <h6 class="outgoing-link">
-                <a href="https://www.github.com/quan">quan@github</a> 
-                •
-                <a href="https://www.linkedin.com/in/quantrantheory">quan@linkedin</a></h6>
-            </div>
-          </div>
-          <div class="row about-wrapper-row">
-            <!-- mobile profile pic -->
-            <!-- <div class="col profile-pic-mobile-col">
-              <img class="profile-pic square" src="assets/images/placeholder-square.jpg"/>
-            </div> -->
-            <div class="col text-box">
-              <!-- about -->
-              <div class="text-box">
-                <p class="about">
-                  I'm a computer nerd/curry enthusiast finishing up my B.S. in Software Engineering from Cal Poly<span class="extra-text-replacement">.</span><span class="extra-text">,
-                  where I've studied computer science mumbo-jumbo and developed apps for customers like Microsoft and Cru.</span>
-                </p>
-                <p class="about">My academic interests lie in programming languages, natural language processing, and functional programming. Outside of academia, my coding time has been spent mostly on web development, API construction, and avoiding Java.</p>
-
-                <p class="about">If I'm not at a computer, I'm probably cooking or doing something musical. Feel free to email me at quan at curryti.me if you'd like to reach me.</p>
-                <!--<p class="about">He started his first software company, <em>Trendtech Ventures</em>, in 2012 and has since seen many more failures (and the occasional success).</p>-->
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</header>
-
-<section id="projects">
-  <div class="container project-container">
-    <h2 class="section-header">Projects</h2>
-    <div class="row project-list">
-      <!-- ProntoBev-->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">ProntoBev</h5>
-            <p class="card-text">Just before their Shark Tank debut, Pronto Concepts needed someone to perfect their storefront. Turns out Shopify has a really cool templating system.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/prontobev.png"
-               onclick="window.open('https://prontoconcepts.com', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Persona 5 Items -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Persona 5 Items</h5>
-            <p class="card-text">A filterable, tabular Persona 5 item database I made because Googling was detracting from my playing time.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/persona5-items.png"
-               onclick="window.open('https://quan.github.io/persona5-items/', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Madotsuki Walker -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Madotsuki Walker</h5>
-            <p class="card-text">An experiment in rendering sprite animation using DOM elements instead of a canvas. Turns out it was a terrible idea.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/madotsuki-walk.png"
-               onclick="window.open('https://quan.github.io/madotsuki/', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Inkwell -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Inkwell</h5>
-            <p class="card-text">A draw and chat app available on iOS, Android, and Windows.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/inkwell.png"
-               onclick="window.open('https://quan.github.io/inkwell-website/', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- PolyRents -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Polyrents</h5>
-            <p class="card-text">Renting, simplified.</p>
-          </div>
-          <img class="card-img-bottom card-img img-fluid"
-               src="assets/images/polyrents.png"
-               onclick="window.open('https://polyrents.com', '_blank')"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Cru -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Cru</h5>
-            <p class="card-text">A mobile app commissioned by Cru Central Coast.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/cru.png"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- slamrater.com -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">slamrater.com</h5>
-            <p class="card-text">A university Greek life website for sharing images. Not tasteful ones.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/slamrater.png"
-               alt="" />
-        </div>
-      </div>
-
-      <!-- Facebook vs. Fake News -->
-      <div class="card-wrapper col-lg-4 col-sm-6">
-        <div class="card">
-          <div class="card-block">
-            <h5 class="card-title">Facebook vs. Fake News</h5>
-            <p class="card-text">An ethical analysis of Facebook's response to false news following the 2016 Presidential Election. Spoiler alert: fake news sucks.</p>
-          </div>
-          <img class="card-img-bottom img-fluid card-img"
-               src="assets/images/facebook-vs-fake-news.png"
-               onclick="window.open('https://quan.github.io/facebook-', '_blank')"
-               alt="" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container-fluid footer">
-    <ul class="footer-list">
-      <li class="footer-list-item">
-        <a class="footer-list-anchor" href="#">Top</a>
+  <!-- Mobile Navigation Menu -->
+  <!-- TODO?: populate dynamically -->
+  <div class="mobile-nav-menu" data-status="closed">
+    <ul class="mobile-nav-menu-flex">
+      <li class="mobile-nav-menu-item">
+        <a class="nav-link" data-target="about">About</a>
       </li>
-      <li class="footer-list-divider">|</li>
-      <li class="footer-list-item">
-        <a class="footer-list-anchor"
-           href="mailto:quan@curryti.me">Email</a>
+      <li class="mobile-nav-menu-item">
+        <a class="nav-link" data-target="projects">Projects</a>
       </li>
-      <li class="footer-list-divider">|</li>
-      <li class="footer-list-item">
-        <a class="footer-list-anchor"
-           href="https://www.github.com/quan">GitHub</a>
+      <li class="mobile-nav-menu-item">
+        <a class="nav-link" data-target="resume">Resume</a>
       </li>
-      <li class="footer-list-divider">|</li>
-      <li class="footer-list-item">
-        <a class="footer-list-anchor"
-           href="https://www.linkedin.com/in/quantrantheory">LinkedIn</a>
+      <li class="mobile-nav-menu-item">
+        <a class="nav-link" data-target="contact">Connect</a>
       </li>
-      <!--<li class="footer-list-divider">|</li>-->
-      <!--<li class="footer-list-item">-->
-        <!--<a class="footer-list-anchor" href="">Something</a>-->
-      <!--</li>-->
     </ul>
   </div>
-</footer>
+  <div class="mobile-nav-button" data-status="off" data-hidden="false"></div>
 
+  <!-- Header Navigation Menu -->
+  <!-- TODO?: populate dynamically -->
+  <header id="nav-menu-header">
+    <ul class="nav-menu">
+      <li class="nav-menu-item current" data-item="0">
+        <a class="nav-link" data-target="about">About</a>
+      </li>
+      <li class="nav-menu-item" data-item="1">
+        <a class="nav-link" data-target="projects">Projects</a>
+      </li>
+      <li class="nav-menu-item" data-item="2">
+        <a class="nav-link" data-target="resume">Resume</a>
+      </li>
+      <li class="nav-menu-item" data-item="3">
+        <a class="nav-link" data-target="contact">Connect</a>
+      </li>
+    </ul>
+  </header>
 
-<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"-->
-        <!--integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="-->
-        <!--crossorigin="anonymous"></script>-->
+  <div class="content">
+    <!-- About Section -->
+    <section id="about" class="large-section">
+      <div class="language-div">
+        <ul class="language-list">
+          <li class="language" data-selected="false"
+          data-lang="en">
+            <a>En</a>
+          </li>
+          <li class="language" data-selected="true"
+          data-lang="py">
+            <a>Py</a>
+          </li>
+          <li class="language" data-selected="false"
+          data-lang="js">
+            <a>JS</a>
+          </li>
+          <li class="language" data-selected="false"
+          data-lang="swift">
+            <a>Swift</a>
+          </li>
+          <li class="language" data-selected="false"
+          data-lang="java">
+            <a>Java</a>
+          </li>
+          <li class="language" data-selected="false"
+          data-lang="c">
+            <a>C</a>
+          </li>
+          <li class="language" data-selected="false"
+          data-lang="php">
+            <a>PHP</a>
+          </li>
+          <li class="language" data-selected="false"
+          data-lang="ml">
+            <a>ML</a>
+          </li>
+        </ul>
+      </div>
+      <div class="code-wrapper"><pre><code></code></pre></div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="large-section">
+      <h1 class="projects-header section-header">Projects</h1>
+
+      <!-- - - - -->
+      <!-- JSISH -->
+      <!-- - - - -->
+      <div id="jsish-section" class="project-div">
+        <h2 class="project-title">jsish</h2>
+        <p class="project-tags">Keywords: Standard ML, Javascript, Interpreter</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">In the words of Dr. John Clements: &quot;There are a lot of mistakes you can make in designing a language and Brendan Eich made all of them.&quot; This is my response.</p>
+            <p class="project-description"><emph>jsish</emph> is a dynamic, strongly typed, interpreted language written in Standard ML. It began as a Javascript clone in a programming languages course and was a good exercise in bad language design, as its semantics included many of Javascript&#39;s more questionable decisions.</p>
+            <p class="project-description">I extended the project by fixing some of Javascript&#39;s bad design decisions (like binding variables to the global scope if declared implicitly and the entire concept of the global object) and adding type safety to make a simpler, safer version of the language. I haven&#39;t found a use for it yet, but it was fun.</p>
+            <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/jsish" target="_blank">GitHub</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- - - - - - - -->
+      <!-- MARKOV POET -->
+      <!-- - - - - - - -->
+      <div id="markov-poet-section" class="project-div">
+        <h2 class="project-title">Markov Poet</h2>
+        <p class="project-tags">Keywords: Python, Text Generation, NLP</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">In an AI course, some classmates and I had wanted to experiment in the domain of poetry generation, so we designed and developed a LSTM RNN. It worked and generated some cool phrases, but one of my classmates noted that it seemed like we were using a neural network for the sake of using a neural network. He was right.</p>
+            <p class="project-description">As a result of said project, I had accrued a large collection of haiku training data. Some time later I had picked up an odd interest in Markov Chains and decided to implement one using said large collection.</p>
+            <p class="project-description">The result was pretty cool. Poetry is a different medium than prose, so I implemented a state model that includes <emph>newlines</emph> as a sink state to reflect this. Because of this, the chain can generate a certain number of <emph>lines</emph> instead of words so the text has a different flow.</p> 
+
+            <p class="project-description">Check it out on <a class="project-link" href="https://www.github.com/quan/markov-poet" target="_blank">GitHub</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- - - - - - - - - -->
+      <!-- PERSONA 5 ITEMS -->
+      <!-- - - - - - - - - -->
+      <div id="persona5-items-section" class="project-div">
+        <h2 class="project-title">Persona 5 Items</h2>
+        <p class="project-tags">Keywords: Web, Javascript, React</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">I love JRPGs. I grew up on Final Fantasy and they will always have a special place in my heart. When Persona 5 was released, I guessed that I would put hundreds of hours into it. I was right.</p>
+            <p class="project-description">With Persona&#39;s extensive rotating shop inventory, I found that I was spending a lot of time on Google. Around the same time, I had been getting a lot of recommendations to learn React. So I put the two together and made this thing.</p> 
+            <p class="project-description"><a class="project-link" href="https://quan.github.io/persona5-items" target="_blank">Try it out</a> or check it out on <a class="project-link" href="https://www.github.com/quan/persona5-items" target="_blank">GitHub</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!--- - - - - - - - - -->
+      <!-- MADOTSUKI WALKER -->
+      <!--- - - - - - - - - -->
+      <div id="madotsuki-section" class="project-div">
+        <h2 class="project-title">Madotsuki Walker</h2>
+        <p class="project-tags">Keywords: Web, Javascript, jQuery</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Once upon a time, I hacked together a web-based visual novel by transforming DOM elements into menu bars and sprites. A few years later, I thought it&#39;d be cool to apply this transformation to a more dynamic gaming medium.</p>
+            <p class="project-description">Thus came the Madotsuki Walker (sprite/name stolen from <a href="http://yumenikki.wikia.com/wiki/Yume_Nikki" target="_blank">Yume Nikki</a>, because I am not an artist), which was an experiment in animating in-browser sprite movement using the DOM and CSS instead of with a canvas. This was a terrible idea.</p>
+            <p class="project-description"><a class="project-link" href="https://quan.github.io/madotsuki" target="_blank">Try it out</a> or check it out on <a class="project-link" href="https://www.github.com/quan/madotsuki" target="_blank">GitHub</a>.</p>
+          </div>
+          <!-- <div class="project-img">
+            <img src="assets/images/madotsuki-walk.png" alt="There's a reason HTML5 has a canvas element." style="padding: 20px;"/>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- - - - - -->
+      <!-- INKWELL -->
+      <!-- - - - - -->
+      <div id="inkwell-section" class="project-div">
+        <h2 class="project-title">Inkwell</h2>
+        <p class="project-tags">Keywords: Mobile, C#, ASP.NET, Xamarin, Web</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Inkwell is a draw and chat app that was once available on Windows, iOS, and Android. It&#39;s no longer being maintained or developed. That&#39;s probably for the best.</p>
+            <p class="project-description">I joined the team during a transitionary period and was initially tasked with heading the rebranding and redesign of the app. After deploying the marketing website with a closed alpha release, I then focused on development and optimization of the REST API.</p>
+            <p class="project-description">Check out a cached version of the <a class="project-link" href="https://quan.github.io/inkwell_website" target="_blank">marketing website</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- - - - - - -->
+      <!-- SLAMRATER -->
+      <!-- - - - - - -->
+      <div id="slamrater-section" class="project-div">
+        <h2 class="project-title">slamrater.com</h2>
+        <p class="project-tags">Keywords: Web, Javascript, jQuery, PHP, MySQL</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">Slamrater was a less-than-tasteful image sharing website a friend and I created to &quot;disrupt a multi-million dollar market&quot;. We didn&#39;t make our millions, but it was the first LAMP stack and is what got me started on web development.</p>
+            <p class="project-description">It&#39;s no longer on the interwebs, and my museum records aren&#39;t exactly PG, so I&#39;ll leave details up to your imagination.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- - - - - - - - - - - - -->
+      <!-- FACEBOOK v. FAKE NEWS -->
+      <!-- - - - - - - - - - - - -->
+      <div id="fb-fake-news-section" class="project-div last">
+        <h2 class="project-title">Facebook vs. Fake News</h2>
+        <p class="project-tags">Keywords: LaTeX, Ethics</p>
+        <div class="project-content-wrapper">
+          <div class="project-text">
+            <p class="project-description">This is an academic paper I submitted on the ethics of Facebook&#39;s response to fake news during the 2016 United States Presidential Election.</p>
+            <p class="project-description">In my non-expert opinion, Facebook did an excellent job. Widespread disinformation was/is/will always be detrimental to the public, and Facebook handled its spread gracefully without crossing the line of censorship. </p>
+            <p class="project-description">After my research, my already-healthy skepticism is .</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+      <h1 class="resume-header section-header">Resume</h1>
+
+      <!-- - - - - - -->
+      <!-- PRONTOBEV -->
+      <!-- - - - - - -->
+      <div id="prontobev-section" class="resume-div">
+        <h2 class="resume-title">ProntoBev</h2>
+        <p class="resume-tags">Keywords: Web, Javascript, CSS, Shopify</p>
+        <p class="resume-dates">November 2017 to current</p>
+        <div class="resume-content-wrapper">
+          <div class="resume-text">
+            <p class="resume-description">Two days before their Shark Tank debut, Pronto Concepts called me looking for someone to prepare their storefront for the incoming flood of orders.</p>
+            <p class="resume-description">The pitch went well, the website kept up with the traffic, and I&#39;ve since joined the team to take care of fun technical things like web development and deploying virtual machines.</p>
+            <p class="resume-description">Purchase your own <a class="project-link" href="https://www.prontoconcepts.com" target="_blank">ProntoBev</a>. I&#39;m a fan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- - - - - - -->
+      <!-- POLYRENTS -->
+      <!-- - - - - - -->
+      <div id="polyrents-section" class="resume-div">
+        <h2 class="resume-title">PolyRents</h2>
+        <p class="resume-tags">Keywords: Web, Javascript, React, Python, Django, Postgres</p>
+        <p class="resume-dates">January 2017 to July 2017</p>
+        <div class="resume-content-wrapper">
+          <div class="resume-text">
+            <p class="resume-description">PolyRents is a startup seeking to modernize the outdated rental application process. It piqued my interest because I was subleasing at the time and thought it would ease my process.</p>
+            <p class="resume-description">I learned Python at PolyRents (now one of my favorite languages), focusing on creating a citations app that scraped police logs to help landlords determine the reliability of potential tenants.</p>
+            <p class="resume-description">Sign up for <a class="project-link" href="https://www.polyrents.com" target="_blank">PolyRents</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- - - - - - -->
+      <!-- TAPESTRY -->
+      <!-- - - - - - -->
+      <div id="tapestry-section" class="resume-div">
+        <h2 class="resume-title">Tapestry Solutions</h2>
+        <p class="resume-tags">Keywords: Java, Actionscript, Postgres</p>
+        <p class="resume-dates">June 2015 to May 2016</p>
+        <div class="resume-content-wrapper">
+          <div class="resume-text">
+            <p class="resume-description">At Tapestry I contributed to a medium-sized development team working on military inventory software. </p>
+            <p class="resume-description">It was my first corporate position and my first professional introduction to the software development process. From it I learned various valuable lessones -- one of which is that I can&#39;t work on a project that doesn&#39;t inspire me. I am driven by my passion.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- - - - - - -->
+      <!-- TRENDTECH -->
+      <!-- - - - - - -->
+      <div id="trendtech-section" class="last resume-div">
+        <h2 class="resume-title">Trendtech Ventures</h2>
+        <p class="resume-tags">Keywords: Web, LAMP, Server Administration</p>
+        <p class="resume-dates">January 2013 to August 2014</p>
+        <div class="resume-content-wrapper">
+          <div class="resume-text">
+            <p class="resume-descript7ion">Trendtech Ventures was a youthful attempt at starting the next Google. It was perhaps a little misguided, but it was one of the most important decisions I have ever made.</p>
+            <p class="resume-description">This was my first introduction to developing for web: my first LAMP stack, my first event handler, and my first bug in production. Without it, I wouldn&#39;t be the programmer I am today.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h1 class="contact-header section-header">Connect</h1>
+        <div class="contact-content">
+          <p>Let&#39;s get in touch.</p>
+          <ul>
+            <li class="contact-email">
+              <a class="contact-link" data-contact="email" target="_blank"
+                 href="mailto:quan@curryti.me"></a></li>
+            <li class="contact-github">
+              <a class="contact-link" data-contact="github" target="_blank"
+                 href="https://www.github.com/quan"></a>
+            </li>
+            <li class="contact-linkedin">
+              <a class="contact-link" data-contact="linkedin" target="_blank"
+                 href="https://www.linkedin.com/in/quantrantheory"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Quan Tran. 2018.</p>
+    </footer>
+  </div>
 </body>
 </html>

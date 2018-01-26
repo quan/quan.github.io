@@ -1,6 +1,9 @@
+@import "modules/media";
 @import "modules/base";
 @import "modules/margin-padding";
+@import "modules/code";
 
-@import "components/header";
-@import "components/sections";
-@import "components/footer";
+@import "components/title";
+@import "components/navigation.h";
+@import "components/sections.h";
+

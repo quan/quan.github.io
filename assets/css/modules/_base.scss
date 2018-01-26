@@ -1,30 +1,12 @@
-/* Variables */
-$sans-serif-font-stack: 'Open Sans', Helvetica, Arial, sans-serif;
+$mono-font-stack: 'Roboto Mono', monospace;
 $slab-font-stack: 'Roboto Slab', serif;
 
-// path relative to index.scss
-$bg-image-light: url("../graphics/bg-light.png");
-$bg-color-light: #f4f4f4;
-//$bg-image-dark: url("../assets/graphics/bg-dark.png");
+$bg-color: #f3f3f3;
+$theme-color: #EE9B00;
+$accent-color: #D25A1E;
 
-$bg-image: $bg-image-light;
-$bg-color: $bg-color-light;
+$min-page-width: 800px;
 
-// header/footer stuff
-$hf-color: rgb(47,69,84);
-$hf-border: 5px dashed $bg-color;
-
-// link colors
-$link-color: powderblue;
-$link-color-hover: deepskyblue;
-
-// display size cutoffs
-$sm-min: 576px;
-$md-min: 768px;
-$lg-min: 992px;
-$xl-min: 1200px;
-
-/* Mixins */
 @mixin center-horizontally() {
   display: block;
   margin-left: auto;
@@ -36,17 +18,40 @@ $xl-min: 1200px;
   height: $dimensions;
 }
 
+@mixin transition($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+          transition: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+     -moz-transform: $value;
+      -ms-transform: $value;
+       -o-transform: $value;
+          transform: $value;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
 /* Body */
 body {
   margin: 0;
   padding: 0;
-  font-family: $sans-serif-font-stack;
-  // font-size: 16px;
-
-  background: $bg-color $bg-image repeat;
+  font-family: $slab-font-stack;
+  background: $bg-color;
+  @media #{$query-desktop} {
+    overflow-x: hidden;
+  }
 }
 
-// To make loading seem smoother.
-div.project-container {
-  min-height: calc(100vh - 320px);
+a {
+  @include transition(.17s);
+  text-decoration: none;
+  &:hover { cursor: pointer; }
+  &:visited { text-decoration: none; }
 }

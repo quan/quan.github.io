@@ -1,0 +1,7 @@
+$sm-mobile-max-width: 320px;
+$mobile-max-width: 767px;
+$desktop-min-width: $mobile-max-width + 1;
+
+$query-sm-mobile: "screen and (max-width: #{$sm-mobile-max-width})";
+$query-mobile: "screen and (max-width: #{$mobile-max-width})";
+$query-desktop: "screen and (min-width: #{$desktop-min-width})";

@@ -1,0 +1,32 @@
+// 
+// Navigation header file.
+//
+
+$nav-menu-content-height: 100vh;
+$nav-menu-width: 150px;
+$nav-menu-skew-width: 160px;
+$nav-menu-skew-height: 1024px;
+$nav-menu-skew-offset: 7px;
+$nav-menu-link-color: white;
+$nav-menu-link-hover-color: #333;
+
+@mixin navigation-link() {
+  font-family: $slab-font-stack;
+  font-weight: 100;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  
+  list-style: none;
+
+  a {
+    // @include transition(.1s); 
+    color: $nav-menu-link-color;
+    &:hover {
+      color: $nav-menu-link-hover-color;
+    }
+  }
+}
+
+@import "navigation/header-menu";
+@import "navigation/mobile-menu";
+@import "navigation/mobile-menu-button";

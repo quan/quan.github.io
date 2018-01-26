@@ -1,11 +1,11 @@
 {
   "name": "quan.github.io",
   "author": "quan",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "A static personal web page.",
   "main": "index.html",
   "scripts": {
-    "build:css": "node-sass --output-style expanded assets/css/index.scss > assets/css/index.css",
+    "build:css": "sass --scss assets/css/index.scss > assets/css/index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +19,6 @@
   "homepage": "https://github.com/quan/quan.github.io",
   "devDependencies": {
     "standard": "^10.0.2"
-  }
+  },
+  "dependencies": {}
 }

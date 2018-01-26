@@ -1,0 +1,27 @@
+$pr-padding-v: 20px;
+$pr-padding-h: 15px;
+
+$pr-padding: $pr-padding-v $pr-padding-h;
+$pr-border: $subsection-border;
+
+
+// Style Projects and Resume sections together, since they're pretty similar.
+
+section#projects a, section#resume a {
+    @include transition(.02s);
+    color: blue;
+    &:hover { 
+      color: rebeccapurple;
+      text-decoration: underline;
+    }
+    &:visited { color: blue; }
+}
+div.project-div, div.resume-div {
+  box-sizing: border-box;
+  
+  padding: $pr-padding;
+
+  border-bottom: $pr-border;
+  // The following section's header has a border.
+  &.last { border-bottom: none; }
+}
