@@ -1,7 +1,7 @@
 const languageMap = {
   'en': "<p class='about-en'>Hi, I'm Quan.</p>\
   <p class='about-en'>I'm a software engineer interested in programming languages, web development, and functional programming.</p>\
-  <p class='about-en'>When I'm not coding, I'm probably cooking or doing something musical (or both).</p>\
+  <p class='about-en'>When I'm not at my computer, I'm usually cooking or doing something musical (or both).</p>\
   <p class='about-en'>Check out some of my <a class='code-link' data-target='projects'>projects</a>, my <a class='code-link' data-target='resume'>resume</a>, or <a class='code-link' data-target='contact'>contact</a> me.</p>\
   <p class='about-en'>Enjoy your stay.</p>",
   //

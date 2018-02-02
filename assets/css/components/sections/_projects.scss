@@ -1,7 +1,8 @@
 $pr-padding-v: 20px;
 $pr-padding-h: 15px;
 
-$pr-padding: $pr-padding-v $pr-padding-h;
+$pr-padding-sm: $pr-padding-v $pr-padding-h * 2;
+$pr-padding-lrg: $pr-padding-v $pr-padding-h;
 $pr-border: $subsection-border;
 
 
@@ -16,10 +17,18 @@ section#projects a, section#resume a {
     }
     &:visited { color: blue; }
 }
+
 div.project-div, div.resume-div {
   box-sizing: border-box;
   
-  padding: $pr-padding;
+  @media #{$query-mobile} {
+    padding: $pr-padding-sm;
+  }
+
+  @media #{$query-desktop} {
+    padding: $pr-padding-lrg;
+  }
+
 
   border-bottom: $pr-border;
   // The following section's header has a border.
