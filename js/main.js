@@ -1,14 +1,14 @@
 /*
 global
 Navigation
-AboutSection
+About
 */
 
 (function () {
-  const _scope = {}
+  var _scope = {}
 
   window.onload = function () {
     Navigation.init(_scope)
-    AboutSection.init(_scope)
+    About.init(_scope)
   }
 })()
