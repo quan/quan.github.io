@@ -2,13 +2,9 @@
 // Navigation header file.
 //
 
-$nav-menu-content-height: 100vh;
-$nav-menu-width: 150px;
-$nav-menu-skew-width: 160px;
-$nav-menu-skew-height: 2160px;
-$nav-menu-skew-offset: 4px;
 $nav-menu-link-color: white;
 $nav-menu-link-hover-color: #333;
+$nav-menu-bg-image: url('../graphics/bg-theme.png');
 
 @mixin navigation-link() {
   font-family: $slab-font-stack;
