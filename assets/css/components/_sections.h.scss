@@ -3,7 +3,7 @@
 //
 
 // The offset from the left, encompassing the navigation bar.
-$content-left-margin: $nav-menu-width + $nav-menu-skew-width;
+$content-left-margin: $nav-menu-width + 2 * $nav-menu-horizontal-padding;
 
 $section-padding-v: 20px;
 $section-padding-h: 50px;

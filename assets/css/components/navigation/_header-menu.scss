@@ -1,127 +1,47 @@
-$nav-menu-bg-image: url('../graphics/bg-theme.png');
-$nav-menu-content-padding: 10vh 0;
-$nav-menu-bg-image-width: 67px;
-$nav-menu-min-height: 300px;
+// Styles for the navigation header as it is displayed on a desktop screen.
 
-$query-under-min-header-height: 'screen and (max-height: #{$nav-menu-min-height})';
-$query-under-max-header-height: 'screen and (max-height: #{$nav-menu-skew-height})';
-$query-over-max-header-height: 'screen and (min-height: #{$nav-menu-skew-height + 1})';
+$nav-menu-width: 150px;
+$nav-menu-horizontal-padding: 50px; // For desktop header.
 
 header#nav-menu-header {
   @media #{$query-mobile} {
     display: none;
   }
   @media #{$query-desktop} {
-    display: block;
-  }
-  @media #{$query-under-max-header-height} {
-    width: $nav-menu-width;
-  }
-  @media #{$query-over-max-header-height} {
-    width: $nav-menu-width * 2;
+    display: table;
   }
   position: fixed;
   top: 0;
   left: 0;
-  min-height: $nav-menu-min-height;
-  height: $nav-menu-content-height;
+  height: 100%;
   box-sizing: border-box;
-  padding: $nav-menu-content-padding;
-  // background-color: $theme-color;
-  background: $nav-menu-bg-image repeat;
 
   ul.nav-menu {
-    margin: 0;
-    position: absolute;
-    bottom: 9%;
-    @media #{$query-over-max-header-height} {
-      left: calc(#{$nav-menu-width} * 2 - 50px - 8vh);
-    }
-    @media #{$query-under-max-header-height} {
-      left: calc(#{$nav-menu-width} - 50px - 8vh);
-    }
-    @media #{$query-under-min-header-height} {
-      left: 78px;
-    }
+    display: table-cell;
+    vertical-align: middle;
+    padding: 50px;
     z-index: 10;
-  }
+    background: $nav-menu-bg-image repeat;
+ }
 
   li.nav-menu-item {
-    margin: 7% 0;
+    margin: 20% 0;
     font-size: 1.5em;
-    text-align: right;
+    text-align: center;
     z-index: 10;
     @include navigation-link();
     /* Keeps the nav menu iems along an angle. */
-    @media #{$query-under-max-header-height} {
-      &[data-item='0'] { padding-right: 0; }
-      &[data-item='1'] { padding-right: $nav-menu-skew-offset; }
-      &[data-item='2'] { padding-right: $nav-menu-skew-offset * 2; }
-      &[data-item='3'] { padding-right: $nav-menu-skew-offset * 3; }
-    }
-    @media #{$query-over-max-header-height} {
-      &[data-item='0'] { padding-right: 0; }
-      &[data-item='1'] { padding-right: $nav-menu-skew-offset * 2; }
-      &[data-item='2'] { padding-right: $nav-menu-skew-offset * 4; }
-      &[data-item='3'] { padding-right: $nav-menu-skew-offset * 6; }
-    }
-  }
-
-  &.current {
-    
-  }
-
-  // Bezel slices.
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    z-index: 1;
-  }
-
-  // Inner slice layered on top of the header.
-  &::before {
-    left: 0;
-    $-inner-multiplier: .4;
-    @media #{$query-under-max-header-height} {
-      border-right: ($-inner-multiplier * $nav-menu-skew-width) solid transparent;
-      border-top: ($-inner-multiplier * $nav-menu-skew-height)solid $accent-color;
-    }
-    @media #{$query-over-max-header-height} {
-      border-right: ($-inner-multiplier * $nav-menu-skew-width * 2) solid transparent;
-      border-top: calc(#{$-inner-multiplier} * 100vh) solid $accent-color;
-    }
-  }
-
-  // Outer slice protruding from the header.
-  &::after {
-    @media #{$query-under-max-header-height} {
-      left: $nav-menu-width;
-      // Solid color fill border.
-      // border-right: $nav-menu-skew-width solid transparent;
-      // border-top: $nav-menu-skew-height solid $theme-color;
-
-      // Hacky tiled bg image fill border.
-      // Can covers some of the content.
-      border-left: $nav-menu-width solid transparent;
-      border-bottom: $nav-menu-skew-height solid $bg-color;
-      background-image: url(../graphics/bg-theme.png);
-      background-position: $nav-menu-bg-image-width;
-    }
-    @media #{$query-over-max-header-height} {
-      left: $nav-menu-width * 2;
-      // Solid color fill border.
-      // border-right: ($nav-menu-skew-width * 2) solid transparent;
-      // border-top: 100vh solid $theme-color;
-
-      // Hacky tiled bg image fill border.
-      // Can covers some of the content.
-      border-left: ($nav-menu-skew-width * 2) solid transparent;
-      border-bottom: 100vh solid $bg-color;
-      background-image: url(../graphics/bg-theme.png);
-      background-position: $nav-menu-bg-image-width;
-    }
+    // @media #{$query-under-max-header-height} {
+    //   &[data-item='0'] { padding-right: 0; }
+    //   &[data-item='1'] { padding-right: $nav-menu-skew-offset; }
+    //   &[data-item='2'] { padding-right: $nav-menu-skew-offset * 2; }
+    //   &[data-item='3'] { padding-right: $nav-menu-skew-offset * 3; }
+    // }
+    // @media #{$query-over-max-header-height} {
+    //   &[data-item='0'] { padding-right: 0; }
+    //   &[data-item='1'] { padding-right: $nav-menu-skew-offset * 2; }
+    //   &[data-item='2'] { padding-right: $nav-menu-skew-offset * 4; }
+    //   &[data-item='3'] { padding-right: $nav-menu-skew-offset * 6; }
+    // }
   }
 }

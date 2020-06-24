@@ -25,6 +25,7 @@ section#about {
   // See code.scss for colors.
   div.code-wrapper {
     @include padding-horizontal($code-wrapper-padding-h);
+    @include margin-horizontal(auto);
     padding-top: $code-wrapper-padding-v;
     pre {
       margin: 0;

@@ -16,7 +16,7 @@ div.mobile-nav-menu {
   right: $nav-menu-inset;
   bottom: $nav-menu-inset;
   min-width: calc(#{$sm-mobile-max-width} - 2 * #{$nav-menu-inset});
-  background: $nav-bg-color;
+  background: $nav-menu-bg-image $nav-bg-color repeat;
   @include transition($nav-menu-transition);
   opacity: 0.0;
   visibility: hidden;
