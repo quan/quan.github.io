@@ -24,6 +24,26 @@ a:visited {
   text-decoration: none;
 }
 
+section#projects a,
+section#resume a,
+p.about-en a {
+  -webkit-transition: 0.02s;
+  -moz-transition: 0.02s;
+  transition: 0.02s;
+  color: blue;
+}
+section#projects a:hover,
+section#resume a:hover,
+p.about-en a:hover {
+  color: rebeccapurple;
+  text-decoration: underline;
+}
+section#projects a:visited,
+section#resume a:visited,
+p.about-en a:visited {
+  color: blue;
+}
+
 code {
   font-family: "Roboto Mono", monospace;
   font-size: 1.1em;
@@ -318,7 +338,16 @@ section#about div.code-wrapper {
   padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 55px;
+}
+@media screen and (max-width: 767px) {
+  section#about div.code-wrapper {
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  section#about div.code-wrapper {
+    padding-top: 55px;
+  }
 }
 section#about div.code-wrapper pre {
   margin: 0;
@@ -368,20 +397,6 @@ li.language[data-selected=true] a {
 }
 li.language[data-selected=true] a:hover {
   color: #C66;
-}
-
-section#projects a, section#resume a {
-  -webkit-transition: 0.02s;
-  -moz-transition: 0.02s;
-  transition: 0.02s;
-  color: blue;
-}
-section#projects a:hover, section#resume a:hover {
-  color: rebeccapurple;
-  text-decoration: underline;
-}
-section#projects a:visited, section#resume a:visited {
-  color: blue;
 }
 
 div.project-div, div.resume-div {

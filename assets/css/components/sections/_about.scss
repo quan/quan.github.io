@@ -26,9 +26,14 @@ section#about {
 
   // See code.scss for colors.
   div.code-wrapper {
+    @media #{$query-mobile} {
+      padding-top: 0;
+    }
+    @media #{$query-desktop} {
+      padding-top: $code-wrapper-padding-v;
+    }
     @include padding-horizontal($code-wrapper-padding-h);
     @include margin-horizontal(auto);
-    padding-top: $code-wrapper-padding-v;
     pre {
       margin: 0;
     }
