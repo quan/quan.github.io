@@ -7,18 +7,6 @@ $pr-padding-sm: $pr-padding-v $pr-padding-h * 2;
 $pr-padding-lrg: $pr-padding-v $pr-padding-h;
 $pr-border: $subsection-border;
 
-
-// Style links.
-section#projects a, section#resume a {
-    @include transition(.02s);
-    color: blue;
-    &:hover { 
-      color: rebeccapurple;
-      text-decoration: underline;
-    }
-    &:visited { color: blue; }
-}
-
 // Styles for the "boxes" that contain individual sections.
 div.project-div, div.resume-div {
   box-sizing: border-box;

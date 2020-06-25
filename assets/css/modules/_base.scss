@@ -55,3 +55,16 @@ a {
   &:hover { cursor: pointer; }
   &:visited { text-decoration: none; }
 }
+
+// Style links in descriptions.
+section#projects a,
+section#resume a,
+p.about-en a {
+    @include transition(.02s);
+    color: blue;
+    &:hover { 
+      color: rebeccapurple;
+      text-decoration: underline;
+    }
+    &:visited { color: blue; }
+}
