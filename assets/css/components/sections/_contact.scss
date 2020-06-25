@@ -1,3 +1,5 @@
+// Styles for the Contact section at the foot of the site.
+
 $contact-vertical-spacing: 50px;
 $contact-vertical-spacing-mobile: $contact-vertical-spacing / 2;
 
@@ -48,6 +50,7 @@ section#contact {
     list-style: none;
   }
 
+  // The horizontal list containing the contact icons.
   li {
     @media #{$query-mobile} {
       margin: $contact-item-margin-mobile;
@@ -58,14 +61,17 @@ section#contact {
       @include square-dimensions($contact-item-dim);
     }
 
+    // GitHub icon.
     &.contact-github {
       background: $github-icon no-repeat;
       background-size: cover;
     }
+    // Linkedin icon.
     &.contact-linkedin {
       background: $linkedin-icon no-repeat;
       background-size: cover;
     }
+    // Email icon.
     &.contact-email {
       background: $email-bg-color $email-icon no-repeat;
       background-size: 78%;

@@ -30,18 +30,5 @@ header#nav-menu-header {
     text-align: center;
     z-index: 10;
     @include navigation-link();
-    /* Keeps the nav menu iems along an angle. */
-    // @media #{$query-under-max-header-height} {
-    //   &[data-item='0'] { padding-right: 0; }
-    //   &[data-item='1'] { padding-right: $nav-menu-skew-offset; }
-    //   &[data-item='2'] { padding-right: $nav-menu-skew-offset * 2; }
-    //   &[data-item='3'] { padding-right: $nav-menu-skew-offset * 3; }
-    // }
-    // @media #{$query-over-max-header-height} {
-    //   &[data-item='0'] { padding-right: 0; }
-    //   &[data-item='1'] { padding-right: $nav-menu-skew-offset * 2; }
-    //   &[data-item='2'] { padding-right: $nav-menu-skew-offset * 4; }
-    //   &[data-item='3'] { padding-right: $nav-menu-skew-offset * 6; }
-    // }
   }
 }
