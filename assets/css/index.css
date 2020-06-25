@@ -63,27 +63,6 @@ a.code-link:visited {
   color: #009;
 }
 
-h1.title {
-  margin: 0;
-  position: fixed;
-  top: 30px;
-  right: 40px;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
-  cursor: default;
-}
-@media screen and (max-width: 767px) {
-  h1.title {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  h1.title {
-    display: block;
-  }
-}
-
 header#nav-menu-header {
   position: fixed;
   top: 0;
@@ -118,7 +97,6 @@ header#nav-menu-header li.nav-menu-item {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   list-style: none;
-  /* Keeps the nav menu iems along an angle. */
 }
 header#nav-menu-header li.nav-menu-item a {
   color: white;

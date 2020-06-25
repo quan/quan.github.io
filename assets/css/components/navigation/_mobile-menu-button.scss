@@ -10,9 +10,8 @@ $nav-button-line-width: 50%;
 $nav-button-line-separation: 8px;
 
 div.mobile-nav-button {
-  // @media #{$query-sm-mobile} {
-  //   left: $nav-button-inset;
-  // }
+  
+  // Only show the menu button on mobile device sizes.
   @media #{$query-mobile} {
     right: $nav-button-inset;
   }
@@ -26,6 +25,7 @@ div.mobile-nav-button {
   height: $nav-button-size;
   z-index: 300;
 
+  // Toggle visibility based on click status.
   opacity: 1.0;
   &[data-hidden='hiding'] {
     @include transition(.8s);
@@ -40,6 +40,7 @@ div.mobile-nav-button {
     cursor: pointer;
   }
 
+  // These are the actual navigation button lines.
   &::before, &::after {
     content: '';
     position: absolute;
@@ -53,19 +54,17 @@ div.mobile-nav-button {
   }
 }
 
+// Animation transforms. This is based on the `data-status` of the button div.
 div.mobile-nav-button::before {
   @include transform(rotate(0) translateY(-#{$nav-button-line-separation}));
 }
-
 div.mobile-nav-button[data-status='on']::before {
   background-color: white;
   @include transform(rotate(45deg) translateY(0));
 }
-
 div.mobile-nav-button::after {
   @include transform(rotate(0) translateY($nav-button-line-separation));
 }
-
 div.mobile-nav-button[data-status='on']::after {
   background-color: white;
   @include transform(rotate(-45deg) translateY(0));

@@ -1,3 +1,5 @@
+// Convenience margin and padding mixins.
+
 @mixin padding-vertical($padding) {
   padding-top: $padding;
   padding-bottom: $padding;
