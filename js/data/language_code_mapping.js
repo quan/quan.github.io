@@ -121,9 +121,9 @@ quan<span class='c-punc'>.</span><span class='c-link'><a class='code-link' data-
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>major, <span class="c-str">"S.E."</span>);<br />
 &nbsp;&nbsp;&nbsp;<span class="c-func">sprintf</span>(quan<span class="c-punc">-></span>education<span class="c-punc">-></span>school, <span class="c-str">"CPSLO"</span>);<br />
 <br />
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">list_projects</span>();<br />
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">show_resume</span>();<br />
-&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link">contact</span>();<br />
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="projects">list_projects</a></span>();<br />
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="resume">show_resume</a></span>();<br />
+&nbsp;&nbsp;&nbsp;quan<span class="c-punc">-></span><span class="c-link"><a class="code-link" data-target="contact">contact</a></span>();<br />
 <br />
 &nbsp;&nbsp;&nbsp;<span class="c-kw">return</span> <span class="c-val">0</span>;<br />
 }</code>`,
@@ -147,9 +147,9 @@ $quan<span class='c-punc'>-></span>education <span class='c-punc'>=</span> <span
 &nbsp;&nbsp;&nbsp;&nbsp;<span class='c-str'>'alma_mater'</span> <span class='c-punc'>=></span> <span class='c-str'>'Cal Poly'</span><br />
 );<br />
 <br />
-$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>list_projects</a></span>();<br />
-$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>show_resume</a></span>();<br />
-$quan<span class='c-punc'>-></span><span class='c-link'><a href='#'>contact</a></span>();</code>`,
+$quan<span class='c-punc'>-></span><span class='c-link'><a class="code-link" data-target="projects">list_projects</a></span>();<br />
+$quan<span class='c-punc'>-></span><span class='c-link'><a class="code-link" data-target="resume">show_resume</a></span>();<br />
+$quan<span class='c-punc'>-></span><span class='c-link'><a class="code-link" data-target="contact">contact</a></span>();</code>`,
   //
   // ML
   //
