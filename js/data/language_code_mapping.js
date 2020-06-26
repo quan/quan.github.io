@@ -7,8 +7,7 @@ const languageMap = {
     I'm usually in the kitchen (I'm currently cooking through David Chang's <a href='https://www.penguinrandomhouse.com/books/26082/momofuku-by-david-chang-and-peter-meehan/' target='_blank'>Momofuku</a>),
     playing music (<a href='https://www.last.fm/user/qtipbrit' target='_blank'>this</a> is what has been playing on my Spotify),
     or bothering my cats (Kiki and Legs).</p>
-  <p class='about-en'>Check out some of my <a class='code-link' data-target='projects'>projects</a>, my <a class='code-link' data-target='resume'>resume</a>, or <a class='code-link' data-target='contact'>contact</a> me.</p>
-  <p class='about-en'>Enjoy your stay.</p>`,
+  <p class='about-en'>Check out some of my <a class='code-link' data-target='projects'>projects</a>, my <a class='code-link' data-target='resume'>resume</a>, or <a class='code-link' data-target='contact'>contact</a> me.</p>`,
   //
   // Python
   //
